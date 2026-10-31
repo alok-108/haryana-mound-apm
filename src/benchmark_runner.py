@@ -40,11 +40,13 @@ def evaluate_benchmark_tracks(
     accessibility_cols: Tuple[str, ...] = ("dist_road_km", "dist_town_km"),
     prior_pi_p: float = 0.02,
     dead_zone_buffer_m: float = 5000.0,
+    spatial_unit: str = "h3_res8",
     random_state: int = 42,
 ) -> Tuple[pd.DataFrame, pd.DataFrame, Dict[str, float | bool], pd.DataFrame]:
     """
     Execute 5-track benchmark comparing Random CV vs. Buffered Spatial Block CV,
     stratified by mound relief, discovery modality, protected site status, and unverified map mounds.
+    Records `spatial_unit` ('h3_res8' or 'patch_250m') on all output metrics.
     """
     df = assign_sample_roles(df)
 
@@ -181,6 +183,7 @@ def evaluate_benchmark_tracks(
                 oof_scores[eval_mask], y_eval_confirmed[eval_mask], [1.0, 2.0, 5.0, 10.0]
             )
             metrics["track"] = track_name
+            metrics["spatial_unit"] = spatial_unit
             metrics["cv_scheme"] = split_scheme
             metrics["aoa_retention_pct"] = float(np.mean(oof_aoa[eval_mask]) * 100.0)
             metrics["block_size_km"] = block_size_m / 1000.0
@@ -197,6 +200,7 @@ def evaluate_benchmark_tracks(
                     k_pct=5.0,
                 )
                 strat_df["track"] = track_name
+                strat_df["spatial_unit"] = spatial_unit
                 stratified_dfs.append(strat_df)
 
                 # Separate evaluation of held-out protected/excavated stratum
@@ -215,6 +219,7 @@ def evaluate_benchmark_tracks(
                                     "recall_at_5pct": prot_metrics["recall_at_5pct"],
                                     "kvamme_gain_at_5pct": prot_metrics["kvamme_gain_at_5pct"],
                                     "track": track_name,
+                                    "spatial_unit": spatial_unit,
                                 }
                             ]
                         )
@@ -229,6 +234,7 @@ def evaluate_benchmark_tracks(
                     weak_label_rows.append(
                         {
                             "track": track_name,
+                            "spatial_unit": spatial_unit,
                             "n_unverified_mounds": int(np.sum(is_unverified_mound)),
                             "recall_at_5pct": mound_metrics["recall_at_5pct"],
                             "kvamme_gain_at_5pct": mound_metrics["kvamme_gain_at_5pct"],

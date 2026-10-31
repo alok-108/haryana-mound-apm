@@ -257,3 +257,60 @@ def test_end_to_end_benchmark_runner():
     assert not strat_df.empty
     assert "probe_auc" in scar_audit
     assert not weak_label_df.empty
+
+
+def test_patch250m_and_h3_dual_spatial_units():
+    """Verify that the benchmark runner executes across both H3 Res 8 and 250m regular patch spatial units (28 rows total)."""
+    rng = np.random.default_rng(101)
+    n = 180
+
+    def make_synthetic_df(scale_m: float):
+        df = pd.DataFrame(
+            {
+                "x_m": rng.uniform(500000.0, 560000.0, size=n),
+                "y_m": rng.uniform(3200000.0, 3260000.0, size=n),
+                "y_obs": np.array([1] * 25 + [0] * (n - 25)),
+                "is_ground_confirmed": np.array([True] * 20 + [False] * 5 + [False] * (n - 25)),
+                "is_protected_or_excavated": np.array([False] * 16 + [True] * 4 + [False] * (n - 20)),
+                "is_hard_negative": np.array([0] * 25 + [1] * 20 + [0] * (n - 45)),
+                "on_soi_map": rng.integers(0, 2, size=n),
+                "dist_road_km": rng.uniform(0.1, 10.0, size=n),
+                "dist_town_km": rng.uniform(1.0, 20.0, size=n),
+                "relief_class": ["high_>=1.5m" if i < 10 else "low_<1m" for i in range(n)],
+                "discovery_modality": ["toposheet_symbol" if i % 2 == 0 else "pedestrian_transect" for i in range(n)],
+                "msrm": rng.normal(0.0, 1.0, size=n) + (scale_m * 0.5),
+                "wth_150m": rng.normal(0.0, 1.0, size=n),
+                "bth_150m": rng.normal(0.0, 1.0, size=n),
+                "NDVI_p50": rng.normal(0.3, 0.1, size=n),
+                "BSI_zaid_med": rng.normal(0.1, 0.05, size=n),
+                "VH_p50": rng.normal(-15.0, 2.0, size=n),
+            }
+        )
+        for j, bname in enumerate(ALPHAEARTH_BANDS):
+            df[bname] = rng.normal(0.0, 1.0, size=n)
+        return df
+
+    df_h3 = make_synthetic_df(scale_m=1.0)
+    df_patch = make_synthetic_df(scale_m=1.5)
+
+    sum_h3, _, _, _ = evaluate_benchmark_tracks(
+        df=df_h3,
+        s1_s2_dem_cols=["NDVI_p50", "BSI_zaid_med", "VH_p50", "msrm", "wth_150m", "bth_150m"],
+        dem_only_cols=["msrm", "wth_150m", "bth_150m"],
+        spatial_unit="h3_res8",
+        dead_zone_buffer_m=2000.0,
+        random_state=42,
+    )
+    sum_patch, _, _, _ = evaluate_benchmark_tracks(
+        df=df_patch,
+        s1_s2_dem_cols=["NDVI_p50", "BSI_zaid_med", "VH_p50", "msrm", "wth_150m", "bth_150m"],
+        dem_only_cols=["msrm", "wth_150m", "bth_150m"],
+        spatial_unit="patch_250m",
+        dead_zone_buffer_m=2000.0,
+        random_state=42,
+    )
+
+    combined_summary = pd.concat([sum_h3, sum_patch], ignore_index=True)
+    # 7 tracks x 2 CV schemes x 2 spatial units = 28 rows
+    assert len(combined_summary) == 28
+    assert set(combined_summary["spatial_unit"]) == {"h3_res8", "patch_250m"}
