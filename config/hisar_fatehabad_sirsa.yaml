@@ -1,0 +1,102 @@
+# Scoped Pilot Configuration: Haryana Ghaggar-Hakra / Chautang Interfluve
+# Target Districts: Hisar, Fatehabad, Sirsa
+# Metric Coordinate Reference System: EPSG:32643 (WGS 84 / UTM zone 43N)
+
+project:
+  name: "haryana-mound-apm"
+  version: "0.2.1"
+  crs_geographic: "EPSG:4326"
+  crs_metric: "EPSG:32643"
+  random_seed: 42
+
+study_area:
+  region_id: "region_a_haryana_pilot"
+  districts:
+    - "Hisar"
+    - "Fatehabad"
+    - "Sirsa"
+  # Approximate bounding box covering Hisar, Fatehabad, Sirsa (WGS84 [lon_min, lat_min, lon_max, lat_max])
+  bbox_wgs84: [74.45, 28.85, 76.35, 29.95]
+  spatial_units:
+    h3_analysis_resolution: 8      # Avg area: 0.7373276 km^2, Avg edge length: 0.5314140 km
+    patch_size_m: 250.0            # Local spatial patch: 250m x 250m (~6.25 ha, matching 1-5 ha mound scale)
+    h3_public_export_resolution: 5 # Coarse obfuscation grid: 252.9038582 km^2
+
+gee_assets:
+  sentinel2_sr: "COPERNICUS/S2_SR_HARMONIZED"
+  sentinel1_grd: "COPERNICUS/S1_GRD"
+  copernicus_dem: "COPERNICUS/DEM/GLO30"
+  fabdem: "projects/sat-io/open-datasets/FABDEM"
+  alphaearth_embeddings: "GOOGLE/SATELLITE_EMBEDDING/V1/ANNUAL"
+  s2_date_start: "2018-01-01"
+  s2_date_end: "2024-12-31"
+  s2_cloud_prob_max: 20
+  # AlphaEarth uses 64 0-indexed bands: A00 through A63
+  alphaearth_band_prefix: "A"
+  alphaearth_num_bands: 64
+  export_scale_m: 10
+
+features:
+  aggregation:
+    methods: ["max", "p90", "p95"] # Never use simple mean (dilutes 1-5 ha mounds inside 74 ha cells)
+  msrm:
+    f_min_m: 30
+    f_max_m: 300
+    step_m: 30
+  tophat_radii_m: [60, 150, 300]
+  scar_mask:
+    inner_exclusion_radius_m: 75.0
+    annular_halo_inner_m: 75.0
+    annular_halo_outer_m: 250.0
+
+labels:
+  training_positives_rule: "ground_confirmed_unexcavated_only"
+  unverified_map_mounds_rule: "exclude_from_train_evaluate_as_weak_labels"
+  protected_excavated_rule: "drop_from_train_positives_evaluate_as_stratum"
+  deduplication:
+    max_spatial_distance_m: 350.0
+    min_name_similarity: 0.82
+  positional_uncertainty_m:
+    rtk_dgps: 5.0
+    handheld_gps: 25.0
+    vhr_verified: 30.0
+    toposheet_1inch: 90.0
+    arcmin_rounded: 1850.0
+    village_centroid: 1200.0
+  target_group_background:
+    exclude_colocated_buffer_m: 500.0
+    exclude_unknown_horizon: true
+
+models:
+  rf_baseline:
+    n_estimators: 300
+    max_depth: 16
+    min_samples_leaf: 5
+    class_weight: "balanced_subsample"
+  lightgbm:
+    n_estimators: 300
+    learning_rate: 0.03
+    num_leaves: 31
+  nnpu:
+    prior_pi_p: 0.02
+    n_rff_components: 48
+    beta_tolerance: 0.0
+    l2_reg: 0.001
+    max_iter: 100
+  embedding_knn:
+    k_positives: 5
+    k_hard_negatives: 5
+
+validation:
+  variogram_multiplier: 1.25
+  min_block_size_m: 25000.0
+  dead_zone_buffer_m: 5000.0
+  n_spatial_folds: 5
+  top_k_percent_thresholds: [1.0, 2.0, 5.0, 10.0]
+  scar_probe_max_auc: 0.60
+
+governance:
+  public_min_sites_per_h3_cell: 5
+  allow_raw_coordinate_export: false
+  require_written_field_permission: true
+  field_permission_reference: null
