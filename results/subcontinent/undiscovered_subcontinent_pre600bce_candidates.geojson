@@ -1,0 +1,880 @@
+{
+  "type": "FeatureCollection",
+  "name": "Undiscovered_Subcontinent_Pre600BCE_Archaeological_Candidates",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.842,
+          29.5085
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_001",
+        "basin_id": "ghaggar_hakra_saraswati",
+        "basin_name": "Saraswati-Ghaggar-Hakra & Drishadvati Basin",
+        "state_province": "Haryana",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.3,
+        "predicted_culture": "Hakra Ware / Early Harappan (Sothi-Siswal / Ravi)",
+        "cultural_rationale": "Low-relief mound morphology (2.3m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "nearest_paleochannel": "Saraswati-Ghaggar-Hakra Relict Riverbed",
+        "dist_paleochannel_km": 1.89,
+        "nearest_known_monument": "Banawali",
+        "dist_to_known_monument_m": 50672.7,
+        "bsi_summer_score": 0.28,
+        "sar_vh_db": -14.2,
+        "alphaearth_similarity": 0.94,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Pedestrian surface collection of ceramics along dune skirts; RTK-UAV elevation mapping."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.22,
+          29.355
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_002",
+        "basin_id": "ghaggar_hakra_saraswati",
+        "basin_name": "Saraswati-Ghaggar-Hakra & Drishadvati Basin",
+        "state_province": "Haryana",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.4,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact mound relief (3.4m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (2.2km) is characteristic of Painted Grey Ware settlements.",
+        "nearest_paleochannel": "Relict Drishadvati / Chautang Riverbed",
+        "dist_paleochannel_km": 2.17,
+        "nearest_known_monument": "Rakhigarhi (Mounds 1-7)",
+        "dist_to_known_monument_m": 15002.7,
+        "bsi_summer_score": 0.31,
+        "sar_vh_db": -13.5,
+        "alphaearth_similarity": 0.96,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Corvette auger coring across agricultural terrace; magnetometry for mud-brick wall alignments."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.245,
+          28.765
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_003",
+        "basin_id": "ghaggar_hakra_saraswati",
+        "basin_name": "Saraswati-Ghaggar-Hakra & Drishadvati Basin",
+        "state_province": "Punjab (Cholistan)",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 4.6,
+        "predicted_culture": "Mature Harappan Urban Civilization",
+        "cultural_rationale": "Prominent mound height (4.6m) in close proximity to major Ghaggar/Chautang waterway (1.1km) strongly matches Mature Harappan urban centers.",
+        "nearest_paleochannel": "Saraswati-Ghaggar-Hakra Relict Riverbed",
+        "dist_paleochannel_km": 1.06,
+        "nearest_known_monument": "Tarkhanwala Dera",
+        "dist_to_known_monument_m": 117480.8,
+        "bsi_summer_score": 0.34,
+        "sar_vh_db": -12.8,
+        "alphaearth_similarity": 0.97,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Camel/4x4 desert transect; LiDAR drone survey to map buried mud-brick fortifications."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.385,
+          30.112
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_004",
+        "basin_id": "ghaggar_hakra_saraswati",
+        "basin_name": "Saraswati-Ghaggar-Hakra & Drishadvati Basin",
+        "state_province": "Haryana",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.6,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact mound relief (2.6m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (1.9km) is characteristic of Painted Grey Ware settlements.",
+        "nearest_paleochannel": "Saraswati-Ghaggar-Hakra Relict Riverbed",
+        "dist_paleochannel_km": 1.91,
+        "nearest_known_monument": "Bhagwanpura",
+        "dist_to_known_monument_m": 44980.4,
+        "bsi_summer_score": 0.26,
+        "sar_vh_db": -14.6,
+        "alphaearth_similarity": 0.92,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Field-walking along canal cut exposures; diagnostic PGW sherd inventory."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.545,
+          30.485
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_006",
+        "basin_id": "upper_indus_punjab",
+        "basin_name": "Upper Indus & Punjab Interfluves (Doabs)",
+        "state_province": "Punjab",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 4.1,
+        "predicted_culture": "Mature Harappan Urban Civilization",
+        "cultural_rationale": "Elevated mound (4.1m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.",
+        "nearest_paleochannel": "Paleo-Ravi Harappan Meander Belt",
+        "dist_paleochannel_km": 0.99,
+        "nearest_known_monument": "Harappa (Mounds AB, E, F)",
+        "dist_to_known_monument_m": 35048.2,
+        "bsi_summer_score": 0.32,
+        "sar_vh_db": -13.2,
+        "alphaearth_similarity": 0.95,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Paleomeander terrace exploration; check for perforated jars and mature Harappan brick batts."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.105,
+          30.355
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_007",
+        "basin_id": "upper_indus_punjab",
+        "basin_name": "Upper Indus & Punjab Interfluves (Doabs)",
+        "state_province": "Punjab",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.2,
+        "predicted_culture": "Late Harappan / Post-Urban (Cemetery H / Jhukar-related)",
+        "cultural_rationale": "Mound feature (2.2m) in the Punjab doab representing Late Harappan / Cemetery H horizon.",
+        "nearest_paleochannel": "Paleo-Sutlej Migration Channel (Pre-Capture)",
+        "dist_paleochannel_km": 0.39,
+        "nearest_known_monument": "Banawali",
+        "dist_to_known_monument_m": 85066.2,
+        "bsi_summer_score": 0.27,
+        "sar_vh_db": -14.4,
+        "alphaearth_similarity": 0.91,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Survey of theh mound margin; check well-drill spoil piles for Late Harappan pottery."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.205,
+          30.352
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_008",
+        "basin_id": "upper_indus_punjab",
+        "basin_name": "Upper Indus & Punjab Interfluves (Doabs)",
+        "state_province": "Punjab",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.7,
+        "predicted_culture": "Mature Harappan Urban Civilization",
+        "cultural_rationale": "Elevated mound (3.7m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.",
+        "nearest_paleochannel": "Paleo-Ravi Harappan Meander Belt",
+        "dist_paleochannel_km": 0.48,
+        "nearest_known_monument": "Jalilpur",
+        "dist_to_known_monument_m": 11399.4,
+        "bsi_summer_score": 0.29,
+        "sar_vh_db": -13.9,
+        "alphaearth_similarity": 0.93,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Rechna doab alluvial terrace survey; ceramic classification for Kot Diji / Hakra sherds."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.085,
+          30.825
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_009",
+        "basin_id": "upper_indus_punjab",
+        "basin_name": "Upper Indus & Punjab Interfluves (Doabs)",
+        "state_province": "Punjab",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.9,
+        "predicted_culture": "Late Harappan / Post-Urban (Cemetery H / Jhukar-related)",
+        "cultural_rationale": "Mound feature (2.9m) in the Punjab doab representing Late Harappan / Cemetery H horizon.",
+        "nearest_paleochannel": "Paleo-Sutlej Migration Channel (Pre-Capture)",
+        "dist_paleochannel_km": 3.13,
+        "nearest_known_monument": "Sanghol",
+        "dist_to_known_monument_m": 28832.8,
+        "bsi_summer_score": 0.28,
+        "sar_vh_db": -14.1,
+        "alphaearth_similarity": 0.93,
+        "evidence_gate_count": 6,
+        "recommended_ground_check": "Examine high village periphery mound; record Bara / PGW pottery fragments."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          69.315,
+          25.552
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_010",
+        "basin_id": "lower_indus_sindh_balochistan",
+        "basin_name": "Lower Indus, Sindh Valley & Balochistan Highlands",
+        "state_province": "Sindh",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 4.9,
+        "predicted_culture": "Mature Harappan Urban Civilization",
+        "cultural_rationale": "Prominent tell mound (4.9m) in the Lower Indus/Nara floodplain strongly indicates an urban Mature Harappan settlement.",
+        "nearest_paleochannel": "Eastern Nara / Hakra Southern Outlet",
+        "dist_paleochannel_km": 1.52,
+        "nearest_known_monument": "Chanhu-daro",
+        "dist_to_known_monument_m": 120971.1,
+        "bsi_summer_score": 0.35,
+        "sar_vh_db": -12.4,
+        "alphaearth_similarity": 0.98,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Eastern Nara relict channel exploration; survey tell mound crest for terracotta cakes and bangles."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.215,
+          29.315
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_011",
+        "basin_id": "lower_indus_sindh_balochistan",
+        "basin_name": "Lower Indus, Sindh Valley & Balochistan Highlands",
+        "state_province": "Balochistan",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.8,
+        "predicted_culture": "Hakra Ware / Early Harappan (Sothi-Siswal / Ravi)",
+        "cultural_rationale": "Relict alluvial fan/delta mound (3.8m) in the Sindh-Balochistan borderland corresponds to Early Chalcolithic/Amri-Nal pastoral settlements.",
+        "nearest_paleochannel": "Bolan River Relict Alluvial Fan (Kachi Plain)",
+        "dist_paleochannel_km": 0.36,
+        "nearest_known_monument": "Mehrgarh",
+        "dist_to_known_monument_m": 14707.9,
+        "bsi_summer_score": 0.31,
+        "sar_vh_db": -13.0,
+        "alphaearth_similarity": 0.95,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Kachi plain alluvial fan survey; investigate erosion nullah exposures for microliths and mud-brick."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          68.045,
+          27.085
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_012",
+        "basin_id": "lower_indus_sindh_balochistan",
+        "basin_name": "Lower Indus, Sindh Valley & Balochistan Highlands",
+        "state_province": "Sindh",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 5.2,
+        "predicted_culture": "Mature Harappan Urban Civilization",
+        "cultural_rationale": "Prominent tell mound (5.2m) in the Lower Indus/Nara floodplain strongly indicates an urban Mature Harappan settlement.",
+        "nearest_paleochannel": "Lower Indus Relict Western Oxbow & Meander",
+        "dist_paleochannel_km": 0.74,
+        "nearest_known_monument": "Mohenjo-daro",
+        "dist_to_known_monument_m": 28673.5,
+        "bsi_summer_score": 0.36,
+        "sar_vh_db": -12.1,
+        "alphaearth_similarity": 0.97,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Lower Indus paleomeander mound survey; drone thermal imaging at dawn for subsurface architecture."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          66.585,
+          25.725
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_013",
+        "basin_id": "lower_indus_sindh_balochistan",
+        "basin_name": "Lower Indus, Sindh Valley & Balochistan Highlands",
+        "state_province": "Balochistan",
+        "country": "Pakistan",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.3,
+        "predicted_culture": "Hakra Ware / Early Harappan (Sothi-Siswal / Ravi)",
+        "cultural_rationale": "Relict alluvial fan/delta mound (3.3m) in the Sindh-Balochistan borderland corresponds to Early Chalcolithic/Amri-Nal pastoral settlements.",
+        "nearest_paleochannel": "Porali Relict Riverine Corridor (Lasbela Plain)",
+        "dist_paleochannel_km": 0.75,
+        "nearest_known_monument": "Balakot",
+        "dist_to_known_monument_m": 30420.9,
+        "bsi_summer_score": 0.28,
+        "sar_vh_db": -13.8,
+        "alphaearth_similarity": 0.92,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Porali river terrace check; examine for painted Nal polychrome sherds and chert cores."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          70.525,
+          23.955
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_014",
+        "basin_id": "gujarat_kutch_saurashtra",
+        "basin_name": "Gujarat, Rann of Kutch & Saurashtra Peninsula",
+        "state_province": "Gujarat",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.9,
+        "predicted_culture": "Gujarat Maritime & Estuarine Harappan (Anarta / Sorath)",
+        "cultural_rationale": "Estuarine/littoral mound morphology (3.9m) near relict tidal waterway (0.3km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.",
+        "nearest_paleochannel": "Paleo-Luni & Great Rann Maritime Inflow",
+        "dist_paleochannel_km": 0.29,
+        "nearest_known_monument": "Dholavira (Kotada Timba)",
+        "dist_to_known_monument_m": 32134.2,
+        "bsi_summer_score": 0.33,
+        "sar_vh_db": -12.9,
+        "alphaearth_similarity": 0.96,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Tidal flat perimeter inspection via ATV/foot; search for dressed sandstone masonry and shell bangles."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          72.085,
+          22.685
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_015",
+        "basin_id": "gujarat_kutch_saurashtra",
+        "basin_name": "Gujarat, Rann of Kutch & Saurashtra Peninsula",
+        "state_province": "Gujarat",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.7,
+        "predicted_culture": "Gujarat Maritime & Estuarine Harappan (Anarta / Sorath)",
+        "cultural_rationale": "Estuarine/littoral mound morphology (2.7m) near relict tidal waterway (1.4km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.",
+        "nearest_paleochannel": "Paleo-Bhogavo & Sabarmati Lothal Estuary",
+        "dist_paleochannel_km": 1.36,
+        "nearest_known_monument": "Lothal",
+        "dist_to_known_monument_m": 24710.5,
+        "bsi_summer_score": 0.29,
+        "sar_vh_db": -13.7,
+        "alphaearth_similarity": 0.94,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Limbdi-Bhogavo paleo-levee walk; inspect micro-topography for carnelian debitage and kiln wasters."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.315,
+          24.525
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_016",
+        "basin_id": "gujarat_kutch_saurashtra",
+        "basin_name": "Gujarat, Rann of Kutch & Saurashtra Peninsula",
+        "state_province": "Rajasthan / Gujarat Border",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.2,
+        "predicted_culture": "Gujarat Maritime & Estuarine Harappan (Anarta / Sorath)",
+        "cultural_rationale": "Estuarine/littoral mound morphology (2.2m) near relict tidal waterway (0.9km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.",
+        "nearest_paleochannel": "Paleo-Luni & Great Rann Maritime Inflow",
+        "dist_paleochannel_km": 0.92,
+        "nearest_known_monument": "Surkotada",
+        "dist_to_known_monument_m": 111589.2,
+        "bsi_summer_score": 0.25,
+        "sar_vh_db": -14.7,
+        "alphaearth_similarity": 0.9,
+        "evidence_gate_count": 6,
+        "recommended_ground_check": "Sanchor alluvial delta walk; look for Anarta hand-made gritty ware and copper fragments."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          71.215,
+          22.015
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_017",
+        "basin_id": "gujarat_kutch_saurashtra",
+        "basin_name": "Gujarat, Rann of Kutch & Saurashtra Peninsula",
+        "state_province": "Gujarat",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.1,
+        "predicted_culture": "Gujarat Maritime & Estuarine Harappan (Anarta / Sorath)",
+        "cultural_rationale": "Estuarine/littoral mound morphology (3.1m) near relict tidal waterway (0.3km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.",
+        "nearest_paleochannel": "Bhadar Relict Riverine Corridor (Central Saurashtra)",
+        "dist_paleochannel_km": 0.34,
+        "nearest_known_monument": "Rojdi",
+        "dist_to_known_monument_m": 34434.2,
+        "bsi_summer_score": 0.3,
+        "sar_vh_db": -13.4,
+        "alphaearth_similarity": 0.94,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Central Saurashtra river bluff survey; test for Sorath Harappan Red Ware and copper chisels."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.285,
+          29.585
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_018",
+        "basin_id": "ganga_yamuna_doab",
+        "basin_name": "Ganga-Yamuna Interfluve & Middle Ganga Basin",
+        "state_province": "Uttar Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.4,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact settlement mound (2.4m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.",
+        "nearest_paleochannel": "Paleo-Yamuna & Hindon Meander System",
+        "dist_paleochannel_km": 4.6,
+        "nearest_known_monument": "Hulas",
+        "dist_to_known_monument_m": 15742.0,
+        "bsi_summer_score": 0.28,
+        "sar_vh_db": -14.1,
+        "alphaearth_similarity": 0.93,
+        "evidence_gate_count": 6,
+        "recommended_ground_check": "Hindon paleochannel terrace exploration; look for rolled Ochre Coloured Pottery in erosion gullies."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.815,
+          29.355
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_019",
+        "basin_id": "ganga_yamuna_doab",
+        "basin_name": "Ganga-Yamuna Interfluve & Middle Ganga Basin",
+        "state_province": "Uttar Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.6,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact settlement mound (3.6m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.",
+        "nearest_paleochannel": "Kali Nadi & Upper Ganga Oxbow Belt",
+        "dist_paleochannel_km": 1.55,
+        "nearest_known_monument": "Mandi",
+        "dist_to_known_monument_m": 25158.4,
+        "bsi_summer_score": 0.31,
+        "sar_vh_db": -13.3,
+        "alphaearth_similarity": 0.95,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Examine elevated village theh; systematically sample Painted Grey Ware sherds with painted swastikas/lotuses."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.265,
+          28.985
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_020",
+        "basin_id": "ganga_yamuna_doab",
+        "basin_name": "Ganga-Yamuna Interfluve & Middle Ganga Basin",
+        "state_province": "Uttar Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.8,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact settlement mound (2.8m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.",
+        "nearest_paleochannel": "Paleo-Yamuna & Hindon Meander System",
+        "dist_paleochannel_km": 3.99,
+        "nearest_known_monument": "Sinauli",
+        "dist_to_known_monument_m": 18045.2,
+        "bsi_summer_score": 0.29,
+        "sar_vh_db": -13.8,
+        "alphaearth_similarity": 0.94,
+        "evidence_gate_count": 6,
+        "recommended_ground_check": "Paleo-Yamuna bank survey near Sinauli corridor; ground-penetrating radar (GPR) for copper-hoard burial pits."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          78.415,
+          28.525
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_021",
+        "basin_id": "ganga_yamuna_doab",
+        "basin_name": "Ganga-Yamuna Interfluve & Middle Ganga Basin",
+        "state_province": "Uttar Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.8,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact settlement mound (3.8m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.",
+        "nearest_paleochannel": "Kali Nadi & Upper Ganga Oxbow Belt",
+        "dist_paleochannel_km": 0.63,
+        "nearest_known_monument": "Ahichchhatra",
+        "dist_to_known_monument_m": 71048.9,
+        "bsi_summer_score": 0.32,
+        "sar_vh_db": -13.0,
+        "alphaearth_similarity": 0.96,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Upper Ganga relict bluff survey; map anthropogenic dark earth deposit and PGW/BRW sherds."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          81.185,
+          25.515
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_022",
+        "basin_id": "ganga_yamuna_doab",
+        "basin_name": "Ganga-Yamuna Interfluve & Middle Ganga Basin",
+        "state_province": "Uttar Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.2,
+        "predicted_culture": "Painted Grey Ware (PGW) / Vedic Riverine Horizon",
+        "cultural_rationale": "Compact settlement mound (3.2m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.",
+        "nearest_paleochannel": "Kali Nadi & Upper Ganga Oxbow Belt",
+        "dist_paleochannel_km": 2.31,
+        "nearest_known_monument": "Kausambi",
+        "dist_to_known_monument_m": 28402.1,
+        "bsi_summer_score": 0.29,
+        "sar_vh_db": -13.6,
+        "alphaearth_similarity": 0.93,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Middle Ganga oxbow lake perimeter survey; check for pre-NBPW Black-and-Red ware and bone points."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.485,
+          25.215
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_023",
+        "basin_id": "central_india_deccan",
+        "basin_name": "Central India & Northern Deccan (Mewar, Malwa & Pravara)",
+        "state_province": "Rajasthan",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 4.7,
+        "predicted_culture": "Ahar-Banas Chalcolithic Culture",
+        "cultural_rationale": "Mound height (4.7m) in the Banas river basin with stone masonry signature corresponds to proto-urban Ahar-Banas Chalcolithic centers (~3000-1500 BCE).",
+        "nearest_paleochannel": "Banas River Relict Terraces (Ahar Culture Core)",
+        "dist_paleochannel_km": 0.27,
+        "nearest_known_monument": "Gilund",
+        "dist_to_known_monument_m": 32092.7,
+        "bsi_summer_score": 0.34,
+        "sar_vh_db": -12.5,
+        "alphaearth_similarity": 0.97,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Banas river terrace walk; survey exposed schist/mud-brick walls and white-painted Black-and-Red pottery."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.125,
+          24.625
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_024",
+        "basin_id": "central_india_deccan",
+        "basin_name": "Central India & Northern Deccan (Mewar, Malwa & Pravara)",
+        "state_province": "Rajasthan",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.6,
+        "predicted_culture": "Ahar-Banas Chalcolithic Culture",
+        "cultural_rationale": "Mound height (3.6m) in the Banas river basin with stone masonry signature corresponds to proto-urban Ahar-Banas Chalcolithic centers (~3000-1500 BCE).",
+        "nearest_paleochannel": "Berach River Relict Terraces (Mewar Southern Flank)",
+        "dist_paleochannel_km": 0.29,
+        "nearest_known_monument": "Balathal",
+        "dist_to_known_monument_m": 18062.4,
+        "bsi_summer_score": 0.31,
+        "sar_vh_db": -13.1,
+        "alphaearth_similarity": 0.95,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Berach river tributary knoll survey; look for Ahar-style copper slag mounds and terracotta spindle whorls."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.415,
+          22.125
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_025",
+        "basin_id": "central_india_deccan",
+        "basin_name": "Central India & Northern Deccan (Mewar, Malwa & Pravara)",
+        "state_province": "Madhya Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 4.2,
+        "predicted_culture": "Malwa & Kayatha Chalcolithic Cultures",
+        "cultural_rationale": "Fluvial terrace mound (4.2m) in the Narmada/Chambal drainage exhibiting ceramic scatter aligns with Malwa/Kayatha Chalcolithic settlements (~2450-1400 BCE).",
+        "nearest_paleochannel": "Narmada & Chambal Malwa Riverine Terraces",
+        "dist_paleochannel_km": 0.49,
+        "nearest_known_monument": "Navdatoli & Maheshwar",
+        "dist_to_known_monument_m": 19353.7,
+        "bsi_summer_score": 0.32,
+        "sar_vh_db": -12.7,
+        "alphaearth_similarity": 0.96,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Narmada high flood terrace survey; identify Malwa painted pottery and chalcedony blade cores."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.825,
+          23.285
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_026",
+        "basin_id": "central_india_deccan",
+        "basin_name": "Central India & Northern Deccan (Mewar, Malwa & Pravara)",
+        "state_province": "Madhya Pradesh",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.3,
+        "predicted_culture": "Malwa & Kayatha Chalcolithic Cultures",
+        "cultural_rationale": "Fluvial terrace mound (3.3m) in the Narmada/Chambal drainage exhibiting ceramic scatter aligns with Malwa/Kayatha Chalcolithic settlements (~2450-1400 BCE).",
+        "nearest_paleochannel": "Narmada & Chambal Malwa Riverine Terraces",
+        "dist_paleochannel_km": 0.75,
+        "nearest_known_monument": "Kayatha",
+        "dist_to_known_monument_m": 26347.6,
+        "bsi_summer_score": 0.29,
+        "sar_vh_db": -13.5,
+        "alphaearth_similarity": 0.93,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Chambal / Choti Kali Sindh terrace walk; test for Chocolate-slipped Kayatha pottery."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.515,
+          19.585
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_027",
+        "basin_id": "central_india_deccan",
+        "basin_name": "Central India & Northern Deccan (Mewar, Malwa & Pravara)",
+        "state_province": "Maharashtra",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 3.5,
+        "predicted_culture": "Jorwe Culture (Deccan Chalcolithic)",
+        "cultural_rationale": "Location in the Godavari-Pravara basin with 3.5m mound relief matches nucleated Jorwe Chalcolithic village settlements (~1400-700 BCE).",
+        "nearest_paleochannel": "Pravara-Godavari Jorwe Fluvial Belt",
+        "dist_paleochannel_km": 0.76,
+        "nearest_known_monument": "Daimabad",
+        "dist_to_known_monument_m": 18739.1,
+        "bsi_summer_score": 0.31,
+        "sar_vh_db": -13.2,
+        "alphaearth_similarity": 0.95,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Pravara river bank tell survey; look for spouted Jorwe jars and copper celts in ploughed soil."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.385,
+          18.715
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_028",
+        "basin_id": "central_india_deccan",
+        "basin_name": "Central India & Northern Deccan (Mewar, Malwa & Pravara)",
+        "state_province": "Maharashtra",
+        "country": "India",
+        "calibrated_probability": 0.994,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 2.9,
+        "predicted_culture": "Jorwe Culture (Deccan Chalcolithic)",
+        "cultural_rationale": "Location in the Godavari-Pravara basin with 2.9m mound relief matches nucleated Jorwe Chalcolithic village settlements (~1400-700 BCE).",
+        "nearest_paleochannel": "Ghod River Relict Terraces (Inamgaon Zone)",
+        "dist_paleochannel_km": 0.77,
+        "nearest_known_monument": "Inamgaon",
+        "dist_to_known_monument_m": 19125.8,
+        "bsi_summer_score": 0.28,
+        "sar_vh_db": -13.9,
+        "alphaearth_similarity": 0.93,
+        "evidence_gate_count": 7,
+        "recommended_ground_check": "Ghod river terrace survey; document circular mud floor outlines and Jorwe matt-ware sherds."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.125,
+          29.885
+        ]
+      },
+      "properties": {
+        "candidate_id": "SUBCON_DISCOV_005",
+        "basin_id": "ghaggar_hakra_saraswati",
+        "basin_name": "Saraswati-Ghaggar-Hakra & Drishadvati Basin",
+        "state_province": "Punjab",
+        "country": "India",
+        "calibrated_probability": 0.9936,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High)",
+        "estimated_relief_m": 1.9,
+        "predicted_culture": "Hakra Ware / Early Harappan (Sothi-Siswal / Ravi)",
+        "cultural_rationale": "Low-relief mound morphology (1.9m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "nearest_paleochannel": "Naiwal Relict Braided Channels",
+        "dist_paleochannel_km": 0.28,
+        "nearest_known_monument": "Banawali",
+        "dist_to_known_monument_m": 36607.0,
+        "bsi_summer_score": 0.24,
+        "sar_vh_db": -15.1,
+        "alphaearth_similarity": 0.89,
+        "evidence_gate_count": 6,
+        "recommended_ground_check": "Post-harvest bare soil inspection; soil electrical conductivity profiling."
+      }
+    }
+  ]
+}

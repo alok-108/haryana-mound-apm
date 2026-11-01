@@ -150,7 +150,7 @@ def annotate_satellite_crop(
 def generate_all_satellite_crops(
     candidates_csv: Path | str = "results/candidates/undiscovered_pre600bce_candidates.csv",
     output_dir: Path | str = "results/candidates/satellite_crops",
-    top_n: int = 5,
+    top_n: int = 6,
 ) -> List[Path]:
     """Generate high-resolution annotated satellite crops for top candidates."""
     df = pd.read_csv(candidates_csv)
@@ -166,7 +166,7 @@ def generate_all_satellite_crops(
         lon = float(row["longitude"])
         prob = float(row["calibrated_probability"])
         cult = str(row["predicted_culture"])
-        h = float(row["estimated_height_m"])
+        h = float(row.get("estimated_height_m", row.get("estimated_relief_m", 2.5)))
         p_dist = float(row["dist_paleochannel_km"])
         gates = int(row["evidence_gate_count"])
 
@@ -194,4 +194,15 @@ def generate_all_satellite_crops(
 
 
 if __name__ == "__main__":
-    generate_all_satellite_crops()
+    import argparse
+    parser = argparse.ArgumentParser(description="Generate satellite crops for candidates")
+    parser.add_argument("--candidates", default="results/candidates/undiscovered_pre600bce_candidates.csv")
+    parser.add_argument("--output-dir", default="results/candidates/satellite_crops")
+    parser.add_argument("--top-n", type=int, default=6)
+    args = parser.parse_args()
+
+    generate_all_satellite_crops(
+        candidates_csv=args.candidates,
+        output_dir=args.output_dir,
+        top_n=args.top_n,
+    )

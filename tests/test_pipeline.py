@@ -431,3 +431,100 @@ def test_generate_discovery_map(tmp_path):
     assert "leaflet" in content
 
 
+def test_subcontinent_macro_basins_bounds():
+    from src.subcontinent_basins import SUBCONTINENT_BASINS, find_macro_basin_for_coordinates
+    assert len(SUBCONTINENT_BASINS) == 6
+    expected_basins = [
+        "ghaggar_hakra_saraswati",
+        "upper_indus_punjab",
+        "lower_indus_sindh_balochistan",
+        "gujarat_kutch_saurashtra",
+        "ganga_yamuna_doab",
+        "central_india_deccan",
+    ]
+    for b in expected_basins:
+        assert b in SUBCONTINENT_BASINS
+        basin = SUBCONTINENT_BASINS[b]
+        assert basin.lat_min < basin.lat_max
+        assert basin.lon_min < basin.lon_max
+        assert len(basin.major_cultural_horizons) > 0
+
+    # Test coordinate lookup
+    b_haryana = find_macro_basin_for_coordinates(29.5, 75.5)
+    assert b_haryana is not None
+    assert b_haryana.basin_id == "ghaggar_hakra_saraswati"
+
+    b_gujarat = find_macro_basin_for_coordinates(23.5, 70.2)
+    assert b_gujarat is not None
+    assert b_gujarat.basin_id == "gujarat_kutch_saurashtra"
+
+
+def test_subcontinent_paleochannels_model():
+    from src.subcontinent_paleochannels import SubcontinentPaleochannelModel
+    model = SubcontinentPaleochannelModel(densify_step_m=1000.0)
+
+    # Test point along Saraswati near Sirsa (29.55, 75.05)
+    dist_km, ch_id, ch_name, b_id = model.query_nearest_paleochannel(29.55, 75.05)
+    assert dist_km < 1.0
+    assert ch_id == "saraswati_ghaggar_trunk"
+    assert b_id == "ghaggar_hakra_saraswati"
+
+    # Test fluvial prior decay
+    prior_close = model.compute_fluvial_prior_score(0.5)
+    prior_far = model.compute_fluvial_prior_score(15.0)
+    assert prior_close > 0.90
+    assert prior_far <= 0.05
+
+
+def test_subcontinent_monuments_spatial_exclusion():
+    from src.subcontinent_known_monuments import SubcontinentKnownMonumentsRegistry
+    registry = SubcontinentKnownMonumentsRegistry(min_exclusion_distance_m=1500.0)
+
+    # Test exact Rakhigarhi monument location (29.2936, 76.0822)
+    is_novel, dist_m, nearest = registry.verify_is_undiscovered(29.2936, 76.0822)
+    assert not is_novel
+    assert dist_m < 50.0
+    assert "Rakhigarhi" in nearest.canonical_name
+
+    # Test point situated 15 km away in rural agriculture
+    is_novel_far, dist_m_far, _ = registry.verify_is_undiscovered(29.5085, 74.8420)
+    assert is_novel_far
+    assert dist_m_far > 10000.0  # >10 km away
+
+
+def test_subcontinent_discovery_engine():
+    from src.subcontinent_discovery_engine import SubcontinentDiscoveryEngine
+    engine = SubcontinentDiscoveryEngine(min_exclusion_distance_m=1500.0)
+    candidates, df = engine.scan_subcontinent()
+
+    assert len(candidates) > 0
+    assert not df.empty
+    # All candidates MUST strictly satisfy unexcavated / novel criterion
+    assert (df["dist_to_known_monument_m"] >= 1500.0).all()
+    # High confidence tier guarantees
+    tier1_cands = [c for c in candidates if "Tier 1" in c.confidence_tier]
+    assert len(tier1_cands) >= 20
+    for c in tier1_cands:
+        assert c.calibrated_probability >= 0.95
+        assert c.evidence_gate_count >= 6
+
+
+def test_generate_subcontinent_map_html(tmp_path):
+    from scripts.generate_subcontinent_map import generate_subcontinent_map_html
+    from src.subcontinent_discovery_engine import SubcontinentDiscoveryEngine
+
+    engine = SubcontinentDiscoveryEngine()
+    _, df = engine.scan_subcontinent()
+    temp_csv = tmp_path / "candidates.csv"
+    df.to_csv(temp_csv, index=False)
+
+    temp_html = tmp_path / "subcontinent_map.html"
+    generate_subcontinent_map_html(temp_csv, temp_html)
+    assert temp_html.exists()
+    content = temp_html.read_text(encoding="utf-8")
+    assert "Pan-Subcontinent Pre-600 BCE Discovery Map" in content
+    assert "Macro-Basin Filter" in content
+    assert "SUBCON_DISCOV_001" in content
+
+
+
