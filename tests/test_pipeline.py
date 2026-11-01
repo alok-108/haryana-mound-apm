@@ -522,9 +522,22 @@ def test_generate_subcontinent_map_html(tmp_path):
     generate_subcontinent_map_html(temp_csv, temp_html)
     assert temp_html.exists()
     content = temp_html.read_text(encoding="utf-8")
-    assert "Pan-Subcontinent Pre-600 BCE Discovery Map" in content
-    assert "Macro-Basin Filter" in content
+    assert "Pan-Subcontinent Pre-600 BCE Archaeological Discovery" in content
+    assert "Archaeologist Field Scanner" in content
     assert "SUBCON_DISCOV_001" in content
+
+
+def test_known_monuments_benchmark_recall():
+    from src.benchmark_known_monuments import KnownMonumentsBenchmarkRunner
+    runner = KnownMonumentsBenchmarkRunner()
+    results, df, stats = runner.run_benchmark()
+
+    assert len(results) >= 40
+    assert not df.empty
+    assert stats["overall_recall_pct"] == 100.0
+    assert stats["missed"] == 0
+    assert stats["mean_calibrated_probability_pct"] >= 95.0
+
 
 
 
