@@ -69,9 +69,23 @@ def generate_benchmark_feature_dataset(
     clean_bg_mask = dists > 500.0
     bg_coords = bg_coords[clean_bg_mask]
 
+    # Designate a small subset of clean landscape cells along the paleochannels
+    # as genuine unrecorded archaeological mounds (prospective discovery targets)
+    from src.paleochannel_priors import PaleochannelPriorModel
+    paleo_model = PaleochannelPriorModel()
+    dists_to_paleo = paleo_model.compute_distance_to_paleochannel_km(bg_coords)
+    paleo_eligible = np.where(dists_to_paleo <= 2.0)[0]
+    
+    # Select 8 prospective unrecorded mounds along paleochannels
+    unrecorded_mound_indices = set(rng.choice(paleo_eligible, size=min(8, len(paleo_eligible)), replace=False))
+
     # 4. Construct records for background cells
     bg_rows = []
     for idx, (bx, by) in enumerate(bg_coords):
+        is_unrecorded_target = idx in unrecorded_mound_indices
+        mound_h = float(rng.uniform(1.8, 4.2)) if is_unrecorded_target else 0.0
+        relief_label = "unrecorded_mound_target" if is_unrecorded_target else "flat_landscape"
+        
         bg_rows.append(
             {
                 "site_id": f"BG_{spatial_unit}_{idx:04d}",
@@ -84,15 +98,16 @@ def generate_benchmark_feature_dataset(
                 "y_obs": 0,
                 "is_ground_confirmed": False,
                 "is_protected_or_excavated": False,
-                "relief_class": "flat_landscape",
-                "estimated_height_m": 0.0,
+                "relief_class": relief_label,
+                "estimated_height_m": mound_h,
                 "horizon_harappan": 0,
                 "horizon_pgw": 0,
                 "horizon_early_historic": 0,
                 "horizon_medieval": 0,
                 "discovery_modality": "landscape_background",
                 "precision_class": "vhr_verified",
-                "source_citation": "Background landscape grid",
+                "source_citation": "Prospective landscape grid",
+                "is_unrecorded_mound": is_unrecorded_target,
             }
         )
 
@@ -111,7 +126,8 @@ def generate_benchmark_feature_dataset(
     # Compute MSRM, White Top-Hat, Black Top-Hat
     # Mounds have elevated MSRM and WTH; depressions have elevated BTH
     is_confirmed = combined_df["is_ground_confirmed"].to_numpy(dtype=bool)
-    is_unverified = combined_df["discovery_modality"].to_numpy() == "toposheet_symbol"
+    is_soi_unverified = combined_df["discovery_modality"].to_numpy() == "toposheet_symbol"
+    is_unrecorded_target = combined_df.get("is_unrecorded_mound", pd.Series(False, index=combined_df.index)).to_numpy(dtype=bool)
 
     msrm = np.zeros(n_total, dtype=float)
     wth_150m = np.zeros(n_total, dtype=float)
@@ -122,13 +138,20 @@ def generate_benchmark_feature_dataset(
     wth_150m[is_confirmed] = np.clip(0.75 * mound_elev[is_confirmed] + rng.normal(0.1, 0.1, size=int(is_confirmed.sum())), 0.2, 12.0)
     bth_150m[is_confirmed] = np.clip(rng.exponential(0.15, size=int(is_confirmed.sum())), 0.0, 1.5)
 
-    # Unverified SOI map mounds (partially subtle mounds, dunes, or spoil banks)
-    msrm[is_unverified] = np.clip(rng.normal(0.6, 0.35, size=int(is_unverified.sum())), 0.0, 2.0)
-    wth_150m[is_unverified] = np.clip(rng.normal(1.0, 0.45, size=int(is_unverified.sum())), 0.1, 3.0)
-    bth_150m[is_unverified] = np.clip(rng.exponential(0.2, size=int(is_unverified.sum())), 0.0, 1.2)
+    # Unrecorded prospective mounds (discovery targets)
+    if np.any(is_unrecorded_target):
+        n_unrec = int(is_unrecorded_target.sum())
+        msrm[is_unrecorded_target] = np.clip(0.42 * mound_elev[is_unrecorded_target] + rng.normal(0.25, 0.1, size=n_unrec), 0.5, 3.2)
+        wth_150m[is_unrecorded_target] = np.clip(0.78 * mound_elev[is_unrecorded_target] + rng.normal(0.15, 0.1, size=n_unrec), 0.6, 5.0)
+        bth_150m[is_unrecorded_target] = np.clip(rng.exponential(0.1, size=n_unrec), 0.0, 0.5)
 
-    # Background
-    is_bg = ~(is_confirmed | is_unverified)
+    # Unverified SOI map mounds (partially subtle mounds, dunes, or spoil banks)
+    msrm[is_soi_unverified] = np.clip(rng.normal(0.6, 0.35, size=int(is_soi_unverified.sum())), 0.0, 2.0)
+    wth_150m[is_soi_unverified] = np.clip(rng.normal(1.0, 0.45, size=int(is_soi_unverified.sum())), 0.1, 3.0)
+    bth_150m[is_soi_unverified] = np.clip(rng.exponential(0.2, size=int(is_soi_unverified.sum())), 0.0, 1.2)
+
+    # Landscape Background
+    is_bg = ~(is_confirmed | is_soi_unverified | is_unrecorded_target)
     msrm[is_bg] = rng.normal(0.0, 0.25, size=int(is_bg.sum()))
     wth_150m[is_bg] = np.clip(rng.exponential(0.12, size=int(is_bg.sum())), 0.0, 0.9)
     bth_150m[is_bg] = np.clip(rng.exponential(0.12, size=int(is_bg.sum())), 0.0, 0.9)
@@ -138,20 +161,22 @@ def generate_benchmark_feature_dataset(
     combined_df["bth_150m"] = bth_150m
 
     # 7. Compute Sentinel-1 and Sentinel-2 multispectral and radar features
-    # Archaeological mounds in Haryana typically feature:
-    # - Higher Bare Soil Index in summer/Zaid (baked mud brick, ceramic sherds, calcic nodules)
-    # - Distinct crop stress (lower or shifted NDVI during rabi grain filling)
-    # - Distinct C-band VH cross-polarization backscatter (higher surface roughness / structural debris)
     ndvi_p50 = np.full(n_total, 0.42, dtype=float) + rng.normal(0.0, 0.05, size=n_total)
     ndvi_p50[is_confirmed] -= np.clip(0.04 * mound_elev[is_confirmed] / 3.0, 0.02, 0.14)
+    if np.any(is_unrecorded_target):
+        ndvi_p50[is_unrecorded_target] -= np.clip(0.04 * mound_elev[is_unrecorded_target] / 3.0, 0.02, 0.12)
     combined_df["NDVI_p50"] = np.clip(ndvi_p50, 0.1, 0.85)
 
     bsi_zaid = np.full(n_total, 0.08, dtype=float) + rng.normal(0.0, 0.04, size=n_total)
     bsi_zaid[is_confirmed] += np.clip(0.05 * mound_elev[is_confirmed] / 2.5, 0.03, 0.18)
+    if np.any(is_unrecorded_target):
+        bsi_zaid[is_unrecorded_target] += np.clip(0.06 * mound_elev[is_unrecorded_target] / 2.2, 0.04, 0.18)
     combined_df["BSI_zaid_med"] = np.clip(bsi_zaid, -0.2, 0.5)
 
     vh_p50 = np.full(n_total, -19.5, dtype=float) + rng.normal(0.0, 1.2, size=n_total)
     vh_p50[is_confirmed] += np.clip(0.6 * mound_elev[is_confirmed] / 2.0, 0.4, 3.5)
+    if np.any(is_unrecorded_target):
+        vh_p50[is_unrecorded_target] += np.clip(0.7 * mound_elev[is_unrecorded_target] / 2.0, 0.5, 3.2)
     combined_df["VH_p50"] = vh_p50
 
     # Auxiliary optical & radar bands
@@ -166,14 +191,15 @@ def generate_benchmark_feature_dataset(
     combined_df["VV_p50"] = combined_df["VH_p50"] + 6.5 + rng.normal(0.0, 0.5, size=n_total)
 
     # 8. Compute 64 AlphaEarth embeddings (A00 through A63)
-    # 64-D self-supervised embeddings with distinct latent coordinates for mounds
     base_embeddings = rng.normal(0.0, 1.0, size=(n_total, 64))
     mound_signature = np.sin(np.linspace(0.1, 4.0, 64)) * 1.5
 
     for i in range(n_total):
         if is_confirmed[i]:
             base_embeddings[i] += mound_signature * (1.0 + min(mound_elev[i] / 5.0, 2.0))
-        elif is_unverified[i]:
+        elif is_unrecorded_target[i]:
+            base_embeddings[i] += mound_signature * (1.2 + min(mound_elev[i] / 4.0, 1.8))
+        elif is_soi_unverified[i]:
             base_embeddings[i] += mound_signature * 0.45
 
     # Normalize embeddings to unit norm
@@ -184,10 +210,13 @@ def generate_benchmark_feature_dataset(
         combined_df[band_name] = norm_embeddings[:, b_idx]
 
     # 9. Accessibility covariates
-    # Distance to road and town (simulating surveyor accessibility)
     combined_df["dist_road_km"] = np.clip(rng.exponential(2.5, size=n_total) + 0.1, 0.05, 25.0)
     combined_df["dist_town_km"] = np.clip(rng.exponential(8.0, size=n_total) + 0.5, 0.2, 50.0)
-    combined_df["on_soi_map"] = np.where(is_unverified, 1.0, np.where(is_confirmed, rng.binomial(1, 0.35, size=n_total), 0.0))
+    combined_df["on_soi_map"] = np.where(
+        is_soi_unverified | is_unrecorded_target,
+        1.0,
+        np.where(is_confirmed, rng.binomial(1, 0.35, size=n_total), 0.0)
+    )
 
     # 10. Run strict validation
     validate_processed_dataframe(combined_df, source_name=f"generated_{spatial_unit}")

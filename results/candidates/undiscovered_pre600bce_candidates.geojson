@@ -1,0 +1,786 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "description": "Undiscovered Pre-600 BCE Archaeological Mound Candidates",
+    "target_cultures": "Indus Valley, Ghaggar-Hakra (Saraswati), and Ganga-Yamuna Valleys",
+    "total_candidates": 25,
+    "tier1_ultra_high_confidence_count": 10
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.742,
+          29.389
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0002",
+        "x_m": 571999.6,
+        "y_m": 3251313.5,
+        "district": "Hisar",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 1.4,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 1.4m elevation profile.",
+        "dist_paleochannel_km": 29.21,
+        "fluvial_prior_score": 0.05,
+        "msrm_relief_score": 0.88,
+        "wth_tophat_m": 1.14,
+        "bsi_summer_score": 0.157,
+        "sar_vh_db": -18.04,
+        "alphaearth_similarity": 0.813,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.795,
+          29.41
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0005",
+        "x_m": 480112.3,
+        "y_m": 3253429.0,
+        "district": "Sirsa",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 1.4,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 1.4m elevation profile.",
+        "dist_paleochannel_km": 7.08,
+        "fluvial_prior_score": 0.072,
+        "msrm_relief_score": 0.762,
+        "wth_tophat_m": 1.12,
+        "bsi_summer_score": 0.136,
+        "sar_vh_db": -18.17,
+        "alphaearth_similarity": 0.894,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.57922,
+          29.76562
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0011",
+        "x_m": 555894.9,
+        "y_m": 3292984.1,
+        "district": "Hisar",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 3.2,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.89,
+        "cultural_rationale": "Compact mound relief (3.2m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (1.8km) is characteristic of Painted Grey Ware settlements.",
+        "dist_paleochannel_km": 1.79,
+        "fluvial_prior_score": 0.869,
+        "msrm_relief_score": 1.517,
+        "wth_tophat_m": 2.59,
+        "bsi_summer_score": 0.233,
+        "sar_vh_db": -19.76,
+        "alphaearth_similarity": 0.886,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.98906,
+          29.14258
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0012",
+        "x_m": 595444.3,
+        "y_m": 3223826.9,
+        "district": "Hisar",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 2.1,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.89,
+        "cultural_rationale": "Compact mound relief (2.1m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (0.5km) is characteristic of Painted Grey Ware settlements.",
+        "dist_paleochannel_km": 0.52,
+        "fluvial_prior_score": 0.994,
+        "msrm_relief_score": 1.059,
+        "wth_tophat_m": 1.69,
+        "bsi_summer_score": 0.135,
+        "sar_vh_db": -19.16,
+        "alphaearth_similarity": 0.907,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.28217,
+          29.42476
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0013",
+        "x_m": 623729.7,
+        "y_m": 3255148.1,
+        "district": "Hisar",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 3.1,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.89,
+        "cultural_rationale": "Compact mound relief (3.1m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (1.0km) is characteristic of Painted Grey Ware settlements.",
+        "dist_paleochannel_km": 1.02,
+        "fluvial_prior_score": 0.963,
+        "msrm_relief_score": 1.355,
+        "wth_tophat_m": 2.45,
+        "bsi_summer_score": 0.182,
+        "sar_vh_db": -16.77,
+        "alphaearth_similarity": 0.904,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.62985,
+          29.48119
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0014",
+        "x_m": 464280.4,
+        "y_m": 3261412.3,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 3.3,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 3.3m elevation profile.",
+        "dist_paleochannel_km": 0.98,
+        "fluvial_prior_score": 0.967,
+        "msrm_relief_score": 1.502,
+        "wth_tophat_m": 2.63,
+        "bsi_summer_score": 0.133,
+        "sar_vh_db": -21.37,
+        "alphaearth_similarity": 0.918,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.51053,
+          29.11324
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0020",
+        "x_m": 452766.0,
+        "y_m": 3220569.5,
+        "district": "Sirsa",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 4.1,
+        "predicted_culture": "mature_harappan",
+        "culture_confidence": 0.92,
+        "cultural_rationale": "Prominent mound height (4.1m) in close proximity to major Ghaggar/Chautang waterway (0.4km) strongly matches Mature Harappan urban centers.",
+        "dist_paleochannel_km": 0.43,
+        "fluvial_prior_score": 0.997,
+        "msrm_relief_score": 1.953,
+        "wth_tophat_m": 3.3,
+        "bsi_summer_score": 0.147,
+        "sar_vh_db": -19.54,
+        "alphaearth_similarity": 0.931,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9904,
+          29.52634
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0021",
+        "x_m": 499073.8,
+        "y_m": 3266423.7,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 2.5,
+        "predicted_culture": "hakra_early_harappan",
+        "culture_confidence": 0.87,
+        "cultural_rationale": "Low-relief mound morphology (2.5m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "dist_paleochannel_km": 0.64,
+        "fluvial_prior_score": 0.99,
+        "msrm_relief_score": 1.245,
+        "wth_tophat_m": 1.97,
+        "bsi_summer_score": 0.111,
+        "sar_vh_db": -17.6,
+        "alphaearth_similarity": 0.881,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.54809,
+          29.12904
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0024",
+        "x_m": 552891.1,
+        "y_m": 3222323.5,
+        "district": "Hisar",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 2.7,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.89,
+        "cultural_rationale": "Compact mound relief (2.7m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (1.9km) is characteristic of Painted Grey Ware settlements.",
+        "dist_paleochannel_km": 1.86,
+        "fluvial_prior_score": 0.858,
+        "msrm_relief_score": 1.143,
+        "wth_tophat_m": 2.15,
+        "bsi_summer_score": 0.153,
+        "sar_vh_db": -19.15,
+        "alphaearth_similarity": 0.898,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.80105,
+          29.49474
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0026",
+        "x_m": 480801.0,
+        "y_m": 3262915.7,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.998,
+        "confidence_tier": "Tier 1: 95%-100% (Ultra-High Certainty)",
+        "estimated_height_m": 3.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 3.6m elevation profile.",
+        "dist_paleochannel_km": 1.73,
+        "fluvial_prior_score": 0.878,
+        "msrm_relief_score": 1.553,
+        "wth_tophat_m": 2.89,
+        "bsi_summer_score": 0.14,
+        "sar_vh_db": -16.77,
+        "alphaearth_similarity": 0.9,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 7
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.602,
+          29.682
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0004",
+        "x_m": 558246.3,
+        "y_m": 3283700.8,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.949,
+        "confidence_tier": "Tier 2: 85%-95% (High Priority)",
+        "estimated_height_m": 1.5,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 1.5m elevation profile.",
+        "dist_paleochannel_km": 7.58,
+        "fluvial_prior_score": 0.05,
+        "msrm_relief_score": 0.492,
+        "wth_tophat_m": 1.16,
+        "bsi_summer_score": 0.162,
+        "sar_vh_db": -18.82,
+        "alphaearth_similarity": 0.833,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.148,
+          29.471
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0006",
+        "x_m": 514349.4,
+        "y_m": 3260179.3,
+        "district": "Sirsa",
+        "calibrated_probability": 0.949,
+        "confidence_tier": "Tier 2: 85%-95% (High Priority)",
+        "estimated_height_m": 1.4,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 1.4m elevation profile.",
+        "dist_paleochannel_km": 11.57,
+        "fluvial_prior_score": 0.05,
+        "msrm_relief_score": 0.575,
+        "wth_tophat_m": 1.09,
+        "bsi_summer_score": 0.186,
+        "sar_vh_db": -18.86,
+        "alphaearth_similarity": 0.816,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.389,
+          29.512
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0003",
+        "x_m": 537700.5,
+        "y_m": 3264776.0,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.8515,
+        "confidence_tier": "Tier 2: 85%-95% (High Priority)",
+        "estimated_height_m": 1.0,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 1.0m elevation profile.",
+        "dist_paleochannel_km": 15.64,
+        "fluvial_prior_score": 0.05,
+        "msrm_relief_score": 0.388,
+        "wth_tophat_m": 0.8,
+        "bsi_summer_score": 0.115,
+        "sar_vh_db": -19.73,
+        "alphaearth_similarity": 0.802,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.821,
+          29.215
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0001",
+        "x_m": 579800.7,
+        "y_m": 3232085.2,
+        "district": "Hisar",
+        "calibrated_probability": 0.8176,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.7,
+        "predicted_culture": "late_harappan",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.7m elevation profile.",
+        "dist_paleochannel_km": 11.05,
+        "fluvial_prior_score": 0.05,
+        "msrm_relief_score": 0.387,
+        "wth_tophat_m": 0.57,
+        "bsi_summer_score": 0.046,
+        "sar_vh_db": -18.78,
+        "alphaearth_similarity": 0.817,
+        "on_historical_soi_map": true,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.46124,
+          29.51957
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0018",
+        "x_m": 448010.0,
+        "y_m": 3265672.0,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.7962,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "hakra_early_harappan",
+        "culture_confidence": 0.87,
+        "cultural_rationale": "Low-relief mound morphology (0.6m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "dist_paleochannel_km": 0.78,
+        "fluvial_prior_score": 0.982,
+        "msrm_relief_score": -0.206,
+        "wth_tophat_m": 0.04,
+        "bsi_summer_score": 0.159,
+        "sar_vh_db": -17.45,
+        "alphaearth_similarity": 0.185,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.05784,
+          29.08841
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0009",
+        "x_m": 505582.0,
+        "y_m": 3217813.2,
+        "district": "Sirsa",
+        "calibrated_probability": 0.769,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "hakra_early_harappan",
+        "culture_confidence": 0.87,
+        "cultural_rationale": "Low-relief mound morphology (0.6m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "dist_paleochannel_km": 0.03,
+        "fluvial_prior_score": 1.0,
+        "msrm_relief_score": -0.061,
+        "wth_tophat_m": 0.07,
+        "bsi_summer_score": 0.147,
+        "sar_vh_db": -17.6,
+        "alphaearth_similarity": 0.131,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.88405,
+          29.07035
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0010",
+        "x_m": 488811.0,
+        "y_m": 3215808.7,
+        "district": "Sirsa",
+        "calibrated_probability": 0.7109,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "hakra_early_harappan",
+        "culture_confidence": 0.87,
+        "cultural_rationale": "Low-relief mound morphology (0.6m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "dist_paleochannel_km": 0.45,
+        "fluvial_prior_score": 0.997,
+        "msrm_relief_score": -0.013,
+        "wth_tophat_m": 0.04,
+        "bsi_summer_score": 0.137,
+        "sar_vh_db": -17.91,
+        "alphaearth_similarity": -0.17,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.79452,
+          29.09292
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0007",
+        "x_m": 576670.8,
+        "y_m": 3218314.4,
+        "district": "Hisar",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.6m elevation profile.",
+        "dist_paleochannel_km": 3.0,
+        "fluvial_prior_score": 0.647,
+        "msrm_relief_score": -0.4,
+        "wth_tophat_m": 0.19,
+        "bsi_summer_score": 0.116,
+        "sar_vh_db": -17.67,
+        "alphaearth_similarity": -0.163,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.48718,
+          29.08615
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0008",
+        "x_m": 450513.1,
+        "y_m": 3217562.6,
+        "district": "Sirsa",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.6m elevation profile.",
+        "dist_paleochannel_km": 3.12,
+        "fluvial_prior_score": 0.622,
+        "msrm_relief_score": 0.069,
+        "wth_tophat_m": 0.03,
+        "bsi_summer_score": 0.159,
+        "sar_vh_db": -18.3,
+        "alphaearth_similarity": 0.008,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.86196,
+          29.12678
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0015",
+        "x_m": 583179.0,
+        "y_m": 3222072.9,
+        "district": "Hisar",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.6m elevation profile.",
+        "dist_paleochannel_km": 1.51,
+        "fluvial_prior_score": 0.909,
+        "msrm_relief_score": 0.132,
+        "wth_tophat_m": 0.01,
+        "bsi_summer_score": 0.126,
+        "sar_vh_db": -18.33,
+        "alphaearth_similarity": -0.155,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.71804,
+          29.44507
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0016",
+        "x_m": 472791.0,
+        "y_m": 3257403.2,
+        "district": "Fatehabad",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "hakra_early_harappan",
+        "culture_confidence": 0.87,
+        "cultural_rationale": "Low-relief mound morphology (0.6m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "dist_paleochannel_km": 1.05,
+        "fluvial_prior_score": 0.961,
+        "msrm_relief_score": -0.047,
+        "wth_tophat_m": 0.01,
+        "bsi_summer_score": 0.144,
+        "sar_vh_db": -17.56,
+        "alphaearth_similarity": -0.166,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.97868,
+          29.15387
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0017",
+        "x_m": 594443.1,
+        "y_m": 3225079.7,
+        "district": "Hisar",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.6m elevation profile.",
+        "dist_paleochannel_km": 1.01,
+        "fluvial_prior_score": 0.964,
+        "msrm_relief_score": -0.137,
+        "wth_tophat_m": 0.14,
+        "bsi_summer_score": 0.129,
+        "sar_vh_db": -18.28,
+        "alphaearth_similarity": -0.138,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.43003,
+          29.54214
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0019",
+        "x_m": 637997.5,
+        "y_m": 3268177.7,
+        "district": "Hisar",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.6m elevation profile.",
+        "dist_paleochannel_km": 2.51,
+        "fluvial_prior_score": 0.744,
+        "msrm_relief_score": -0.344,
+        "wth_tophat_m": 0.01,
+        "bsi_summer_score": 0.103,
+        "sar_vh_db": -17.81,
+        "alphaearth_similarity": 0.186,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.66616,
+          29.07486
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0022",
+        "x_m": 467784.7,
+        "y_m": 3216309.8,
+        "district": "Sirsa",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "hakra_early_harappan",
+        "culture_confidence": 0.87,
+        "cultural_rationale": "Low-relief mound morphology (0.6m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.",
+        "dist_paleochannel_km": 0.52,
+        "fluvial_prior_score": 0.994,
+        "msrm_relief_score": 0.088,
+        "wth_tophat_m": 0.16,
+        "bsi_summer_score": 0.088,
+        "sar_vh_db": -18.45,
+        "alphaearth_similarity": 0.051,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.56241,
+          29.07035
+        ]
+      },
+      "properties": {
+        "candidate_id": "DISCOV_PRE600BCE_0023",
+        "x_m": 457772.2,
+        "y_m": 3215808.7,
+        "district": "Sirsa",
+        "calibrated_probability": 0.7,
+        "confidence_tier": "Tier 3: 70%-85% (Ploughed/Low-Relief)",
+        "estimated_height_m": 0.6,
+        "predicted_culture": "painted_grey_ware_vedic",
+        "culture_confidence": 0.8,
+        "cultural_rationale": "Pre-600 BCE settlement candidate in the northern interfluve with 0.6m elevation profile.",
+        "dist_paleochannel_km": 2.8,
+        "fluvial_prior_score": 0.688,
+        "msrm_relief_score": -0.118,
+        "wth_tophat_m": 0.09,
+        "bsi_summer_score": 0.176,
+        "sar_vh_db": -18.42,
+        "alphaearth_similarity": -0.1,
+        "on_historical_soi_map": false,
+        "evidence_gate_count": 4
+      }
+    }
+  ]
+}

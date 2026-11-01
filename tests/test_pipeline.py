@@ -370,3 +370,64 @@ def test_visualization_suite(tmp_path):
     plot_public_obfuscated_map(df_map, output_path=p_map)
     assert p_map.exists()
 
+
+def test_pre600bce_cultures_inference():
+    from src.pre600bce_cultures import CULTURE_PROFILES, infer_likely_pre600bce_culture
+    assert len(CULTURE_PROFILES) >= 5
+    assert "mature_harappan" in CULTURE_PROFILES
+    assert "painted_grey_ware_vedic" in CULTURE_PROFILES
+
+    # Test Rakhigarhi-scale prominent mound near Drishadvati paleochannel
+    cult, conf, rat = infer_likely_pre600bce_culture(
+        latitude=29.28, longitude=76.06, estimated_height_m=8.5, dist_paleochannel_km=0.5, bsi_score=0.18
+    )
+    assert cult == "mature_harappan"
+    assert conf >= 0.90
+
+
+def test_paleochannel_priors_model():
+    from src.paleochannel_priors import PaleochannelPriorModel
+    model = PaleochannelPriorModel()
+    
+    # Rakhigarhi UTM43N coordinates (~603785, 3240390)
+    coords = np.array([[603785.0, 3240390.0]])
+    dists = model.compute_distance_to_paleochannel_km(coords)
+    priors = model.compute_fluvial_settlement_prior(coords)
+    assert dists[0] < 1.5
+    assert priors[0] > 0.90
+
+
+def test_discovery_engine_orthogonal_gating(tmp_path):
+    from src.discovery_engine import Pre600BCEDiscoveryEngine
+    from src.feature_generator import generate_benchmark_feature_dataset
+
+    df = generate_benchmark_feature_dataset(spatial_unit="patch_250m", n_background_samples=250, random_state=42)
+    engine = Pre600BCEDiscoveryEngine(tier3_threshold=0.70)
+    cands, cdf = engine.scan_for_undiscovered_sites(df, top_k=15)
+    assert len(cands) > 0
+    assert not cdf.empty
+    assert "calibrated_probability" in cdf.columns
+    assert (cdf["calibrated_probability"] >= 0.70).all()
+
+    csv_p, geo_p = engine.export_candidates(cdf, output_dir=tmp_path)
+    assert csv_p.exists()
+    assert geo_p.exists()
+
+
+def test_generate_discovery_map(tmp_path):
+    from scripts.generate_discovery_map import build_interactive_map_html
+    from src.discovery_engine import Pre600BCEDiscoveryEngine
+    from src.feature_generator import generate_benchmark_feature_dataset
+
+    df = generate_benchmark_feature_dataset(spatial_unit="patch_250m", n_background_samples=150, random_state=42)
+    engine = Pre600BCEDiscoveryEngine(tier3_threshold=0.70)
+    _, cdf = engine.scan_for_undiscovered_sites(df, top_k=10)
+
+    out_html = tmp_path / "map.html"
+    build_interactive_map_html(cdf, out_html)
+    assert out_html.exists()
+    content = out_html.read_text(encoding="utf-8")
+    assert "Pre-600 BCE Discovery Map" in content
+    assert "leaflet" in content
+
+
