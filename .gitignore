@@ -12,3 +12,7 @@ data/processed/*
 *.parquet
 *.zip
 .vscode/
+dist/
+build/
+*.egg-info/
+
