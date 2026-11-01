@@ -13,6 +13,14 @@ import socket
 import sys
 import webbrowser
 
+# Ensure utf-8 stdout on Windows
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 # Ensure repository root is on sys.path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
@@ -39,7 +47,7 @@ def main() -> None:
     server_address = ("0.0.0.0", port)
 
     print("=" * 85)
-    print("🛰️  PAN-SUBCONTINENT PRE-600 BCE ARCHAEOLOGICAL DISCOVERY SERVER (LIVE APM BACKEND)")
+    print("PAN-SUBCONTINENT PRE-600 BCE ARCHAEOLOGICAL DISCOVERY SERVER (LIVE APM BACKEND)")
     print("=" * 85)
     print(f"[*] Initializing in-memory spatial indexes (KDTree) & paleochannel networks...")
     print(f"[*] Server listening on:  http://localhost:{port}/")
