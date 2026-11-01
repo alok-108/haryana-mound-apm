@@ -539,5 +539,77 @@ def test_known_monuments_benchmark_recall():
     assert stats["mean_calibrated_probability_pct"] >= 95.0
 
 
+def test_web_server_api_endpoints():
+    import threading
+    import time
+    import requests
+    from src.web_server import ArchaeologicalAPMServer, ArchaeologicalHTTPHandler, ThreadingHTTPServer
+
+    # Test server core logic
+    server = ArchaeologicalAPMServer()
+
+    # 1. Test novel point
+    res_novel = server.evaluate_coordinate(29.5085, 74.8420)
+    assert res_novel["is_undiscovered"] is True
+    assert res_novel["is_known_monument"] is False
+    assert res_novel["calibrated_probability"] >= 0.90
+    assert "🌟 100% NEW" in res_novel["status_label"]
+
+    # 2. Test known monument point (Rakhigarhi)
+    res_known = server.evaluate_coordinate(29.2936, 76.0822)
+    assert res_known["is_undiscovered"] is False
+    assert res_known["is_known_monument"] is True
+    assert "Rakhigarhi" in res_known["nearest_known_monument"]
+    assert "🏛️ ALREADY DISCOVERED" in res_known["status_label"]
+
+    # 3. Test viewport scan
+    v_res = server.scan_viewport(28.0, 31.0, 74.0, 77.0)
+    assert v_res["undiscovered_count"] > 0
+    assert v_res["known_monuments_count"] > 0
+
+    # 4. Spin up real HTTP server on ephemeral port and test REST API
+    httpd = ThreadingHTTPServer(("127.0.0.1", 0), ArchaeologicalHTTPHandler)
+    port = httpd.server_address[1]
+    thread = threading.Thread(target=httpd.serve_forever, daemon=True)
+    thread.start()
+
+    try:
+        base_url = f"http://127.0.0.1:{port}"
+
+        # Status endpoint
+        r_status = requests.get(f"{base_url}/api/status", timeout=5)
+        assert r_status.status_code == 200
+        assert r_status.json()["status"] == "online"
+
+        # Point scan endpoint (novel)
+        r_scan = requests.get(f"{base_url}/api/scan?lat=29.5085&lon=74.8420", timeout=5)
+        assert r_scan.status_code == 200
+        assert r_scan.json()["is_undiscovered"] is True
+
+        # Point scan endpoint (known)
+        r_known = requests.get(f"{base_url}/api/scan?lat=29.2936&lon=76.0822", timeout=5)
+        assert r_known.status_code == 200
+        assert r_known.json()["is_known_monument"] is True
+
+        # Viewport endpoint
+        r_vp = requests.get(f"{base_url}/api/scan_viewport?min_lat=28&max_lat=31&min_lon=74&max_lon=77", timeout=5)
+        assert r_vp.status_code == 200
+        assert "undiscovered_count" in r_vp.json()
+
+        # Benchmark endpoint
+        r_bench = requests.get(f"{base_url}/api/benchmark", timeout=5)
+        assert r_bench.status_code == 200
+        assert r_bench.json()["statistics"]["overall_recall_pct"] == 100.0
+
+        # Map HTML serving
+        r_map = requests.get(f"{base_url}/map", timeout=5)
+        assert r_map.status_code == 200
+        assert "Pan-Subcontinent Pre-600 BCE Archaeological Discovery" in r_map.text
+    finally:
+        httpd.shutdown()
+        httpd.server_close()
+
+
+
 
 
