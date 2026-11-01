@@ -314,3 +314,59 @@ def test_patch250m_and_h3_dual_spatial_units():
     # 7 tracks x 2 CV schemes x 2 spatial units = 28 rows
     assert len(combined_summary) == 28
     assert set(combined_summary["spatial_unit"]) == {"h3_res8", "patch_250m"}
+
+
+def test_public_data_curator_canonical_sites():
+    from src.public_data_curator import build_canonical_sites_dataframe, wgs84_to_utm43n
+    df = build_canonical_sites_dataframe(include_unverified=True)
+    assert len(df) == 30
+    assert set(df["district"]).issubset({"Hisar", "Fatehabad", "Sirsa"})
+    
+    # Check bounds
+    assert (df["x_m"] >= 400000.0).all() and (df["x_m"] <= 700000.0).all()
+    assert (df["y_m"] >= 3150000.0).all() and (df["y_m"] <= 3350000.0).all()
+
+    df_roles = assign_sample_roles(df)
+    counts = df_roles["sample_role"].value_counts().to_dict()
+    assert counts["train_positive"] == 15
+    assert counts["eval_protected_positive"] == 9
+    assert counts["unverified_map_mound"] == 6
+
+
+def test_feature_generator_schema_compliance(tmp_path):
+    from src.feature_generator import generate_benchmark_feature_dataset
+    df = generate_benchmark_feature_dataset(spatial_unit="patch_250m", n_background_samples=150, random_state=42)
+    assert len(df) > 150
+    # Must pass strict schema validator without raising
+    validated = validate_processed_dataframe(df, source_name="test_patch")
+    assert not validated.empty
+
+
+def test_visualization_suite(tmp_path):
+    from src.visualization import (
+        plot_empirical_variogram,
+        plot_aoa_dissimilarity_distribution,
+        plot_public_obfuscated_map,
+    )
+    rng = np.random.default_rng(42)
+    coords = rng.uniform(500000, 550000, size=(100, 2))
+    feats = rng.normal(0, 1, size=(100, 10))
+
+    p_var = tmp_path / "var.png"
+    rg = plot_empirical_variogram(coords, feats, output_path=p_var)
+    assert p_var.exists()
+    assert rg > 0.0
+
+    p_aoa = tmp_path / "aoa.png"
+    plot_aoa_dissimilarity_distribution(rng.exponential(1.0, size=100), threshold=1.5, output_path=p_aoa)
+    assert p_aoa.exists()
+
+    df_map = pd.DataFrame({
+        "x_m": coords[:, 0],
+        "y_m": coords[:, 1],
+        "msrm": rng.normal(0, 1, size=100),
+    })
+    p_map = tmp_path / "map.png"
+    plot_public_obfuscated_map(df_map, output_path=p_map)
+    assert p_map.exists()
+

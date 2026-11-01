@@ -183,6 +183,10 @@ def evaluate_benchmark_tracks(
                 oof_scores[eval_mask], y_eval_confirmed[eval_mask], [1.0, 2.0, 5.0, 10.0]
             )
             metrics["track"] = track_name
+            metrics["track_id"] = track_name.split("_")[0]
+            metrics["model_name"] = model_key
+            metrics["feature_modality"] = feat_key
+            metrics["propensity_adjusted"] = bool(use_weights)
             metrics["spatial_unit"] = spatial_unit
             metrics["cv_scheme"] = split_scheme
             metrics["aoa_retention_pct"] = float(np.mean(oof_aoa[eval_mask]) * 100.0)

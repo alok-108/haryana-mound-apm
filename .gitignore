@@ -6,6 +6,7 @@ __pycache__/
 htmlcov/
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/public_ground_truth_sites.csv
 data/processed/*
 !data/processed/.gitkeep
 *.parquet
