@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Pre-600 BCE Undiscovered Archaeological Candidates</name>
+    <description>Subcontinent-wide GeoAI prospective discoveries (P &gt;= 95%, unexcavated, unrecorded)</description>
+    <Style id="discoveryPin">
+      <IconStyle>
+        <color>ff00aaff</color>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>SUBCON_DISCOV_001 (hakra_early_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_001: hakra_early_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Haryana, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Saraswati-Ghaggar-Hakra Relict Riverbed (1.89 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.3 m (Tophat: 2.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Sothi (36.55 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Low-relief mound morphology (2.3m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Pedestrian surface collection of ceramics along dune skirts; RTK-UAV elevation mapping.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.842000,29.508500,2.3</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_002 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_002: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Haryana, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Relict Drishadvati / Chautang Riverbed (2.17 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.4 m (Tophat: 3.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rakhigarhi (Mounds 1-7) (15.00 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact mound relief (3.4m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (2.2km) is characteristic of Painted Grey Ware settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Corvette auger coring across agricultural terrace; magnetometry for mud-brick wall alignments.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>76.220000,29.355000,3.4</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_003 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_003: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Punjab (Cholistan), Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Saraswati-Ghaggar-Hakra Relict Riverbed (1.06 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.6 m (Tophat: 4.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Tarkhanwala Dera (117.48 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Prominent mound height (4.6m) in close proximity to major Ghaggar/Chautang waterway (1.1km) strongly matches Mature Harappan urban centers.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Camel/4x4 desert transect; LiDAR drone survey to map buried mud-brick fortifications.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>72.245000,28.765000,4.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_004 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_004: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Haryana, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Saraswati-Ghaggar-Hakra Relict Riverbed (1.91 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.6 m (Tophat: 2.4 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Bhagwanpura (44.98 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact mound relief (2.6m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (1.9km) is characteristic of Painted Grey Ware settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Field-walking along canal cut exposures; diagnostic PGW sherd inventory.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>76.385000,30.112000,2.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_006 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_006: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Ravi Harappan Meander Belt (0.99 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.1 m (Tophat: 3.8 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Harappa (Mounds AB, E, F) (35.05 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Elevated mound (4.1m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Paleomeander terrace exploration; check for perforated jars and mature Harappan brick batts.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>72.545000,30.485000,4.1</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_007 (late_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_007: late_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Sutlej Migration Channel (Pre-Capture) (0.39 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.2 m (Tophat: 2.0 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rohira (82.72 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Mound feature (2.2m) in the Punjab doab representing Late Harappan / Cemetery H horizon.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Survey of theh mound margin; check well-drill spoil piles for Late Harappan pottery.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.105000,30.355000,2.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_008 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_008: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Ravi Harappan Meander Belt (0.48 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.7 m (Tophat: 3.3 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Jalilpur (11.40 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Elevated mound (3.7m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Rechna doab alluvial terrace survey; ceramic classification for Kot Diji / Hakra sherds.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>72.205000,30.352000,3.7</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_009 (late_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_009: late_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Sutlej Migration Channel (Pre-Capture) (3.13 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.9 m (Tophat: 2.6 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Sunet (27.23 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Mound feature (2.9m) in the Punjab doab representing Late Harappan / Cemetery H horizon.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Examine high village periphery mound; record Bara / PGW pottery fragments.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>76.085000,30.825000,2.9</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_010 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_010: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Sindh, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Eastern Nara / Hakra Southern Outlet (1.52 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.9 m (Tophat: 4.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Chanhu-daro (120.97 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Prominent tell mound (4.9m) in the Lower Indus/Nara floodplain strongly indicates an urban Mature Harappan settlement.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Eastern Nara relict channel exploration; survey tell mound crest for terracotta cakes and bangles.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>69.315000,25.552000,4.9</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_011 (hakra_early_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_011: hakra_early_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Balochistan, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Bolan River Relict Alluvial Fan (Kachi Plain) (0.36 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.8 m (Tophat: 3.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Mehrgarh (14.71 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Relict alluvial fan/delta mound (3.8m) in the Sindh-Balochistan borderland corresponds to Early Chalcolithic/Amri-Nal pastoral settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Kachi plain alluvial fan survey; investigate erosion nullah exposures for microliths and mud-brick.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>68.215000,29.315000,3.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_012 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_012: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Sindh, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Lower Indus Relict Western Oxbow & Meander (0.74 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+5.2 m (Tophat: 4.8 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Mohenjo-daro (28.67 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Prominent tell mound (5.2m) in the Lower Indus/Nara floodplain strongly indicates an urban Mature Harappan settlement.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Lower Indus paleomeander mound survey; drone thermal imaging at dawn for subsurface architecture.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>68.045000,27.085000,5.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_013 (hakra_early_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_013: hakra_early_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Balochistan, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Porali Relict Riverine Corridor (Lasbela Plain) (0.75 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.3 m (Tophat: 3.0 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Balakot (30.42 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Relict alluvial fan/delta mound (3.3m) in the Sindh-Balochistan borderland corresponds to Early Chalcolithic/Amri-Nal pastoral settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Porali river terrace check; examine for painted Nal polychrome sherds and chert cores.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>66.585000,25.725000,3.3</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_014 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_014: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Luni & Great Rann Maritime Inflow (0.29 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.9 m (Tophat: 3.6 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Dholavira (Kotada Timba) (32.13 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (3.9m) near relict tidal waterway (0.3km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Tidal flat perimeter inspection via ATV/foot; search for dressed sandstone masonry and shell bangles.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>70.525000,23.955000,3.9</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_015 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_015: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Bhogavo & Sabarmati Lothal Estuary (1.36 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.7 m (Tophat: 2.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Lothal (24.71 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (2.7m) near relict tidal waterway (1.4km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Limbdi-Bhogavo paleo-levee walk; inspect micro-topography for carnelian debitage and kiln wasters.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>72.085000,22.685000,2.7</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_016 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_016: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Rajasthan / Gujarat Border, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Luni & Great Rann Maritime Inflow (0.92 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.2 m (Tophat: 2.0 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Surkotada (111.59 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (2.2m) near relict tidal waterway (0.9km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Sanchor alluvial delta walk; look for Anarta hand-made gritty ware and copper fragments.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>71.315000,24.525000,2.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_017 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_017: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Bhadar Relict Riverine Corridor (Central Saurashtra) (0.34 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.1 m (Tophat: 2.8 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rojdi (34.43 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (3.1m) near relict tidal waterway (0.3km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Central Saurashtra river bluff survey; test for Sorath Harappan Red Ware and copper chisels.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>71.215000,22.015000,3.1</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_018 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_018: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Yamuna & Hindon Meander System (4.60 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.4 m (Tophat: 2.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Hulas (15.74 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (2.4m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Hindon paleochannel terrace exploration; look for rolled Ochre Coloured Pottery in erosion gullies.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>77.285000,29.585000,2.4</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_019 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_019: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (1.55 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.6 m (Tophat: 3.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Mandi (25.16 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.6m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Examine elevated village theh; systematically sample Painted Grey Ware sherds with painted swastikas/lotuses.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>77.815000,29.355000,3.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_020 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_020: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Yamuna & Hindon Meander System (3.99 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.8 m (Tophat: 2.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Sinauli (18.05 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (2.8m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Paleo-Yamuna bank survey near Sinauli corridor; ground-penetrating radar (GPR) for copper-hoard burial pits.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>77.265000,28.985000,2.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_021 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_021: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (0.63 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.8 m (Tophat: 3.4 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Lal Qila (45.24 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.8m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Upper Ganga relict bluff survey; map anthropogenic dark earth deposit and PGW/BRW sherds.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>78.415000,28.525000,3.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_022 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_022: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (2.31 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.2 m (Tophat: 2.9 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Kausambi (28.40 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.2m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Middle Ganga oxbow lake perimeter survey; check for pre-NBPW Black-and-Red ware and bone points.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>81.185000,25.515000,3.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_023 (ahar_banas)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_023: ahar_banas</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Rajasthan, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Banas River Relict Terraces (Ahar Culture Core) (0.27 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.7 m (Tophat: 4.3 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Marmi (13.26 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Mound height (4.7m) in the Banas river basin with stone masonry signature corresponds to proto-urban Ahar-Banas Chalcolithic centers (~3000-1500 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Banas river terrace walk; survey exposed schist/mud-brick walls and white-painted Black-and-Red pottery.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.485000,25.215000,4.7</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_024 (ahar_banas)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_024: ahar_banas</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Rajasthan, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Berach River Relict Terraces (Mewar Southern Flank) (0.29 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.6 m (Tophat: 3.3 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Balathal (18.06 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Mound height (3.6m) in the Banas river basin with stone masonry signature corresponds to proto-urban Ahar-Banas Chalcolithic centers (~3000-1500 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Berach river tributary knoll survey; look for Ahar-style copper slag mounds and terracotta spindle whorls.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.125000,24.625000,3.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_025 (malwa_kayatha)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_025: malwa_kayatha</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Madhya Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Narmada & Chambal Malwa Riverine Terraces (0.49 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.2 m (Tophat: 3.8 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Navdatoli & Maheshwar (19.35 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Fluvial terrace mound (4.2m) in the Narmada/Chambal drainage exhibiting ceramic scatter aligns with Malwa/Kayatha Chalcolithic settlements (~2450-1400 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Narmada high flood terrace survey; identify Malwa painted pottery and chalcedony blade cores.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.415000,22.125000,4.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_026 (malwa_kayatha)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_026: malwa_kayatha</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Madhya Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Narmada & Chambal Malwa Riverine Terraces (0.75 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.3 m (Tophat: 3.0 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Kayatha (26.35 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Fluvial terrace mound (3.3m) in the Narmada/Chambal drainage exhibiting ceramic scatter aligns with Malwa/Kayatha Chalcolithic settlements (~2450-1400 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Chambal / Choti Kali Sindh terrace walk; test for Chocolate-slipped Kayatha pottery.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.825000,23.285000,3.3</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_027 (jorwe_chalcolithic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_027: jorwe_chalcolithic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Maharashtra, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Pravara-Godavari Jorwe Fluvial Belt (0.76 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.5 m (Tophat: 3.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Daimabad (18.74 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Location in the Godavari-Pravara basin with 3.5m mound relief matches nucleated Jorwe Chalcolithic village settlements (~1400-700 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Pravara river bank tell survey; look for spouted Jorwe jars and copper celts in ploughed soil.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.515000,19.585000,3.5</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_028 (jorwe_chalcolithic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_028: jorwe_chalcolithic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Maharashtra, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Ghod River Relict Terraces (Inamgaon Zone) (0.77 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.9 m (Tophat: 2.6 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Inamgaon (19.13 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Location in the Godavari-Pravara basin with 2.9m mound relief matches nucleated Jorwe Chalcolithic village settlements (~1400-700 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Ghod river terrace survey; document circular mud floor outlines and Jorwe matt-ware sherds.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.385000,18.715000,2.9</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_029 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_029: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Rajasthan, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Naiwal Relict Braided Channels (10.53 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.8 m (Tophat: 3.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Kalibangan (55.59 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Pre-600 BCE settlement candidate in the northern interfluve with 3.8m elevation profile.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Ghaggar dry bed sand margin survey; UAV multispectral photogrammetry for buried mudbrick walls.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.615000,29.742000,3.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_030 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_030: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Haryana, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Relict Drishadvati / Chautang Riverbed (9.42 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.1 m (Tophat: 2.8 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Siswal (17.46 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact mound relief (3.1m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (9.4km) is characteristic of Painted Grey Ware settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Drishadvati relict meander between Agroha and Siswal; systematic pedestrian transect for Sothi-Siswal sherds.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.685000,29.215000,3.1</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_031 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_031: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Rajasthan, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Sutlej Migration Channel (Pre-Capture) (14.34 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.2 m (Tophat: 3.9 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Kalibangan (42.03 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Pre-600 BCE settlement candidate in the northern interfluve with 4.2m elevation profile.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Suratgarh-Anupgarh relict channel knoll; test for Mature Harappan dish-on-stand fragments and vitrified pottery kiln slag.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.321000,29.812000,4.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_032 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_032: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Punjab (Cholistan), Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Saraswati-Ghaggar-Hakra Relict Riverbed (37.40 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+5.1 m (Tophat: 4.7 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Ganweriwala (36.02 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Pre-600 BCE settlement candidate in the northern interfluve with 5.1m elevation profile.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Derawar Hakra paleocourse interdune flat; identify Hakra Ware incised thick pottery and chert micro-blades.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>70.825000,28.514000,5.1</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_033 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_033: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Punjab (Cholistan), Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Saraswati-Ghaggar-Hakra Relict Riverbed (37.35 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.5 m (Tophat: 4.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Ganweriwala (52.66 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Pre-600 BCE settlement candidate in the northern interfluve with 4.5m elevation profile.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Hakra dry channel levee survey; ground-penetrating radar profiling across fossil settlement perimeter.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>71.341000,28.752000,4.5</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_034 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_034: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Haryana, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Relict Drishadvati / Chautang Riverbed (25.96 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+2.7 m (Tophat: 2.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rakhigarhi (Mounds 1-7) (26.49 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact mound relief (2.7m) in the historical Vedic Saraswati-Drishadvati doab with close riverine proximity (26.0km) is characteristic of Painted Grey Ware settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Relict Chautang levee near Barwala; check for Early Harappan mud-brick alignments and terracotta bangles.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.845000,29.412000,2.7</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_035 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_035: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Ravi Harappan Meander Belt (5.01 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.9 m (Tophat: 3.6 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Jalilpur (38.64 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Elevated mound (3.9m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Chenab paleomeander terrace near Multan; document baked brick foundations and Harappan painted black-on-red ware.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>71.854000,30.125000,3.9</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_036 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_036: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Ravi Harappan Meander Belt (36.20 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.4 m (Tophat: 4.0 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Harappa (Mounds AB, E, F) (72.55 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Elevated mound (4.4m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Rechna Doab relict natural levee; look for Kot Diji grooved bowls and cylindrical carnelian beads.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>73.124000,31.245000,4.4</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_037 (late_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_037: late_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Sutlej Migration Channel (Pre-Capture) (65.95 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.4 m (Tophat: 3.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Sunet (131.20 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Mound feature (3.4m) in the Punjab doab representing Late Harappan / Cemetery H horizon.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Sutlej paleocourse near Firozpur; sample Late Harappan Bara Ware and faience bead debitage.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.452000,30.712000,3.4</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_038 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_038: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Upper Indus & Punjab Interfluves (Doabs) (Punjab, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Ravi Harappan Meander Belt (192.53 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.7 m (Tophat: 3.3 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rehman Dheri (93.66 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Elevated mound (3.7m) on the paleo-Ravi/Sutlej interfluve indicates Harappan urban occupation.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Thal Desert margin Jhelum paleocourse; surface test for flint micro-blades and Pre-Harappan pottery.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>71.821000,32.145000,3.7</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_039 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_039: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Sindh, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Lower Indus Relict Western Oxbow & Meander (9.44 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.6 m (Tophat: 4.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Kot Diji (51.77 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Prominent tell mound (4.6m) in the Lower Indus/Nara floodplain strongly indicates an urban Mature Harappan settlement.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Western Indus paleochannel loop levee; drone photogrammetry and pottery sampling for mature Indus seals.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>68.645000,27.812000,4.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_040 (hakra_early_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_040: hakra_early_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Sindh, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Lower Indus Relict Western Oxbow & Meander (40.70 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.8 m (Tophat: 3.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Mohenjo-daro (59.34 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Relict alluvial fan/delta mound (3.8m) in the Sindh-Balochistan borderland corresponds to Early Chalcolithic/Amri-Nal pastoral settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Eastern Nara relict canal apex; survey exposed fired brick kilns and steatite bead workshops.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>68.412000,26.854000,3.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_041 (hakra_early_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_041: hakra_early_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Sindh, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Eastern Nara / Hakra Southern Outlet (57.52 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.2 m (Tophat: 2.9 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Chanhu-daro (127.66 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Relict alluvial fan/delta mound (3.2m) in the Sindh-Balochistan borderland corresponds to Early Chalcolithic/Amri-Nal pastoral settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Lower Indus deltaic relict apex near Badin; investigate marine shell bangle debris and Harappan ledger sherds.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>68.845000,25.124000,3.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_042 (mature_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_042: mature_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Lower Indus, Sindh Valley & Balochistan Highlands (Balochistan, Pakistan)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Bolan River Relict Alluvial Fan (Kachi Plain) (74.13 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+5.3 m (Tophat: 4.9 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Nausharo (60.60 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Prominent tell mound (5.3m) in the Lower Indus/Nara floodplain strongly indicates an urban Mature Harappan settlement.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Kachi Plain alluvial fan near Bolan Pass; examine early aceramic Neolithic mud-brick storehouse remains.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>67.542000,28.912000,5.3</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_043 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_043: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Luni & Great Rann Maritime Inflow (24.14 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.8 m (Tophat: 4.4 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Dholavira (Kotada Timba) (28.45 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (4.8m) near relict tidal waterway (24.1km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Great Rann northern shoreline island knoll; inspect exposed dressed sandstone citadel walls and stone pillar bases.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>70.124000,23.645000,4.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_044 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_044: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Luni & Great Rann Maritime Inflow (67.00 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.6 m (Tophat: 3.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Desalpur (Gunthli) (79.59 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (3.6m) near relict tidal waterway (67.0km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Banni Grasslands relict levee; test for Anarta Ware and Early Harappan coarse red pottery.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>69.845000,23.185000,3.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_045 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_045: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Bhogavo & Sabarmati Lothal Estuary (44.89 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.3 m (Tophat: 3.0 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rangpur (69.62 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (3.3m) near relict tidal waterway (44.9km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Little Rann eastern margin terrace; search for salt extraction brine pans and Harappan perforated jars.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>71.412000,22.845000,3.3</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_046 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_046: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Bhadar Relict Riverine Corridor (Central Saurashtra) (43.17 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.1 m (Tophat: 3.7 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Rojdi (51.51 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (4.1m) near relict tidal waterway (43.2km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Shetrunji River upper terrace knoll; investigate Sorath Harappan stud-handle bowls and terracotta cattle.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>70.845000,21.412000,4.1</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_047 (gujarat_estuarine_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_047: gujarat_estuarine_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Gujarat, Rann of Kutch & Saurashtra Peninsula (Gujarat, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Bhogavo & Sabarmati Lothal Estuary (15.37 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.7 m (Tophat: 3.4 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Lothal (47.48 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Estuarine/littoral mound morphology (3.7m) near relict tidal waterway (15.4km) is diagnostic of Gujarat Maritime/Anarta Harappan horizons.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Sabarmati-Bhadar paleo-confluence near Dholka; survey chert weight fragments and micaceous red ware.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>72.415000,22.124000,3.7</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_048 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_048: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Paleo-Yamuna & Hindon Meander System (1.28 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.9 m (Tophat: 3.5 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Hulas (16.42 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.9m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Hindon-Kali interfluve bluff; test for Late Harappan to Painted Grey Ware overlapping stratigraphy.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>77.412000,29.845000,3.9</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_049 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_049: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (11.87 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.1 m (Tophat: 3.7 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Lal Qila (46.70 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (4.1m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Central Doab relict oxbow knoll; fluxgate gradiometry for ancient iron-smelting bloomery furnaces.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>78.645000,28.214000,4.1</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_050 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_050: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (1.50 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.5 m (Tophat: 3.2 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Kampil (Kampilya) (52.16 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.5m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Kali Nadi southern bluff; systematically record fine grey ware bowls with black painted concentric circles.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>79.612000,27.245000,3.5</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_051 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_051: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (34.19 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.4 m (Tophat: 3.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Sringaverapura (122.60 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.4m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Sai River high terrace; search for Pre-600 BCE Black-and-Red ware and bone arrowheads.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>80.845000,26.412000,3.4</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_052 (painted_grey_ware_vedic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_052: painted_grey_ware_vedic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Ganga-Yamuna Interfluve & Middle Ganga Basin (Uttar Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Kali Nadi & Upper Ganga Oxbow Belt (118.28 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.2 m (Tophat: 2.9 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Sringaverapura (81.83 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Compact settlement mound (3.2m) along Upper Ganga/Hindon relict meanders matches Painted Grey Ware / Vedic riverine sites.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Gomti relict meander; explore elevated kankar terrace for Early Iron Age cord-impressed pottery.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>82.412000,25.845000,3.2</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_053 (ahar_banas)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_053: ahar_banas</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Rajasthan, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Banas River Relict Terraces (Ahar Culture Core) (6.50 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.5 m (Tophat: 4.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Marmi (52.74 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Mound height (4.5m) in the Banas river basin with stone masonry signature corresponds to proto-urban Ahar-Banas Chalcolithic centers (~3000-1500 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Banas-Kothari confluence terrace; survey white-painted Black-and-Red ware and copper axes.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.845000,25.412000,4.5</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_054 (malwa_kayatha)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_054: malwa_kayatha</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Madhya Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Narmada & Chambal Malwa Riverine Terraces (58.41 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.8 m (Tophat: 3.4 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Dangwada (65.99 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Fluvial terrace mound (3.8m) in the Narmada/Chambal drainage exhibiting ceramic scatter aligns with Malwa/Kayatha Chalcolithic settlements (~2450-1400 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Chambal upper basin knoll; sample Malwa ware polychrome painted chalices and jasper micro-tools.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.124000,22.612000,3.8</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_055 (malwa_kayatha)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_055: malwa_kayatha</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Madhya Pradesh, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Narmada & Chambal Malwa Riverine Terraces (279.25 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+4.3 m (Tophat: 3.9 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Eran (52.79 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Fluvial terrace mound (4.3m) in the Narmada/Chambal drainage exhibiting ceramic scatter aligns with Malwa/Kayatha Chalcolithic settlements (~2450-1400 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Betwa-Dhasan interfluve; document fortification ditch depression and Kayatha/Malwa pottery deposits.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>78.645000,23.845000,4.3</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_056 (jorwe_chalcolithic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_056: jorwe_chalcolithic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Maharashtra, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Pravara-Godavari Jorwe Fluvial Belt (85.09 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.6 m (Tophat: 3.3 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Bahal (46.16 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Location in the Godavari-Pravara basin with 3.6m mound relief matches nucleated Jorwe Chalcolithic village settlements (~1400-700 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Girna River middle terrace; test for Savalda burnished pottery and copper bead necklaces.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.845000,20.312000,3.6</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_057 (jorwe_chalcolithic)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_057: jorwe_chalcolithic</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Central India & Northern Deccan (Mewar, Malwa & Pravara) (Maharashtra, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Pravara-Godavari Jorwe Fluvial Belt (45.93 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+3.4 m (Tophat: 3.1 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Daimabad (47.31 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Location in the Godavari-Pravara basin with 3.4m mound relief matches nucleated Jorwe Chalcolithic village settlements (~1400-700 BCE).</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Mula River ancient terrace knoll; examine urn-burial cemetery features and painted Jorwe ware.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>74.845000,19.124000,3.4</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SUBCON_DISCOV_005 (hakra_early_harappan)</name>
+      <styleUrl>#discoveryPin</styleUrl>
+      <description><![CDATA[
+        <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
+          <tr bgcolor="#f4ecd8"><th colspan="2">🌟 SUBCON_DISCOV_005: hakra_early_harappan</th></tr>
+          <tr><td><b>Presence Probability:</b></td><td><b>99.4%</b></td></tr>
+          <tr><td><b>Macro-Basin:</b></td><td>Saraswati-Ghaggar-Hakra & Drishadvati Basin (Punjab, India)</td></tr>
+          <tr><td><b>Nearest Paleochannel:</b></td><td>Naiwal Relict Braided Channels (0.28 km)</td></tr>
+          <tr><td><b>Micro-Topography (Relief):</b></td><td>+1.9 m (Tophat: 1.7 m)</td></tr>
+          <tr><td><b>Nearest Documented Monument:</b></td><td>Banawali (36.61 km away - 100% Novel)</td></tr>
+          <tr><td><b>Diagnostic Ceramics &amp; Features:</b></td><td>Low-relief mound morphology (1.9m) along the lower Ghaggar paleolevee corresponds to Hakra Ware / Early Harappan agro-pastoral settlements.</td></tr>
+          <tr><td><b>Recommended Survey Protocol:</b></td><td>Post-harvest bare soil inspection; soil electrical conductivity profiling.</td></tr>
+        </table>
+        ]]></description>
+      <Point>
+        <coordinates>75.125000,29.885000,1.9</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

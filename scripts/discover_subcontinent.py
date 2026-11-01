@@ -22,6 +22,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import pandas as pd
 
+from src.export_engine import candidates_to_gpx, candidates_to_kml
 from src.pre600bce_cultures import CULTURE_PROFILES
 from src.subcontinent_basins import SUBCONTINENT_BASINS
 from src.subcontinent_discovery_engine import SubcontinentDiscoveryEngine
@@ -101,6 +102,17 @@ def run_subcontinent_discovery() -> None:
     with open(geojson_path, "w", encoding="utf-8") as f:
         json.dump(geojson_dict, f, indent=2)
     print(f"[OK] Exported GeoJSON layer to: {geojson_path}")
+
+    # 2b. Export Google Earth KML and Handheld GPS GPX
+    kml_path = out_dir / "undiscovered_subcontinent_pre600bce_candidates.kml"
+    with open(kml_path, "w", encoding="utf-8") as f:
+        f.write(candidates_to_kml(candidates))
+    print(f"[OK] Exported Google Earth KML layer to: {kml_path}")
+
+    gpx_path = out_dir / "undiscovered_subcontinent_pre600bce_candidates.gpx"
+    with open(gpx_path, "w", encoding="utf-8") as f:
+        f.write(candidates_to_gpx(candidates))
+    print(f"[OK] Exported Handheld GPS GPX layer to: {gpx_path}")
 
     # 3. Generate Comprehensive Investigation Dossier in Markdown
     dossier_path = out_dir / "PAN_SUBCONTINENT_DISCOVERY_DOSSIER.md"

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="APM Subcontinent GeoAI Engine" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>Pre-600 BCE Undiscovered Mound Discoveries</name>
+    <desc>Target waypoints for ground archaeological verification surveys</desc>
+  </metadata>
+  <wpt lat="29.508500" lon="74.842000">
+    <ele>2.3</ele>
+    <name>SUBCON_DISCOV_001</name>
+    <desc>Culture: hakra_early_harappan | Prob: 99.4% | Relief: +2.3m | Paleochannel: Saraswati-Ghaggar-Hakra Relict Riverbed (1.9km) | Nearest Known Monument: Sothi (36.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.355000" lon="76.220000">
+    <ele>3.4</ele>
+    <name>SUBCON_DISCOV_002</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.4m | Paleochannel: Relict Drishadvati / Chautang Riverbed (2.2km) | Nearest Known Monument: Rakhigarhi (Mounds 1-7) (15.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.765000" lon="72.245000">
+    <ele>4.6</ele>
+    <name>SUBCON_DISCOV_003</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +4.6m | Paleochannel: Saraswati-Ghaggar-Hakra Relict Riverbed (1.1km) | Nearest Known Monument: Tarkhanwala Dera (117.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.112000" lon="76.385000">
+    <ele>2.6</ele>
+    <name>SUBCON_DISCOV_004</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +2.6m | Paleochannel: Saraswati-Ghaggar-Hakra Relict Riverbed (1.9km) | Nearest Known Monument: Bhagwanpura (45.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.485000" lon="72.545000">
+    <ele>4.1</ele>
+    <name>SUBCON_DISCOV_006</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +4.1m | Paleochannel: Paleo-Ravi Harappan Meander Belt (1.0km) | Nearest Known Monument: Harappa (Mounds AB, E, F) (35.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.355000" lon="75.105000">
+    <ele>2.2</ele>
+    <name>SUBCON_DISCOV_007</name>
+    <desc>Culture: late_harappan | Prob: 99.4% | Relief: +2.2m | Paleochannel: Paleo-Sutlej Migration Channel (Pre-Capture) (0.4km) | Nearest Known Monument: Rohira (82.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.352000" lon="72.205000">
+    <ele>3.7</ele>
+    <name>SUBCON_DISCOV_008</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +3.7m | Paleochannel: Paleo-Ravi Harappan Meander Belt (0.5km) | Nearest Known Monument: Jalilpur (11.4km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.825000" lon="76.085000">
+    <ele>2.9</ele>
+    <name>SUBCON_DISCOV_009</name>
+    <desc>Culture: late_harappan | Prob: 99.4% | Relief: +2.9m | Paleochannel: Paleo-Sutlej Migration Channel (Pre-Capture) (3.1km) | Nearest Known Monument: Sunet (27.2km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.552000" lon="69.315000">
+    <ele>4.9</ele>
+    <name>SUBCON_DISCOV_010</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +4.9m | Paleochannel: Eastern Nara / Hakra Southern Outlet (1.5km) | Nearest Known Monument: Chanhu-daro (121.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.315000" lon="68.215000">
+    <ele>3.8</ele>
+    <name>SUBCON_DISCOV_011</name>
+    <desc>Culture: hakra_early_harappan | Prob: 99.4% | Relief: +3.8m | Paleochannel: Bolan River Relict Alluvial Fan (Kachi Plain) (0.4km) | Nearest Known Monument: Mehrgarh (14.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="27.085000" lon="68.045000">
+    <ele>5.2</ele>
+    <name>SUBCON_DISCOV_012</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +5.2m | Paleochannel: Lower Indus Relict Western Oxbow &amp; Meander (0.7km) | Nearest Known Monument: Mohenjo-daro (28.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.725000" lon="66.585000">
+    <ele>3.3</ele>
+    <name>SUBCON_DISCOV_013</name>
+    <desc>Culture: hakra_early_harappan | Prob: 99.4% | Relief: +3.3m | Paleochannel: Porali Relict Riverine Corridor (Lasbela Plain) (0.8km) | Nearest Known Monument: Balakot (30.4km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="23.955000" lon="70.525000">
+    <ele>3.9</ele>
+    <name>SUBCON_DISCOV_014</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +3.9m | Paleochannel: Paleo-Luni &amp; Great Rann Maritime Inflow (0.3km) | Nearest Known Monument: Dholavira (Kotada Timba) (32.1km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="22.685000" lon="72.085000">
+    <ele>2.7</ele>
+    <name>SUBCON_DISCOV_015</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +2.7m | Paleochannel: Paleo-Bhogavo &amp; Sabarmati Lothal Estuary (1.4km) | Nearest Known Monument: Lothal (24.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="24.525000" lon="71.315000">
+    <ele>2.2</ele>
+    <name>SUBCON_DISCOV_016</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +2.2m | Paleochannel: Paleo-Luni &amp; Great Rann Maritime Inflow (0.9km) | Nearest Known Monument: Surkotada (111.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="22.015000" lon="71.215000">
+    <ele>3.1</ele>
+    <name>SUBCON_DISCOV_017</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +3.1m | Paleochannel: Bhadar Relict Riverine Corridor (Central Saurashtra) (0.3km) | Nearest Known Monument: Rojdi (34.4km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.585000" lon="77.285000">
+    <ele>2.4</ele>
+    <name>SUBCON_DISCOV_018</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +2.4m | Paleochannel: Paleo-Yamuna &amp; Hindon Meander System (4.6km) | Nearest Known Monument: Hulas (15.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.355000" lon="77.815000">
+    <ele>3.6</ele>
+    <name>SUBCON_DISCOV_019</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.6m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (1.6km) | Nearest Known Monument: Mandi (25.2km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.985000" lon="77.265000">
+    <ele>2.8</ele>
+    <name>SUBCON_DISCOV_020</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +2.8m | Paleochannel: Paleo-Yamuna &amp; Hindon Meander System (4.0km) | Nearest Known Monument: Sinauli (18.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.525000" lon="78.415000">
+    <ele>3.8</ele>
+    <name>SUBCON_DISCOV_021</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.8m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (0.6km) | Nearest Known Monument: Lal Qila (45.2km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.515000" lon="81.185000">
+    <ele>3.2</ele>
+    <name>SUBCON_DISCOV_022</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.2m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (2.3km) | Nearest Known Monument: Kausambi (28.4km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.215000" lon="74.485000">
+    <ele>4.7</ele>
+    <name>SUBCON_DISCOV_023</name>
+    <desc>Culture: ahar_banas | Prob: 99.4% | Relief: +4.7m | Paleochannel: Banas River Relict Terraces (Ahar Culture Core) (0.3km) | Nearest Known Monument: Marmi (13.3km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="24.625000" lon="74.125000">
+    <ele>3.6</ele>
+    <name>SUBCON_DISCOV_024</name>
+    <desc>Culture: ahar_banas | Prob: 99.4% | Relief: +3.6m | Paleochannel: Berach River Relict Terraces (Mewar Southern Flank) (0.3km) | Nearest Known Monument: Balathal (18.1km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="22.125000" lon="75.415000">
+    <ele>4.2</ele>
+    <name>SUBCON_DISCOV_025</name>
+    <desc>Culture: malwa_kayatha | Prob: 99.4% | Relief: +4.2m | Paleochannel: Narmada &amp; Chambal Malwa Riverine Terraces (0.5km) | Nearest Known Monument: Navdatoli &amp; Maheshwar (19.4km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="23.285000" lon="75.825000">
+    <ele>3.3</ele>
+    <name>SUBCON_DISCOV_026</name>
+    <desc>Culture: malwa_kayatha | Prob: 99.4% | Relief: +3.3m | Paleochannel: Narmada &amp; Chambal Malwa Riverine Terraces (0.8km) | Nearest Known Monument: Kayatha (26.3km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="19.585000" lon="74.515000">
+    <ele>3.5</ele>
+    <name>SUBCON_DISCOV_027</name>
+    <desc>Culture: jorwe_chalcolithic | Prob: 99.4% | Relief: +3.5m | Paleochannel: Pravara-Godavari Jorwe Fluvial Belt (0.8km) | Nearest Known Monument: Daimabad (18.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="18.715000" lon="74.385000">
+    <ele>2.9</ele>
+    <name>SUBCON_DISCOV_028</name>
+    <desc>Culture: jorwe_chalcolithic | Prob: 99.4% | Relief: +2.9m | Paleochannel: Ghod River Relict Terraces (Inamgaon Zone) (0.8km) | Nearest Known Monument: Inamgaon (19.1km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.742000" lon="74.615000">
+    <ele>3.8</ele>
+    <name>SUBCON_DISCOV_029</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.8m | Paleochannel: Naiwal Relict Braided Channels (10.5km) | Nearest Known Monument: Kalibangan (55.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.215000" lon="75.685000">
+    <ele>3.1</ele>
+    <name>SUBCON_DISCOV_030</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.1m | Paleochannel: Relict Drishadvati / Chautang Riverbed (9.4km) | Nearest Known Monument: Siswal (17.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.812000" lon="74.321000">
+    <ele>4.2</ele>
+    <name>SUBCON_DISCOV_031</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +4.2m | Paleochannel: Paleo-Sutlej Migration Channel (Pre-Capture) (14.3km) | Nearest Known Monument: Kalibangan (42.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.514000" lon="70.825000">
+    <ele>5.1</ele>
+    <name>SUBCON_DISCOV_032</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +5.1m | Paleochannel: Saraswati-Ghaggar-Hakra Relict Riverbed (37.4km) | Nearest Known Monument: Ganweriwala (36.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.752000" lon="71.341000">
+    <ele>4.5</ele>
+    <name>SUBCON_DISCOV_033</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +4.5m | Paleochannel: Saraswati-Ghaggar-Hakra Relict Riverbed (37.4km) | Nearest Known Monument: Ganweriwala (52.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.412000" lon="75.845000">
+    <ele>2.7</ele>
+    <name>SUBCON_DISCOV_034</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +2.7m | Paleochannel: Relict Drishadvati / Chautang Riverbed (26.0km) | Nearest Known Monument: Rakhigarhi (Mounds 1-7) (26.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.125000" lon="71.854000">
+    <ele>3.9</ele>
+    <name>SUBCON_DISCOV_035</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +3.9m | Paleochannel: Paleo-Ravi Harappan Meander Belt (5.0km) | Nearest Known Monument: Jalilpur (38.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="31.245000" lon="73.124000">
+    <ele>4.4</ele>
+    <name>SUBCON_DISCOV_036</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +4.4m | Paleochannel: Paleo-Ravi Harappan Meander Belt (36.2km) | Nearest Known Monument: Harappa (Mounds AB, E, F) (72.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="30.712000" lon="74.452000">
+    <ele>3.4</ele>
+    <name>SUBCON_DISCOV_037</name>
+    <desc>Culture: late_harappan | Prob: 99.4% | Relief: +3.4m | Paleochannel: Paleo-Sutlej Migration Channel (Pre-Capture) (66.0km) | Nearest Known Monument: Sunet (131.2km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="32.145000" lon="71.821000">
+    <ele>3.7</ele>
+    <name>SUBCON_DISCOV_038</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +3.7m | Paleochannel: Paleo-Ravi Harappan Meander Belt (192.5km) | Nearest Known Monument: Rehman Dheri (93.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="27.812000" lon="68.645000">
+    <ele>4.6</ele>
+    <name>SUBCON_DISCOV_039</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +4.6m | Paleochannel: Lower Indus Relict Western Oxbow &amp; Meander (9.4km) | Nearest Known Monument: Kot Diji (51.8km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="26.854000" lon="68.412000">
+    <ele>3.8</ele>
+    <name>SUBCON_DISCOV_040</name>
+    <desc>Culture: hakra_early_harappan | Prob: 99.4% | Relief: +3.8m | Paleochannel: Lower Indus Relict Western Oxbow &amp; Meander (40.7km) | Nearest Known Monument: Mohenjo-daro (59.3km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.124000" lon="68.845000">
+    <ele>3.2</ele>
+    <name>SUBCON_DISCOV_041</name>
+    <desc>Culture: hakra_early_harappan | Prob: 99.4% | Relief: +3.2m | Paleochannel: Eastern Nara / Hakra Southern Outlet (57.5km) | Nearest Known Monument: Chanhu-daro (127.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.912000" lon="67.542000">
+    <ele>5.3</ele>
+    <name>SUBCON_DISCOV_042</name>
+    <desc>Culture: mature_harappan | Prob: 99.4% | Relief: +5.3m | Paleochannel: Bolan River Relict Alluvial Fan (Kachi Plain) (74.1km) | Nearest Known Monument: Nausharo (60.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="23.645000" lon="70.124000">
+    <ele>4.8</ele>
+    <name>SUBCON_DISCOV_043</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +4.8m | Paleochannel: Paleo-Luni &amp; Great Rann Maritime Inflow (24.1km) | Nearest Known Monument: Dholavira (Kotada Timba) (28.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="23.185000" lon="69.845000">
+    <ele>3.6</ele>
+    <name>SUBCON_DISCOV_044</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +3.6m | Paleochannel: Paleo-Luni &amp; Great Rann Maritime Inflow (67.0km) | Nearest Known Monument: Desalpur (Gunthli) (79.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="22.845000" lon="71.412000">
+    <ele>3.3</ele>
+    <name>SUBCON_DISCOV_045</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +3.3m | Paleochannel: Paleo-Bhogavo &amp; Sabarmati Lothal Estuary (44.9km) | Nearest Known Monument: Rangpur (69.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="21.412000" lon="70.845000">
+    <ele>4.1</ele>
+    <name>SUBCON_DISCOV_046</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +4.1m | Paleochannel: Bhadar Relict Riverine Corridor (Central Saurashtra) (43.2km) | Nearest Known Monument: Rojdi (51.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="22.124000" lon="72.415000">
+    <ele>3.7</ele>
+    <name>SUBCON_DISCOV_047</name>
+    <desc>Culture: gujarat_estuarine_harappan | Prob: 99.4% | Relief: +3.7m | Paleochannel: Paleo-Bhogavo &amp; Sabarmati Lothal Estuary (15.4km) | Nearest Known Monument: Lothal (47.5km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.845000" lon="77.412000">
+    <ele>3.9</ele>
+    <name>SUBCON_DISCOV_048</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.9m | Paleochannel: Paleo-Yamuna &amp; Hindon Meander System (1.3km) | Nearest Known Monument: Hulas (16.4km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="28.214000" lon="78.645000">
+    <ele>4.1</ele>
+    <name>SUBCON_DISCOV_049</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +4.1m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (11.9km) | Nearest Known Monument: Lal Qila (46.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="27.245000" lon="79.612000">
+    <ele>3.5</ele>
+    <name>SUBCON_DISCOV_050</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.5m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (1.5km) | Nearest Known Monument: Kampil (Kampilya) (52.2km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="26.412000" lon="80.845000">
+    <ele>3.4</ele>
+    <name>SUBCON_DISCOV_051</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.4m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (34.2km) | Nearest Known Monument: Sringaverapura (122.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.845000" lon="82.412000">
+    <ele>3.2</ele>
+    <name>SUBCON_DISCOV_052</name>
+    <desc>Culture: painted_grey_ware_vedic | Prob: 99.4% | Relief: +3.2m | Paleochannel: Kali Nadi &amp; Upper Ganga Oxbow Belt (118.3km) | Nearest Known Monument: Sringaverapura (81.8km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="25.412000" lon="74.845000">
+    <ele>4.5</ele>
+    <name>SUBCON_DISCOV_053</name>
+    <desc>Culture: ahar_banas | Prob: 99.4% | Relief: +4.5m | Paleochannel: Banas River Relict Terraces (Ahar Culture Core) (6.5km) | Nearest Known Monument: Marmi (52.7km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="22.612000" lon="75.124000">
+    <ele>3.8</ele>
+    <name>SUBCON_DISCOV_054</name>
+    <desc>Culture: malwa_kayatha | Prob: 99.4% | Relief: +3.8m | Paleochannel: Narmada &amp; Chambal Malwa Riverine Terraces (58.4km) | Nearest Known Monument: Dangwada (66.0km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="23.845000" lon="78.645000">
+    <ele>4.3</ele>
+    <name>SUBCON_DISCOV_055</name>
+    <desc>Culture: malwa_kayatha | Prob: 99.4% | Relief: +4.3m | Paleochannel: Narmada &amp; Chambal Malwa Riverine Terraces (279.2km) | Nearest Known Monument: Eran (52.8km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="20.312000" lon="74.845000">
+    <ele>3.6</ele>
+    <name>SUBCON_DISCOV_056</name>
+    <desc>Culture: jorwe_chalcolithic | Prob: 99.4% | Relief: +3.6m | Paleochannel: Pravara-Godavari Jorwe Fluvial Belt (85.1km) | Nearest Known Monument: Bahal (46.2km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="19.124000" lon="74.845000">
+    <ele>3.4</ele>
+    <name>SUBCON_DISCOV_057</name>
+    <desc>Culture: jorwe_chalcolithic | Prob: 99.4% | Relief: +3.4m | Paleochannel: Pravara-Godavari Jorwe Fluvial Belt (45.9km) | Nearest Known Monument: Daimabad (47.3km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+  <wpt lat="29.885000" lon="75.125000">
+    <ele>1.9</ele>
+    <name>SUBCON_DISCOV_005</name>
+    <desc>Culture: hakra_early_harappan | Prob: 99.4% | Relief: +1.9m | Paleochannel: Naiwal Relict Braided Channels (0.3km) | Nearest Known Monument: Banawali (36.6km)</desc>
+    <type>Archaeological Mound Prospect</type>
+  </wpt>
+</gpx>

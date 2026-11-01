@@ -29,6 +29,12 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
 from src.benchmark_known_monuments import KnownMonumentsBenchmarkRunner
+from src.export_engine import (
+    candidates_to_geojson,
+    candidates_to_gpx,
+    candidates_to_kml,
+    generate_field_survey_dossier,
+)
 from src.pre600bce_cultures import CULTURE_PROFILES, infer_likely_pre600bce_culture
 from src.subcontinent_basins import SUBCONTINENT_BASINS, find_macro_basin_for_coordinates
 from src.subcontinent_discovery_engine import SubcontinentDiscoveryEngine
@@ -393,7 +399,76 @@ class ArchaeologicalHTTPHandler(BaseHTTPRequestHandler):
             })
             return
 
-        # 7. Satellite Mosaic Crops
+        # 7. Multi-Format Field Export Endpoints
+        if path == "/api/export/geojson":
+            gj = candidates_to_geojson(APM_BACKEND.candidates)
+            payload = json.dumps(gj, indent=2).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/geo+json; charset=utf-8")
+            self.send_header("Content-Disposition", 'attachment; filename="subcontinent_undiscovered_pre600bce.geojson"')
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
+        if path == "/api/export/kml":
+            kml_text = candidates_to_kml(APM_BACKEND.candidates)
+            payload = kml_text.encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/vnd.google-earth.kml+xml; charset=utf-8")
+            self.send_header("Content-Disposition", 'attachment; filename="subcontinent_undiscovered_pre600bce.kml"')
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
+        if path == "/api/export/gpx":
+            gpx_text = candidates_to_gpx(APM_BACKEND.candidates)
+            payload = gpx_text.encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "application/gpx+xml; charset=utf-8")
+            self.send_header("Content-Disposition", 'attachment; filename="subcontinent_undiscovered_pre600bce.gpx"')
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
+        if path == "/api/export/csv":
+            csv_payload = APM_BACKEND.candidates_df.to_csv(index=False).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "text/csv; charset=utf-8")
+            self.send_header("Content-Disposition", 'attachment; filename="subcontinent_undiscovered_pre600bce.csv"')
+            self.send_header("Content-Length", str(len(csv_payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(csv_payload)
+            return
+
+        # 8. Field Survey Dossier API
+        if path == "/api/dossier":
+            cid = query.get("id", [""])[0].upper()
+            found_c = None
+            for c in APM_BACKEND.candidates:
+                if c.candidate_id.upper() == cid:
+                    found_c = c
+                    break
+            if found_c:
+                dossier_md = generate_field_survey_dossier(found_c)
+                payload = dossier_md.encode("utf-8")
+                self.send_response(200)
+                self.send_header("Content-Type", "text/markdown; charset=utf-8")
+                self.send_header("Content-Length", str(len(payload)))
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                self.wfile.write(payload)
+            else:
+                self.send_json_response({"error": f"Candidate ID '{cid}' not found"}, status=404)
+            return
+
+        # 9. Satellite Mosaic Crops
         if path.startswith("/crops/"):
             crop_filename = path.replace("/crops/", "")
             crop_path = REPO_ROOT / "results" / "subcontinent" / "satellite_crops" / crop_filename

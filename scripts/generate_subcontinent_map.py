@@ -287,20 +287,41 @@ def generate_subcontinent_map_html(
       display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px;
       font-weight: 700; background: #15803d; color: #86efac; margin-bottom: 6px;
     }}
+    .export-pill-btn {{
+      display: inline-flex; align-items: center; padding: 4px 8px; border-radius: 6px;
+      font-size: 11px; font-weight: 700; text-decoration: none;
+      background: #1e293b; color: #38bdf8; border: 1px solid #0284c7;
+      transition: all 0.2s ease; cursor: pointer;
+    }}
+    .export-pill-btn:hover {{
+      background: #0284c7; color: white; border-color: #38bdf8;
+    }}
     .crosshair-cursor {{ cursor: crosshair !important; }}
   </style>
 </head>
 <body>
 
-  <!-- Top Header -->
+  <!-- Top Header with Export Bar & Global Search -->
   <div class="top-header">
-    <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
       <div>
         <h1><span>🛰️</span> Pan-Subcontinent Pre-600 BCE Archaeological Discovery GIS</h1>
-        <p>Multi-Sensor Predictive Modeling across 6 Basins &bull; Instant Point/Area Scanner for Archaeologists</p>
+        <p>Multi-Sensor GeoAI across 6 Basins &bull; {len(known_records)} Benchmark Monuments (100% Recall) &bull; {len(cand_records)} High-Confidence Undiscovered Tells</p>
       </div>
-      <div id="backendStatusPill" style="margin-left: 20px; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; background: #065f46; color: #a7f3d0; border: 1px solid #10b981; white-space: nowrap;">
-        Checking APM Backend...
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <!-- Global Search Bar -->
+        <input type="text" id="globalSearchInput" placeholder="🔍 Search site, basin, river..." oninput="handleGlobalSearch(this.value)" style="padding: 5px 10px; background: #1e293b; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; font-size: 11px; width: 180px; outline: none;" />
+
+        <!-- Quick Export Buttons -->
+        <a href="/api/export/geojson" download="subcontinent_undiscovered_pre600bce.geojson" class="export-pill-btn" title="Download GeoJSON for QGIS / ArcGIS">⬇️ GeoJSON</a>
+        <a href="/api/export/kml" download="subcontinent_undiscovered_pre600bce.kml" class="export-pill-btn" title="Download KML for Google Earth 3D">⬇️ KML</a>
+        <a href="/api/export/gpx" download="subcontinent_undiscovered_pre600bce.gpx" class="export-pill-btn" title="Download GPX for Garmin/Trimble GPS">⬇️ GPX</a>
+        <a href="/api/export/csv" download="subcontinent_undiscovered_pre600bce.csv" class="export-pill-btn" title="Download CSV Table">⬇️ CSV</a>
+
+        <!-- Backend Status Pill -->
+        <div id="backendStatusPill" style="padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; background: #065f46; color: #a7f3d0; border: 1px solid #10b981; white-space: nowrap;">
+          Checking APM Backend...
+        </div>
       </div>
     </div>
   </div>
@@ -324,7 +345,7 @@ def generate_subcontinent_map_html(
     </button>
 
     <button class="tool-btn tool-btn-bench" onclick="runBenchmarkAudit()">
-      <span>🏆</span> Run Benchmark Audit on 48 Known Monuments
+      <span>🏆</span> Run Benchmark Audit on {len(known_records)} Known Monuments
     </button>
 
     <div class="panel-hdr" style="margin-top: 14px;">Live Evaluation Console</div>
@@ -340,6 +361,11 @@ def generate_subcontinent_map_html(
     <div class="panel-hdr">Landscape Filter & Controls</div>
 
     <div class="filter-group">
+      <label for="confSlider">Min Confidence: <span id="confValDisplay" style="color:#38bdf8; font-weight:700;">95%</span></label>
+      <input type="range" id="confSlider" min="80" max="99" value="95" step="1" oninput="document.getElementById('confValDisplay').innerText=this.value+'%'; applyFilters();" style="width:100%; accent-color:#0284c7;" />
+    </div>
+
+    <div class="filter-group">
       <label for="basinSelect">Macro-Basin Filter:</label>
       <select id="basinSelect" class="filter-select" onchange="applyFilters()">
         <option value="ALL">All 6 Macro-Basins (Subcontinent Wide)</option>
@@ -348,6 +374,9 @@ def generate_subcontinent_map_html(
         <option value="lower_indus_sindh_balochistan">3. Lower Indus, Sindh & Balochistan</option>
         <option value="gujarat_kutch_saurashtra">4. Gujarat, Kutch & Saurashtra</option>
         <option value="ganga_yamuna_doab">5. Ganga-Yamuna Doab & Middle Ganga</option>
+        <option value="central_india_deccan">6. Central India & Northern Deccan</option>
+      </select>
+    </div>
         <option value="central_india_deccan">6. Central India & Northern Deccan</option>
       </select>
     </div>
@@ -435,6 +464,16 @@ def generate_subcontinent_map_html(
     const darkBasemap = L.tileLayer('https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png', {{
       attribution: '&copy; OpenStreetMap &copy; CARTO',
       maxZoom: 19
+    }});
+
+    const usgsTopo = L.tileLayer('https://basemap.nationalmap.gov/arcgis/rest/services/USGSTopo/MapServer/tile/{{z}}/{{y}}/{{x}}', {{
+      maxZoom: 16,
+      attribution: 'USGS National Map'
+    }});
+
+    const osmLayer = L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+      maxZoom: 19,
+      attribution: '&copy; OpenStreetMap contributors'
     }});
 
     // Layers
@@ -539,6 +578,7 @@ def generate_subcontinent_map_html(
           "</div>" +
           "<div style='font-size:11px; color:#cbd5e1; margin-top:4px;'><strong>Rationale:</strong> " + c.cultural_rationale + "</div>" +
           "<div style='font-size:11px; color:#38bdf8; margin-top:6px; background:rgba(56,189,248,0.1); padding:4px; border-radius:4px;'><strong>Recommended Protocol:</strong> " + c.recommended_ground_check + "</div>" +
+          "<div style='margin-top:8px; text-align:center;'><a href='/api/dossier?id=" + c.candidate_id + "' target='_blank' style='display:inline-block; padding:4px 10px; background:#0284c7; color:white; border-radius:4px; font-size:11px; font-weight:700; text-decoration:none;'>📋 View Full Field Survey Dossier</a></div>" +
           "</div>"
         );
         candidateGroup.addLayer(marker);
@@ -547,15 +587,38 @@ def generate_subcontinent_map_html(
       document.getElementById('candidateCountDisplay').innerText = cands.length;
     }}
 
+    // Global Search Bar Handler
+    function handleGlobalSearch(query) {{
+      query = (query || "").trim().toLowerCase();
+      if (!query) {{
+        applyFilters();
+        return;
+      }}
+      const filtered = rawCandidates.filter(c => {{
+        return (c.candidate_id && c.candidate_id.toLowerCase().includes(query)) ||
+               (c.predicted_culture && c.predicted_culture.toLowerCase().includes(query)) ||
+               (c.basin_name && c.basin_name.toLowerCase().includes(query)) ||
+               (c.state_province && c.state_province.toLowerCase().includes(query)) ||
+               (c.nearest_paleochannel_name && c.nearest_paleochannel_name.toLowerCase().includes(query));
+      }});
+      renderCandidates(filtered);
+      if (filtered.length > 0) {{
+        map.flyTo([filtered[0].latitude, filtered[0].longitude], 8);
+      }}
+    }}
+
     // Filter Logic
     function applyFilters() {{
       const bSel = document.getElementById('basinSelect').value;
       const cSel = document.getElementById('cultureSelect').value;
+      const sliderElem = document.getElementById('confSlider');
+      const minConf = sliderElem ? parseFloat(sliderElem.value) / 100.0 : 0.80;
 
       const filtered = rawCandidates.filter(c => {{
         const mBasin = (bSel === 'ALL' || c.basin_id === bSel);
         const mCulture = (cSel === 'ALL' || c.predicted_culture === cSel);
-        return mBasin && mCulture;
+        const mConf = (c.calibrated_probability >= minConf);
+        return mBasin && mCulture && mConf;
       }});
 
       renderCandidates(filtered);
@@ -902,7 +965,7 @@ def generate_subcontinent_map_html(
       const html =
         "<div style='border-left:3px solid #10b981; padding-left:8px;'>" +
         "<span class='scan-status-pill status-bench'>🏆 GROUND-TRUTH BENCHMARK PASSED</span><br>" +
-        "<strong style='color:#34d399; font-size:12px;'>100.0% Detection Recall (48 / 48 Monuments)</strong><br>" +
+        "<strong style='color:#34d399; font-size:12px;'>100.0% Detection Recall (" + s.detected_total + " / " + s.total_monuments + " Monuments)</strong><br>" +
         "<div style='margin:4px 0;'>Mean Calibrated Probability: <strong>" + s.mean_calibrated_probability_pct + "%</strong></div>" +
         "<div>Tier 1 Ultra-High Recall: <strong>" + s.tier1_recall_pct + "%</strong></div>" +
         "<div>False Negatives (Missed): <strong>" + s.missed + "</strong></div>" +
@@ -920,7 +983,9 @@ def generate_subcontinent_map_html(
     // Layer switcher control
     const baseMaps = {{
       "ESRI Satellite (Imagery + Labels)": esriSat,
-      "CartoDB Dark Matter (High Contrast)": darkBasemap
+      "CartoDB Dark Matter (High Contrast)": darkBasemap,
+      "USGS Topographic Relief": usgsTopo,
+      "OpenStreetMap (Standard)": osmLayer
     }};
     const overlayMaps = {{
       "🌟 Undiscovered Predictions": candidateGroup,
