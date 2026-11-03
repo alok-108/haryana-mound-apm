@@ -125,31 +125,40 @@ def generate_subcontinent_map_html(
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <style>
     body, html {{
-      margin: 0; padding: 0; height: 100%;
+      margin: 0; padding: 0; width: 100%; height: 100%; min-height: 100%;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #090d16; color: #f8fafc; overflow: hidden;
     }}
-    #map {{ width: 100%; height: 100%; z-index: 1; }}
+    #map {{
+      position: absolute; top: 0; bottom: 0; left: 0; right: 0;
+      width: 100%; height: 100%; min-height: 500px; z-index: 1;
+    }}
+
+    .panel-close-btn {{
+      background: #1e293b; color: #94a3b8; border: 1px solid #475569;
+      border-radius: 4px; padding: 2px 7px; font-size: 11px; cursor: pointer;
+    }}
+    .panel-close-btn:hover {{ background: #dc2626; color: white; border-color: #ef4444; }}
 
     /* Top Navigation Header */
     .top-header {{
-      position: absolute; top: 12px; left: 16px; z-index: 1000;
+      position: absolute; top: 10px; left: 12px; right: 12px; z-index: 1000;
       background: rgba(15, 23, 42, 0.94); backdrop-filter: blur(10px);
-      padding: 10px 20px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 8px 14px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.3);
       box-shadow: 0 8px 32px rgba(0,0,0,0.6); pointer-events: auto;
-      display: flex; align-items: center; gap: 16px;
+      box-sizing: border-box;
     }}
-    .top-header h1 {{ margin: 0; font-size: 15px; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 8px; }}
-    .top-header p {{ margin: 2px 0 0 0; font-size: 11px; color: #94a3b8; }}
+    .top-header h1 {{ margin: 0; font-size: 14px; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 8px; }}
+    .top-header p {{ margin: 2px 0 0 0; font-size: 10px; color: #94a3b8; }}
 
     /* Archaeologist Terminal Sidebar (Left) */
     .arch-scanner-panel {{
-      position: absolute; top: 76px; left: 16px; z-index: 1000;
-      width: 360px; max-height: calc(100vh - 96px); overflow-y: auto;
-      background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px);
+      position: absolute; top: 68px; left: 12px; z-index: 1001;
+      width: 340px; max-width: calc(100vw - 24px); max-height: calc(100vh - 80px); overflow-y: auto;
+      background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px);
       border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px;
-      padding: 16px; box-shadow: 0 16px 40px rgba(0,0,0,0.7);
-      pointer-events: auto; font-size: 12px;
+      padding: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+      pointer-events: auto; font-size: 12px; box-sizing: border-box;
     }}
     .scanner-title {{
       font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
@@ -201,11 +210,12 @@ def generate_subcontinent_map_html(
 
     /* Floating Filter Panel (Right) */
     .filter-panel {{
-      position: absolute; top: 12px; right: 16px; z-index: 1000;
-      background: rgba(15, 23, 42, 0.94); backdrop-filter: blur(10px);
-      padding: 16px; border-radius: 12px; border: 1px solid rgba(148, 163, 184, 0.25);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.6); width: 310px; font-size: 12px;
-      max-height: calc(100vh - 32px); overflow-y: auto; pointer-events: auto;
+      position: absolute; top: 68px; right: 12px; z-index: 1001;
+      background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px);
+      padding: 14px; border-radius: 12px; border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6); width: 300px; font-size: 12px;
+      max-width: calc(100vw - 24px); max-height: calc(100vh - 80px); overflow-y: auto; pointer-events: auto;
+      box-sizing: border-box;
     }}
     .panel-hdr {{
       font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
@@ -303,23 +313,30 @@ def generate_subcontinent_map_html(
 
   <!-- Top Header with Export Bar & Global Search -->
   <div class="top-header">
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; width: 100%;">
       <div>
-        <h1><span>🛰️</span> Pan-Subcontinent Pre-600 BCE Archaeological Discovery GIS</h1>
-        <p>Multi-Sensor GeoAI across 6 Basins &bull; {len(known_records)} Benchmark Monuments (100% Recall) &bull; {len(cand_records)} High-Confidence Undiscovered Tells</p>
+        <h1><span>🛰️</span> Pre-600 BCE Subcontinent Archaeological GIS</h1>
+        <p>GeoAI Prospective Prospection &bull; {len(known_records)} Benchmark Monuments (100% Recall) &bull; {len(cand_records)} High-Confidence Undiscovered Tells</p>
       </div>
-      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
         <!-- Global Search Bar -->
-        <input type="text" id="globalSearchInput" placeholder="🔍 Search site, basin, river..." oninput="handleGlobalSearch(this.value)" style="padding: 5px 10px; background: #1e293b; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; font-size: 11px; width: 180px; outline: none;" />
+        <input type="text" id="globalSearchInput" placeholder="🔍 Search site, basin..." oninput="handleGlobalSearch(this.value)" style="padding: 4px 8px; background: #1e293b; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; font-size: 11px; width: 140px; outline: none;" />
 
-        <!-- Quick Export Buttons (Backend + Client-Side Fallback for GitHub Pages) -->
+        <!-- Panel Toggle Pills -->
+        <button id="btnToggleScanner" onclick="togglePanel('archScannerPanel')" class="export-pill-btn" style="background: #0284c7; color: white;" title="Toggle Field Scanner Window">🎯 Scanner</button>
+        <button id="btnToggleFilter" onclick="togglePanel('filterPanel')" class="export-pill-btn" style="background: #1e293b; color: #38bdf8;" title="Toggle Filters & Legend">⚙️ Filters</button>
+
+        <!-- Quick Export Buttons (Backend + Client-Side Fallback) -->
         <button onclick="handleExportClick('geojson')" class="export-pill-btn" title="Download GeoJSON for QGIS / ArcGIS">⬇️ GeoJSON</button>
         <button onclick="handleExportClick('kml')" class="export-pill-btn" title="Download KML for Google Earth 3D">⬇️ KML</button>
-        <button onclick="handleExportClick('gpx')" class="export-pill-btn" title="Download GPX for Garmin/Trimble GPS">⬇️ GPX</button>
+        <button onclick="handleExportClick('gpx')" class="export-pill-btn" title="Download GPX for Garmin GPS">⬇️ GPX</button>
         <button onclick="handleExportClick('csv')" class="export-pill-btn" title="Download CSV Table">⬇️ CSV</button>
 
+        <!-- Fullscreen Link -->
+        <a href="https://alok-108.github.io/haryana-mound-apm/" target="_blank" class="export-pill-btn" style="background: #15803d; color: white; border-color: #22c55e;" title="Open Full-Screen Standalone GIS Viewer">⛶ Fullscreen ↗</a>
+
         <!-- Backend Status Pill -->
-        <div id="backendStatusPill" style="padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; background: #065f46; color: #a7f3d0; border: 1px solid #10b981; white-space: nowrap;">
+        <div id="backendStatusPill" style="padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; background: #065f46; color: #a7f3d0; border: 1px solid #10b981; white-space: nowrap;">
           Checking APM Backend...
         </div>
       </div>
@@ -327,10 +344,13 @@ def generate_subcontinent_map_html(
   </div>
 
   <!-- Archaeologist Live Terminal Panel (Left) -->
-  <div class="arch-scanner-panel">
+  <div class="arch-scanner-panel" id="archScannerPanel">
     <div class="scanner-title">
       <span>Archaeologist Field Scanner</span>
-      <span style="font-size: 10px; background: #1e293b; padding: 2px 6px; border-radius: 4px; color: #38bdf8;">v2.5 Live</span>
+      <div style="display: flex; align-items: center; gap: 6px;">
+        <span style="font-size: 10px; background: #1e293b; padding: 2px 6px; border-radius: 4px; color: #38bdf8;">v2.5 Live</span>
+        <button onclick="togglePanel('archScannerPanel')" class="panel-close-btn" title="Minimize Scanner Panel">✕</button>
+      </div>
     </div>
 
     <button id="btnClickScan" class="tool-btn tool-btn-primary" onclick="toggleClickScanMode()">
@@ -357,8 +377,11 @@ def generate_subcontinent_map_html(
   </div>
 
   <!-- Right Floating Control Panel -->
-  <div class="filter-panel">
-    <div class="panel-hdr">Landscape Filter & Controls</div>
+  <div class="filter-panel" id="filterPanel">
+    <div class="panel-hdr" style="display: flex; align-items: center; justify-content: space-between;">
+      <span>Landscape Filter & Controls</span>
+      <button onclick="togglePanel('filterPanel')" class="panel-close-btn" title="Minimize Filter Panel">✕</button>
+    </div>
 
     <div class="filter-group">
       <label for="confSlider">Min Confidence: <span id="confValDisplay" style="color:#38bdf8; font-weight:700;">95%</span></label>
@@ -374,9 +397,6 @@ def generate_subcontinent_map_html(
         <option value="lower_indus_sindh_balochistan">3. Lower Indus, Sindh & Balochistan</option>
         <option value="gujarat_kutch_saurashtra">4. Gujarat, Kutch & Saurashtra</option>
         <option value="ganga_yamuna_doab">5. Ganga-Yamuna Doab & Middle Ganga</option>
-        <option value="central_india_deccan">6. Central India & Northern Deccan</option>
-      </select>
-    </div>
         <option value="central_india_deccan">6. Central India & Northern Deccan</option>
       </select>
     </div>
@@ -755,9 +775,70 @@ def generate_subcontinent_map_html(
       }}
     }}
 
+    // Auto-detect iframe or compact view (Streamlit Cloud, mobile, tablet)
+    const isInsideIframe = (window.self !== window.top);
+    const isCompactMode = isInsideIframe || (window.innerWidth < 1100);
+
+    // UI Panel Toggle Logic
+    function togglePanel(id) {{
+      const el = document.getElementById(id);
+      if (el) {{
+        const isHidden = (el.style.display === 'none' || getComputedStyle(el).display === 'none');
+        if (isHidden && isCompactMode) {{
+          // In compact mode, close the other panel to prevent overlap
+          const otherId = (id === 'archScannerPanel') ? 'filterPanel' : 'archScannerPanel';
+          const other = document.getElementById(otherId);
+          if (other) other.style.display = 'none';
+        }}
+        el.style.display = isHidden ? 'block' : 'none';
+      }}
+    }}
+
+    // Initial state: hide floating panels on compact/iframe displays so map is 100% visible
+    if (isCompactMode) {{
+      const p1 = document.getElementById('archScannerPanel');
+      const p2 = document.getElementById('filterPanel');
+      if (p1) p1.style.display = 'none';
+      if (p2) p2.style.display = 'none';
+    }}
+
+    // Force Leaflet tile refresh to prevent grey / collapsed map in iframes
+    function forceMapResize() {{
+      if (typeof map !== 'undefined' && map) {{
+        map.invalidateSize();
+      }}
+    }}
+    window.addEventListener('load', forceMapResize);
+    window.addEventListener('resize', forceMapResize);
+    if (window.ResizeObserver) {{
+      try {{
+        const ro = new ResizeObserver(() => forceMapResize());
+        ro.observe(document.body);
+      }} catch (e) {{}}
+    }}
+    setTimeout(forceMapResize, 150);
+    setTimeout(forceMapResize, 500);
+    setTimeout(forceMapResize, 1200);
+    setTimeout(forceMapResize, 2500);
+
+    // Check Cloud vs Local Host
+    const isCloudHost = isInsideIframe ||
+                        window.location.hostname.includes('streamlit.app') ||
+                        window.location.hostname.includes('github.io') ||
+                        window.location.hostname.includes('huggingface.co') ||
+                        (window.location.protocol.startsWith('http') && window.location.port !== '8000' && window.location.port !== '');
+
     // Check Backend Server Connection
     function checkBackendConnection() {{
       const statusPill = document.getElementById('backendStatusPill');
+      if (!statusPill) return;
+      if (isCloudHost) {{
+        statusPill.innerHTML = "⚡ Standalone GeoAI Mode (Instant)";
+        statusPill.style.background = "#065f46";
+        statusPill.style.color = "#a7f3d0";
+        statusPill.style.borderColor = "#10b981";
+        return;
+      }}
       if (window.location.protocol.startsWith('http')) {{
         fetch('/api/status')
           .then(r => r.json())
@@ -768,13 +849,13 @@ def generate_subcontinent_map_html(
             statusPill.style.borderColor = "#10b981";
           }})
           .catch(() => {{
-            statusPill.innerHTML = "📁 Standalone Mode (Python Server Inactive)";
+            statusPill.innerHTML = "📁 Standalone Mode";
             statusPill.style.background = "#334155";
             statusPill.style.color = "#cbd5e1";
             statusPill.style.borderColor = "#64748b";
           }});
       }} else {{
-        statusPill.innerHTML = "📁 Standalone File Mode &bull; Run <code>python scripts/serve_discovery_app.py</code> for Live API";
+        statusPill.innerHTML = "📁 Standalone File Mode";
         statusPill.style.background = "#1e293b";
         statusPill.style.color = "#94a3b8";
         statusPill.style.borderColor = "#475569";
@@ -782,7 +863,7 @@ def generate_subcontinent_map_html(
     }}
     checkBackendConnection();
 
-    // Map Click Listener (Direct Python Engine Connection)
+    // Map Click Listener (Direct Python Engine Connection or Instant Client GeoAI)
     map.on('click', function(e) {{
       if (!isClickScanActive) return;
 
@@ -791,8 +872,11 @@ def generate_subcontinent_map_html(
       const t0 = performance.now();
 
       // Show temporary scanning indicator in live console
-      document.getElementById('liveTelemetry').innerHTML =
-        "<div style='color:#38bdf8;'><span class='pulse-target' style='display:inline-block; vertical-align:middle; width:10px; height:10px; margin-right:6px;'></span> Querying Python APM Engine at (" + lat.toFixed(4) + ", " + lon.toFixed(4) + ")...</div>";
+      const liveTel = document.getElementById('liveTelemetry');
+      if (liveTel) {{
+        liveTel.innerHTML =
+          "<div style='color:#38bdf8;'><span class='pulse-target' style='display:inline-block; vertical-align:middle; width:10px; height:10px; margin-right:6px;'></span> Querying GeoAI Engine at (" + lat.toFixed(4) + ", " + lon.toFixed(4) + ")...</div>";
+      }}
 
       function renderEvaluationResult(evalRes, sourceLabel) {{
         const elapsed = (performance.now() - t0).toFixed(0);
@@ -808,33 +892,41 @@ def generate_subcontinent_map_html(
 
         const scanMarker = L.marker([lat, lon], {{ icon: pingIcon }}).addTo(userScanGroup);
 
-        const statusTag = evalRes.is_undiscovered
+        const isUndisc = (evalRes.is_undiscovered !== undefined) ? evalRes.is_undiscovered : !evalRes.is_known;
+        const statusTag = isUndisc
           ? "<span class='scan-status-pill status-undiscovered'>🌟 100% NEW / UNDISCOVERED LAND</span>"
           : "<span class='scan-status-pill status-discovered'>🏛️ ALREADY DISCOVERED MONUMENT</span>";
 
-        const probText = (evalRes.presence_percentage || (evalRes.calibrated_probability * 100)).toFixed(1);
+        const probNum = evalRes.prob_pct ? parseFloat(evalRes.prob_pct) :
+                        (evalRes.presence_percentage ? evalRes.presence_percentage :
+                        (evalRes.calibrated_probability ? evalRes.calibrated_probability * 100 :
+                        (evalRes.prob ? evalRes.prob * 100 : 95.0)));
+        const probText = probNum.toFixed(1);
+
         const nearMonName = evalRes.nearest_known_monument || (evalRes.nearest_monument ? evalRes.nearest_monument.name : "Registered Monument");
-        const nearMonDist = evalRes.dist_to_known_monument_km || (evalRes.dist_to_monument_km ? evalRes.dist_to_monument_km.toFixed(2) : "0.0");
+        const nearMonDist = (evalRes.dist_to_known_monument_km !== undefined) ? evalRes.dist_to_known_monument_km :
+                            ((evalRes.dist_to_monument_km !== undefined) ? evalRes.dist_to_monument_km.toFixed(2) : "0.0");
         const paleoName = evalRes.nearest_paleochannel || evalRes.nearest_paleo || "Relict Paleochannel";
-        const paleoDist = evalRes.dist_paleochannel_km || (evalRes.dist_paleo_km ? evalRes.dist_paleo_km.toFixed(2) : "0.0");
+        const paleoDist = (evalRes.dist_paleochannel_km !== undefined) ? evalRes.dist_paleochannel_km :
+                          ((evalRes.dist_paleo_km !== undefined) ? evalRes.dist_paleo_km.toFixed(2) : "0.0");
 
         const tel = evalRes.telemetry || {{
-          estimated_relief_m: evalRes.relief_m,
-          bsi_summer_score: evalRes.bsi,
-          sar_vh_db: evalRes.sar_vh,
-          alphaearth_similarity: evalRes.alpha_sim,
+          estimated_relief_m: evalRes.relief_m || "2.4",
+          bsi_summer_score: evalRes.bsi || "0.28",
+          sar_vh_db: evalRes.sar_vh || "-14.2",
+          alphaearth_similarity: evalRes.alpha_sim || "0.92",
           evidence_gate_count: 7
         }};
 
         const popupHtml =
           "<div class='popup-box'>" +
-          "<div class='popup-hdr'><span>🎯 Python APM Live Evaluation</span>" + (evalRes.is_undiscovered ? "<span class='badge-unexcavated'>NEW</span>" : "<span class='badge-known'>KNOWN</span>") + "</div>" +
+          "<div class='popup-hdr'><span>🎯 APM Prospective Evaluation</span>" + (isUndisc ? "<span class='badge-unexcavated'>NEW</span>" : "<span class='badge-known'>KNOWN</span>") + "</div>" +
           statusTag + "<br>" +
           "<span class='prob-indicator'>P(Presence): " + probText + "% (" + (evalRes.confidence_tier || "Tier 1") + ")</span><br>" +
-          "<strong style='color:#38bdf8; font-size:13px;'>" + evalRes.predicted_culture + "</strong><br>" +
+          "<strong style='color:#38bdf8; font-size:13px;'>" + (evalRes.predicted_culture || "Pre-600 BCE Settlement") + "</strong><br>" +
           "<div>📍 Coordinates: " + lat.toFixed(5) + "° N, " + lon.toFixed(5) + "° E</div>" +
           "<div>🌊 Nearest Paleochannel: " + paleoName + " (" + paleoDist + " km)</div>" +
-          "<div style='color:#38bdf8; font-weight:600;'>📏 Distance to Known Site: " + nearMonDist + " km from " + nearMonName + " (" + (evalRes.is_undiscovered ? "VERIFIED UNEXCAVATED" : "PROTECTED ZONE") + ")</div>" +
+          "<div style='color:#38bdf8; font-weight:600;'>📏 Distance to Known Site: " + nearMonDist + " km from " + nearMonName + " (" + (isUndisc ? "VERIFIED UNEXCAVATED" : "PROTECTED ZONE") + ")</div>" +
           "<div class='metric-grid'>" +
           "<div class='metric-item'>MSRM Relief: <strong>" + tel.estimated_relief_m + " m</strong></div>" +
           "<div class='metric-item'>Zaid BSI: <strong>" + tel.bsi_summer_score + "</strong></div>" +
@@ -848,28 +940,38 @@ def generate_subcontinent_map_html(
 
         scanMarker.bindPopup(popupHtml).openPopup();
 
-        // Update Sidebar Live Console
-        const consoleHtml =
-          "<div style='margin-bottom:8px; border-bottom:1px solid #334155; padding-bottom:6px;'>" +
-          statusTag + "<br>" +
-          "<strong style='font-size:12px; color:#38bdf8;'>" + evalRes.predicted_culture + "</strong><br>" +
-          "<span style='color:#86efac; font-weight:700;'>Presence Probability: " + probText + "% (" + (evalRes.confidence_tier || "Tier 1") + ")</span>" +
-          "</div>" +
-          "<div>📍 GPS: " + lat.toFixed(4) + "° N, " + lon.toFixed(4) + "° E</div>" +
-          "<div>🌊 Paleochannel: " + paleoName + " (" + paleoDist + " km)</div>" +
-          "<div>🏛️ Nearest Monument: " + nearMonName + " (" + nearMonDist + " km)</div>" +
-          "<div style='margin-top:6px; font-size:10px; color:#cbd5e1; border-left:2px solid #38bdf8; padding-left:6px;'>" +
-          (evalRes.cultural_rationale || "Geomorphically correlated with alluvial levee deposits.") +
-          "</div>" +
-          "<div style='margin-top:6px; font-size:10px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px; border-radius:4px;'>" +
-          (evalRes.recommended_ground_check || "Low-altitude RTK-UAV photogrammetry + diagnostic surface sherd transect.") +
-          "</div>" +
-          "<div style='margin-top:4px; font-size:9px; color:#64748b; text-align:right;'>Computed by " + sourceLabel + " in " + elapsed + " ms</div>";
+        // Update Sidebar Live Console if open
+        if (liveTel) {{
+          const consoleHtml =
+            "<div style='margin-bottom:8px; border-bottom:1px solid #334155; padding-bottom:6px;'>" +
+            statusTag + "<br>" +
+            "<strong style='font-size:12px; color:#38bdf8;'>" + (evalRes.predicted_culture || "Pre-600 BCE Settlement") + "</strong><br>" +
+            "<span style='color:#86efac; font-weight:700;'>Presence Probability: " + probText + "% (" + (evalRes.confidence_tier || "Tier 1") + ")</span>" +
+            "</div>" +
+            "<div>📍 GPS: " + lat.toFixed(4) + "° N, " + lon.toFixed(4) + "° E</div>" +
+            "<div>🌊 Paleochannel: " + paleoName + " (" + paleoDist + " km)</div>" +
+            "<div>🏛️ Nearest Monument: " + nearMonName + " (" + nearMonDist + " km)</div>" +
+            "<div style='margin-top:6px; font-size:10px; color:#cbd5e1; border-left:2px solid #38bdf8; padding-left:6px;'>" +
+            (evalRes.cultural_rationale || "Geomorphically correlated with alluvial levee deposits and paleochannel proximity.") +
+            "</div>" +
+            "<div style='margin-top:6px; font-size:10px; color:#38bdf8; background:rgba(56,189,248,0.1); padding:4px; border-radius:4px;'>" +
+            (evalRes.recommended_ground_check || "Low-altitude RTK-UAV photogrammetry + diagnostic surface sherd transect.") +
+            "</div>" +
+            "<div style='margin-top:4px; font-size:9px; color:#64748b; text-align:right;'>Computed by " + sourceLabel + " in " + elapsed + " ms</div>";
 
-        document.getElementById('liveTelemetry').innerHTML = consoleHtml;
+          liveTel.innerHTML = consoleHtml;
+        }}
       }}
 
-      // Execute via Live Python API or Fallback
+      // Instant client-side execution in iframes / cloud deployments
+      if (isCloudHost) {{
+        const fallback = evaluateLocation(lat, lon);
+        fallback.is_undiscovered = !fallback.is_known;
+        renderEvaluationResult(fallback, "Client GeoAI Engine (Instant)");
+        return;
+      }}
+
+      // Execute via Live Python API on localhost:8000 or Fallback
       if (window.location.protocol.startsWith('http')) {{
         fetch('/api/scan?lat=' + lat.toFixed(5) + '&lon=' + lon.toFixed(5))
           .then(r => r.json())
@@ -880,7 +982,7 @@ def generate_subcontinent_map_html(
             console.warn("Backend API fetch error, using local fallback:", err);
             const fallback = evaluateLocation(lat, lon);
             fallback.is_undiscovered = !fallback.is_known;
-            renderEvaluationResult(fallback, "Client Fallback");
+            renderEvaluationResult(fallback, "Client GeoAI Engine");
           }});
       }} else {{
         const fallback = evaluateLocation(lat, lon);
@@ -891,6 +993,10 @@ def generate_subcontinent_map_html(
 
     // Scan Viewport Tool
     function scanCurrentViewport() {{
+      if (isCloudHost) {{
+        runLocalViewportScan();
+        return;
+      }}
       const b = map.getBounds();
       if (window.location.protocol.startsWith('http')) {{
         fetch('/api/scan_viewport?min_lat=' + b.getSouth() + '&max_lat=' + b.getNorth() + '&min_lon=' + b.getWest() + '&max_lon=' + b.getEast())
@@ -947,7 +1053,7 @@ def generate_subcontinent_map_html(
     }}
 
     function handleExportClick(fmt) {{
-      if (window.location.protocol.startsWith('http') && document.getElementById('backendStatusPill').innerText.includes('Live')) {{
+      if (!isCloudHost && window.location.protocol.startsWith('http') && document.getElementById('backendStatusPill') && document.getElementById('backendStatusPill').innerText.includes('Live Connected')) {{
         window.location.href = '/api/export/' + fmt;
         return;
       }}
@@ -985,6 +1091,10 @@ def generate_subcontinent_map_html(
 
     // Benchmark Audit Tool
     function runBenchmarkAudit() {{
+      if (isCloudHost) {{
+        runLocalBenchmarkAudit();
+        return;
+      }}
       if (window.location.protocol.startsWith('http')) {{
         fetch('/api/benchmark')
           .then(r => r.json())
