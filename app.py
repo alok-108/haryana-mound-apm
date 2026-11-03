@@ -204,15 +204,23 @@ def run_streamlit_app():
 
         if map_path.exists():
             html_content = map_path.read_text(encoding="utf-8")
-            components.html(html_content, height=800, scrolling=False)
+            components.html(html_content, height=820, scrolling=True)
         else:
             st.warning("Map file not found. Please compile it with `python scripts/generate_subcontinent_map.py`.")
 
-        st.info(
-            "📱 **Display Notice:** If using a mobile phone or narrow tablet, you can also launch the "
-            "[Dedicated Fullscreen Web GIS Viewer ↗](https://alok-108.github.io/haryana-mound-apm/) "
-            "for complete touch navigation with no framing constraints."
-        )
+        col_full, col_info = st.columns([1, 2])
+        with col_full:
+            st.link_button(
+                "⛶ Open Fullscreen Web GIS Viewer ↗",
+                "https://alok-108.github.io/haryana-mound-apm/",
+                type="primary",
+                use_container_width=True,
+            )
+        with col_info:
+            st.caption(
+                "Tip: Click anywhere on the map to run instant GeoAI prospection, "
+                "or open the Fullscreen Viewer for field tablets and large GIS monitors."
+            )
 
     # Tab 2: Coordinate Deep Scanner & Archaeological Dossier
     with tab_scanner:

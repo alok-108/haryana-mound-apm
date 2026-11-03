@@ -142,33 +142,33 @@ def generate_subcontinent_map_html(
 
     /* Top Navigation Header */
     .top-header {{
-      position: absolute; top: 10px; left: 12px; right: 12px; z-index: 1000;
-      background: rgba(15, 23, 42, 0.94); backdrop-filter: blur(10px);
-      padding: 8px 14px; border-radius: 10px; border: 1px solid rgba(56, 189, 248, 0.3);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.6); pointer-events: auto;
+      position: absolute; top: 8px; left: 8px; right: 8px; z-index: 1000;
+      background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px);
+      padding: 6px 12px; border-radius: 8px; border: 1px solid rgba(56, 189, 248, 0.3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5); pointer-events: auto;
       box-sizing: border-box;
     }}
-    .top-header h1 {{ margin: 0; font-size: 14px; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 8px; }}
-    .top-header p {{ margin: 2px 0 0 0; font-size: 10px; color: #94a3b8; }}
+    .top-header h1 {{ margin: 0; font-size: 13px; font-weight: 700; color: #38bdf8; display: flex; align-items: center; gap: 6px; }}
+    .top-header p {{ margin: 1px 0 0 0; font-size: 10px; color: #94a3b8; }}
 
     /* Archaeologist Terminal Sidebar (Left) */
     .arch-scanner-panel {{
-      position: absolute; top: 68px; left: 12px; z-index: 1001;
-      width: 340px; max-width: calc(100vw - 24px); max-height: calc(100vh - 80px); overflow-y: auto;
-      background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px);
-      border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px;
-      padding: 14px; box-shadow: 0 16px 40px rgba(0,0,0,0.7);
-      pointer-events: auto; font-size: 12px; box-sizing: border-box;
+      position: absolute; top: 58px; left: 8px; z-index: 1002;
+      width: 330px; max-width: calc(100vw - 16px); max-height: calc(100vh - 68px); overflow-y: auto;
+      background: rgba(15, 23, 42, 0.97); backdrop-filter: blur(12px);
+      border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 10px;
+      padding: 12px; box-shadow: 0 16px 40px rgba(0,0,0,0.7);
+      pointer-events: auto; font-size: 11px; box-sizing: border-box;
     }}
     .scanner-title {{
-      font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
+      font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;
       color: #38bdf8; display: flex; align-items: center; justify-content: space-between;
-      border-bottom: 1px solid #334155; padding-bottom: 8px; margin-bottom: 12px;
+      border-bottom: 1px solid #334155; padding-bottom: 6px; margin-bottom: 10px;
     }}
     .tool-btn {{
       display: flex; align-items: center; justify-content: center; gap: 8px;
-      width: 100%; padding: 10px; margin-bottom: 8px; border-radius: 8px;
-      font-weight: 700; font-size: 12px; cursor: pointer; border: 1px solid transparent;
+      width: 100%; padding: 8px; margin-bottom: 6px; border-radius: 6px;
+      font-weight: 700; font-size: 11px; cursor: pointer; border: 1px solid transparent;
       transition: all 0.2s ease;
     }}
     .tool-btn-primary {{
@@ -199,10 +199,10 @@ def generate_subcontinent_map_html(
     /* Scan Results Container */
     .scan-feed-box {{
       background: #0b1120; border: 1px solid #1e293b; border-radius: 8px;
-      padding: 12px; margin-top: 12px; font-size: 11px; max-height: 280px; overflow-y: auto;
+      padding: 10px; margin-top: 10px; font-size: 11px; max-height: 260px; overflow-y: auto;
     }}
     .scan-status-pill {{
-      display: inline-block; padding: 3px 8px; border-radius: 4px; font-weight: 700; font-size: 11px; margin-bottom: 6px;
+      display: inline-block; padding: 2px 7px; border-radius: 4px; font-weight: 700; font-size: 10px; margin-bottom: 4px;
     }}
     .status-undiscovered {{ background: #991b1b; color: #fecaca; border: 1px solid #ef4444; }}
     .status-discovered {{ background: #1e3a8a; color: #bfdbfe; border: 1px solid #3b82f6; }}
@@ -210,11 +210,11 @@ def generate_subcontinent_map_html(
 
     /* Floating Filter Panel (Right) */
     .filter-panel {{
-      position: absolute; top: 68px; right: 12px; z-index: 1001;
-      background: rgba(15, 23, 42, 0.96); backdrop-filter: blur(12px);
-      padding: 14px; border-radius: 12px; border: 1px solid rgba(148, 163, 184, 0.25);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.6); width: 300px; font-size: 12px;
-      max-width: calc(100vw - 24px); max-height: calc(100vh - 80px); overflow-y: auto; pointer-events: auto;
+      position: absolute; top: 58px; right: 8px; z-index: 1002;
+      background: rgba(15, 23, 42, 0.97); backdrop-filter: blur(12px);
+      padding: 12px; border-radius: 10px; border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6); width: 290px; font-size: 11px;
+      max-width: calc(100vw - 16px); max-height: calc(100vh - 68px); overflow-y: auto; pointer-events: auto;
       box-sizing: border-box;
     }}
     .panel-hdr {{
@@ -313,31 +313,33 @@ def generate_subcontinent_map_html(
 
   <!-- Top Header with Export Bar & Global Search -->
   <div class="top-header">
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; width: 100%;">
-      <div>
-        <h1><span>🛰️</span> Pre-600 BCE Subcontinent Archaeological GIS</h1>
-        <p>GeoAI Prospective Prospection &bull; {len(known_records)} Benchmark Monuments (100% Recall) &bull; {len(cand_records)} High-Confidence Undiscovered Tells</p>
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px; width: 100%;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="font-size: 16px;">🛰️</span>
+        <div>
+          <h1>Pre-600 BCE Subcontinent Archaeological GIS</h1>
+          <p>{len(known_records)} Benchmark Monuments (100% Recall) &bull; {len(cand_records)} High-Confidence Undiscovered Tells</p>
+        </div>
       </div>
-      <div style="display: flex; align-items: center; gap: 6px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; gap: 5px; flex-wrap: wrap;">
         <!-- Global Search Bar -->
-        <input type="text" id="globalSearchInput" placeholder="🔍 Search site, basin..." oninput="handleGlobalSearch(this.value)" style="padding: 4px 8px; background: #1e293b; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; font-size: 11px; width: 140px; outline: none;" />
+        <input type="text" id="globalSearchInput" placeholder="🔍 Search site, basin..." oninput="handleGlobalSearch(this.value)" style="padding: 4px 8px; background: #1e293b; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; font-size: 11px; width: 130px; outline: none;" />
 
         <!-- Panel Toggle Pills -->
         <button id="btnToggleScanner" onclick="togglePanel('archScannerPanel')" class="export-pill-btn" style="background: #0284c7; color: white;" title="Toggle Field Scanner Window">🎯 Scanner</button>
         <button id="btnToggleFilter" onclick="togglePanel('filterPanel')" class="export-pill-btn" style="background: #1e293b; color: #38bdf8;" title="Toggle Filters & Legend">⚙️ Filters</button>
 
-        <!-- Quick Export Buttons (Backend + Client-Side Fallback) -->
-        <button onclick="handleExportClick('geojson')" class="export-pill-btn" title="Download GeoJSON for QGIS / ArcGIS">⬇️ GeoJSON</button>
+        <!-- Quick Export Buttons -->
         <button onclick="handleExportClick('kml')" class="export-pill-btn" title="Download KML for Google Earth 3D">⬇️ KML</button>
-        <button onclick="handleExportClick('gpx')" class="export-pill-btn" title="Download GPX for Garmin GPS">⬇️ GPX</button>
+        <button onclick="handleExportClick('geojson')" class="export-pill-btn" title="Download GeoJSON for QGIS">⬇️ GeoJSON</button>
         <button onclick="handleExportClick('csv')" class="export-pill-btn" title="Download CSV Table">⬇️ CSV</button>
 
         <!-- Fullscreen Link -->
         <a href="https://alok-108.github.io/haryana-mound-apm/" target="_blank" class="export-pill-btn" style="background: #15803d; color: white; border-color: #22c55e;" title="Open Full-Screen Standalone GIS Viewer">⛶ Fullscreen ↗</a>
 
-        <!-- Backend Status Pill -->
-        <div id="backendStatusPill" style="padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; background: #065f46; color: #a7f3d0; border: 1px solid #10b981; white-space: nowrap;">
-          Checking APM Backend...
+        <!-- Viewport Stat Pill -->
+        <div id="viewportStatPill" style="padding: 3px 8px; border-radius: 20px; font-size: 10px; font-weight: 700; background: #1e293b; color: #38bdf8; border: 1px solid #0284c7; white-space: nowrap;">
+          👁️ In View: {len(cand_records)} Tells
         </div>
       </div>
     </div>
@@ -598,7 +600,7 @@ def generate_subcontinent_map_html(
           "</div>" +
           "<div style='font-size:11px; color:#cbd5e1; margin-top:4px;'><strong>Rationale:</strong> " + c.cultural_rationale + "</div>" +
           "<div style='font-size:11px; color:#38bdf8; margin-top:6px; background:rgba(56,189,248,0.1); padding:4px; border-radius:4px;'><strong>Recommended Protocol:</strong> " + c.recommended_ground_check + "</div>" +
-          "<div style='margin-top:8px; text-align:center;'><a href='/api/dossier?id=" + c.candidate_id + "' target='_blank' style='display:inline-block; padding:4px 10px; background:#0284c7; color:white; border-radius:4px; font-size:11px; font-weight:700; text-decoration:none;'>📋 View Full Field Survey Dossier</a></div>" +
+          "<div style='margin-top:8px; text-align:center;'><button onclick='downloadCandidateDossier(&apos;" + c.candidate_id + "&apos;)' class='export-pill-btn' style='background:#0284c7; color:white; width:100%; justify-content:center; padding:5px 8px; cursor:pointer;'>📥 Download Field Survey Dossier (.JSON)</button></div>" +
           "</div>"
         );
         candidateGroup.addLayer(marker);
@@ -753,8 +755,15 @@ def generate_subcontinent_map_html(
       }};
     }}
 
-    // Click-to-Scan Mode State
-    let isClickScanActive = false;
+    // Candidate Dossier Download Handler
+    function downloadCandidateDossier(candId) {{
+      const cand = rawCandidates.find(c => c.candidate_id === candId);
+      if (!cand) return;
+      downloadData(JSON.stringify(cand, null, 2), "apm_dossier_" + candId + ".json", "application/json");
+    }}
+
+    // Click-to-Scan Mode State (Active by Default)
+    let isClickScanActive = true;
 
     function toggleClickScanMode() {{
       isClickScanActive = !isClickScanActive;
@@ -763,15 +772,19 @@ def generate_subcontinent_map_html(
       const mapDiv = document.getElementById('map');
 
       if (isClickScanActive) {{
-        btn.classList.add('active');
-        btn.innerHTML = "<span>🛑</span> Stop Click-Scan Mode";
-        help.style.display = "block";
-        mapDiv.classList.add('crosshair-cursor');
+        if (btn) {{
+          btn.classList.add('active');
+          btn.innerHTML = "<span>🛑</span> Pause Click-Scan Mode";
+        }}
+        if (help) help.style.display = "block";
+        if (mapDiv) mapDiv.classList.add('crosshair-cursor');
       }} else {{
-        btn.classList.remove('active');
-        btn.innerHTML = "<span>🎯</span> Click Any Point on Map to Scan";
-        help.style.display = "none";
-        mapDiv.classList.remove('crosshair-cursor');
+        if (btn) {{
+          btn.classList.remove('active');
+          btn.innerHTML = "<span>🎯</span> Resume Click-Scan Mode";
+        }}
+        if (help) help.style.display = "none";
+        if (mapDiv) mapDiv.classList.remove('crosshair-cursor');
       }}
     }}
 
@@ -810,6 +823,7 @@ def generate_subcontinent_map_html(
     }}
     window.addEventListener('load', forceMapResize);
     window.addEventListener('resize', forceMapResize);
+    setInterval(forceMapResize, 800);
     if (window.ResizeObserver) {{
       try {{
         const ro = new ResizeObserver(() => forceMapResize());
@@ -1155,6 +1169,22 @@ def generate_subcontinent_map_html(
       "🎯 Live Scan Target": userScanGroup
     }};
     L.control.layers(baseMaps, overlayMaps, {{ position: 'bottomleft' }}).addTo(map);
+
+    // Live Viewport Stat Counter
+    function updateViewportStats() {{
+      if (typeof map === 'undefined' || !map) return;
+      const bounds = map.getBounds();
+      let unCount = 0;
+      rawCandidates.forEach(c => {{
+        if (bounds.contains([c.latitude, c.longitude])) unCount++;
+      }});
+      const badge = document.getElementById('viewportStatPill');
+      if (badge) {{
+        badge.innerHTML = "👁️ In View: <strong>" + unCount + "</strong> Tells";
+      }}
+    }}
+    map.on('moveend', updateViewportStats);
+    setTimeout(updateViewportStats, 300);
   </script>
 </body>
 </html>
