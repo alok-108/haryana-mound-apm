@@ -1,5 +1,7 @@
 """
 Pan-Subcontinent Prospective Discovery Engine for Pre-600 BCE Archaeological Sites.
+Phase 0 Architectural Heuristic Prototype & Spatial Prior Model.
+
 Operates across all 6 Macro-Basins:
 1. Saraswati-Ghaggar-Hakra & Drishadvati (NW India & Cholistan)
 2. Upper Indus & Punjab River Systems (Doabs)
@@ -14,6 +16,13 @@ MANDATORY USER CONSTRAINTS:
    Strict spatial exclusion ($d \\ge 1500\\text{ m}$) against the entire Subcontinent Known Monuments Gazetteer.
    Guarantees zero predictions of previously discovered, excavated, or registered sites.
 3. 95%-100% presence possibility for Tier 1: Powered by 7-evidence orthogonal gating.
+
+NOTE ON SCIENTIFIC DATA PROVENANCE (Phase 0 vs Phase 1):
+- In Phase 0, candidates in PROTOTYPE_DEMO_SEED_CANDIDATES represent curated demonstration seed coordinates
+  derived from published paleochannel levee surveys (Orengo & Petrie 2017, TwoRains).
+  Physical parameters (relief, BSI, SAR) serve as prototype demonstration priors.
+- In Phase 1, candidate coordinates and feature arrays will be dynamically harvested via Google Earth Engine
+  (Sentinel-1 SAR, multitemporal Sentinel-2 BSI/NDVI, Copernicus/FABDEM MSRM, and AlphaEarth embeddings).
 """
 
 from __future__ import annotations
@@ -59,7 +68,8 @@ class SubcontinentCandidate:
 
 
 # Candidate discovery coordinates across unexplored tracts in the 6 basins
-RAW_CANDIDATE_LOCATIONS: List[Dict[str, object]] = [
+# Phase 0 Architectural Prototype Demo Seeds (Phase 1 will replace with automated GEE spatial clustering)
+PROTOTYPE_DEMO_SEED_CANDIDATES: List[Dict[str, object]] = [
     # --- 1. Saraswati-Ghaggar-Hakra Basin ---
     {
         "candidate_id": "SUBCON_DISCOV_001",
@@ -941,6 +951,9 @@ RAW_CANDIDATE_LOCATIONS: List[Dict[str, object]] = [
     },
 
 ]
+
+# Alias for backward compatibility
+RAW_CANDIDATE_LOCATIONS: List[Dict[str, object]] = PROTOTYPE_DEMO_SEED_CANDIDATES
 
 
 class SubcontinentDiscoveryEngine:

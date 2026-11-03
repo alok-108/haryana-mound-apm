@@ -163,6 +163,13 @@ class ArchaeologicalAPMServer:
         return {
             "latitude": round(lat, 5),
             "longitude": round(lon, 5),
+            "engine_mode": "demo_synthetic_heuristic",
+            "is_live_satellite_pixel": False,
+            "data_provenance": (
+                "Phase 0 architectural prototype heuristic prior. "
+                "Real Earth Engine multitemporal Sentinel-1/2, FABDEM MSRM, "
+                "and AlphaEarth embedding features arrive in Phase 1."
+            ),
             "is_undiscovered": bool(is_novel),
             "is_known_monument": bool(is_known),
             "status_label": status_label,
@@ -312,6 +319,9 @@ class ArchaeologicalHTTPHandler(BaseHTTPRequestHandler):
                 "status": "online",
                 "service": "Pan-Subcontinent Pre-600 BCE APM Discovery Engine",
                 "version": "2.5.0",
+                "engine_mode": "demo_synthetic_heuristic",
+                "phase": "Phase 0 (Architectural Heuristic Prototype & Prior Model)",
+                "data_provenance": "Phase 0 synthetic prior. Real GEE Sentinel-1/2, FABDEM MSRM, AlphaEarth ingestion scheduled in Phase 1.",
                 "macro_basins_count": len(SUBCONTINENT_BASINS),
                 "known_monuments_indexed": len(APM_BACKEND.monuments_registry.monuments),
                 "undiscovered_candidates_cataloged": len(APM_BACKEND.candidates),

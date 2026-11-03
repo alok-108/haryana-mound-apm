@@ -201,7 +201,7 @@
         <span style="font-size: 16px;">🛰️</span>
         <div>
           <h1>Pre-600 BCE Subcontinent Archaeological GIS</h1>
-          <p>97 Benchmark Monuments (100% Recall) &bull; 57 High-Confidence Undiscovered Tells</p>
+          <p>97 Documented Reference Monuments &bull; 57 Prototype Undiscovered Tells &bull; <span style="color:#38bdf8;">Phase 0 Prior Mode</span></p>
         </div>
       </div>
       <div style="display: flex; align-items: center; gap: 5px; flex-wrap: wrap;">
@@ -233,7 +233,7 @@
     <div class="scanner-title">
       <span>Archaeologist Field Scanner</span>
       <div style="display: flex; align-items: center; gap: 6px;">
-        <span style="font-size: 10px; background: #1e293b; padding: 2px 6px; border-radius: 4px; color: #38bdf8;">v2.5 Live</span>
+        <span style="font-size: 10px; background: #1e293b; padding: 2px 6px; border-radius: 4px; color: #38bdf8;">Phase 0 Demo Mode</span>
         <button onclick="togglePanel('archScannerPanel')" class="panel-close-btn" title="Minimize Scanner Panel">✕</button>
       </div>
     </div>
@@ -791,8 +791,8 @@
 
         const isUndisc = (evalRes.is_undiscovered !== undefined) ? evalRes.is_undiscovered : !evalRes.is_known;
         const statusTag = isUndisc
-          ? "<span class='scan-status-pill status-undiscovered'>🌟 100% NEW / UNDISCOVERED LAND</span>"
-          : "<span class='scan-status-pill status-discovered'>🏛️ ALREADY DISCOVERED MONUMENT</span>";
+          ? "<span class='scan-status-pill status-undiscovered'>🌟 PROSPECTIVE CANDIDATE (Prior)</span>"
+          : "<span class='scan-status-pill status-discovered'>🏛️ DOCUMENTED REFERENCE MONUMENT</span>";
 
         const probNum = evalRes.prob_pct ? parseFloat(evalRes.prob_pct) :
                         (evalRes.presence_percentage ? evalRes.presence_percentage :
@@ -957,10 +957,18 @@
       if (fmt === 'geojson') {
         const gj = {
           type: "FeatureCollection",
+          properties: {
+            anti_looting_policy: "ICAHM/UNESCO Compliant: Coarsened to ~1.1km to prevent metal-detecting looting.",
+            total_features: rawCandidates.length
+          },
           features: rawCandidates.map(c => ({
             type: "Feature",
-            geometry: { type: "Point", coordinates: [c.longitude, c.latitude] },
-            properties: c
+            geometry: { type: "Point", coordinates: [parseFloat(c.longitude.toFixed(2)), parseFloat(c.latitude.toFixed(2))] },
+            properties: Object.assign({}, c, {
+              latitude: parseFloat(c.latitude.toFixed(2)),
+              longitude: parseFloat(c.longitude.toFixed(2)),
+              anti_looting_status: "COARSE_PUBLIC_1KM"
+            })
           }))
         };
         downloadData(JSON.stringify(gj, null, 2), "subcontinent_undiscovered_pre600bce.geojson", "application/geo+json");
@@ -970,16 +978,16 @@
         const csv = [keys.join(",")].concat(rawCandidates.map(r => keys.map(k => JSON.stringify(r[k] !== undefined ? r[k] : "")).join(","))).join(String.fromCharCode(10));
         downloadData(csv, "subcontinent_undiscovered_pre600bce.csv", "text/csv");
       } else if (fmt === 'kml') {
-        let kml = '<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2">\n<Document>\n<name>Pre-600 BCE Undiscovered Mounds</name>\n';
+        let kml = '<?xml version="1.0" encoding="UTF-8"?>\n<kml xmlns="http://www.opengis.net/kml/2.2">\n<Document>\n<name>Pre-600 BCE Undiscovered Mounds (Anti-Looting Masked ~1.1km)</name>\n';
         rawCandidates.forEach(c => {
-          kml += `<Placemark><name>${c.candidate_id}</name><description>Culture: ${c.predicted_culture} | Prob: ${(c.calibrated_probability*100).toFixed(1)}%</description><Point><coordinates>${c.longitude},${c.latitude},${c.estimated_relief_m}</coordinates></Point></Placemark>\n`;
+          kml += `<Placemark><name>${c.candidate_id}</name><description>Culture: ${c.predicted_culture} | Prob: ${(c.calibrated_probability*100).toFixed(1)}% | [Coarsened ~1.1km for heritage preservation]</description><Point><coordinates>${c.longitude.toFixed(2)},${c.latitude.toFixed(2)},${c.estimated_relief_m}</coordinates></Point></Placemark>\n`;
         });
         kml += '</Document>\n</kml>';
         downloadData(kml, "subcontinent_undiscovered_pre600bce.kml", "application/vnd.google-earth.kml+xml");
       } else if (fmt === 'gpx') {
         let gpx = '<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="APM Engine" xmlns="http://www.topografix.com/GPX/1/1">\n';
         rawCandidates.forEach(c => {
-          gpx += `<wpt lat="${c.latitude}" lon="${c.longitude}"><name>${c.candidate_id}</name><desc>${c.predicted_culture} (${(c.calibrated_probability*100).toFixed(1)}%)</desc></wpt>\n`;
+          gpx += `<wpt lat="${c.latitude.toFixed(2)}" lon="${c.longitude.toFixed(2)}"><name>${c.candidate_id}</name><desc>${c.predicted_culture} (${(c.calibrated_probability*100).toFixed(1)}%) [Coarsened ~1.1km]</desc></wpt>\n`;
         });
         gpx += '</gpx>';
         downloadData(gpx, "subcontinent_undiscovered_pre600bce.gpx", "application/gpx+xml");
@@ -999,13 +1007,13 @@
             const s = data.statistics;
             const html =
               "<div style='border-left:3px solid #10b981; padding-left:8px;'>" +
-              "<span class='scan-status-pill status-bench'>🏆 PYTHON BENCHMARK AUDIT PASSED</span><br>" +
-              "<strong style='color:#34d399; font-size:12px;'>100.0% Empirical Recall (" + s.detected_total + " / " + s.total_monuments + " Monuments)</strong><br>" +
-              "<div style='margin:4px 0;'>Mean Calibrated Probability: <strong>" + s.mean_calibrated_probability_pct + "%</strong></div>" +
-              "<div>Tier 1 Ultra-High Recall: <strong>" + s.tier1_recall_pct + "%</strong></div>" +
+              "<span class='scan-status-pill status-bench'>🏆 REFERENCE MONUMENTS PRIOR AUDIT</span><br>" +
+              "<strong style='color:#34d399; font-size:12px;'>Phase 0 Prior Consistency (" + s.detected_total + " / " + s.total_monuments + " Monuments)</strong><br>" +
+              "<div style='margin:4px 0;'>Mean Baseline Probability: <strong>" + s.mean_calibrated_probability_pct + "%</strong></div>" +
+              "<div>Tier 1 Prior Recovery: <strong>" + s.tier1_recall_pct + "%</strong></div>" +
               "<div>False Negatives (Missed): <strong>" + s.missed + "</strong></div>" +
               "<div style='margin-top:6px; font-size:10px; color:#a7f3d0; background:rgba(16,185,129,0.15); padding:6px; border-radius:4px;'>" +
-              "✓ The Python APM model successfully recovers Rakhigarhi, Mohenjo-daro, Harappa, Dholavira, Lothal, Sinauli, Hastinapur, Gilund, and Daimabad." +
+              "✓ The APM model prior successfully flags Rakhigarhi, Mohenjo-daro, Harappa, Dholavira, Lothal, Sinauli, Hastinapur, Gilund, and Daimabad." +
               "</div>" +
               "</div>";
             document.getElementById('liveTelemetry').innerHTML = html;
@@ -1020,13 +1028,13 @@
       const s = benchmarkStats;
       const html =
         "<div style='border-left:3px solid #10b981; padding-left:8px;'>" +
-        "<span class='scan-status-pill status-bench'>🏆 GROUND-TRUTH BENCHMARK PASSED</span><br>" +
-        "<strong style='color:#34d399; font-size:12px;'>100.0% Detection Recall (" + s.detected_total + " / " + s.total_monuments + " Monuments)</strong><br>" +
-        "<div style='margin:4px 0;'>Mean Calibrated Probability: <strong>" + s.mean_calibrated_probability_pct + "%</strong></div>" +
-        "<div>Tier 1 Ultra-High Recall: <strong>" + s.tier1_recall_pct + "%</strong></div>" +
+        "<span class='scan-status-pill status-bench'>🏆 REFERENCE MONUMENTS PRIOR AUDIT</span><br>" +
+        "<strong style='color:#34d399; font-size:12px;'>Phase 0 Prior Consistency (" + s.detected_total + " / " + s.total_monuments + " Monuments)</strong><br>" +
+        "<div style='margin:4px 0;'>Mean Baseline Probability: <strong>" + s.mean_calibrated_probability_pct + "%</strong></div>" +
+        "<div>Tier 1 Prior Recovery: <strong>" + s.tier1_recall_pct + "%</strong></div>" +
         "<div>False Negatives (Missed): <strong>" + s.missed + "</strong></div>" +
         "<div style='margin-top:6px; font-size:10px; color:#a7f3d0; background:rgba(16,185,129,0.15); padding:6px; border-radius:4px;'>" +
-        "✓ The APM model successfully detects Rakhigarhi, Mohenjo-daro, Harappa, Dholavira, Lothal, Sinauli, Hastinapur, Gilund, and Daimabad using the same physical features." +
+        "✓ The APM model prior successfully flags Rakhigarhi, Mohenjo-daro, Harappa, Dholavira, Lothal, Sinauli, Hastinapur, Gilund, and Daimabad." +
         "</div>" +
         "</div>";
 

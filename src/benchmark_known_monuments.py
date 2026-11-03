@@ -1,13 +1,14 @@
 """
 Pan-Subcontinent Known Monuments Benchmark & Validation Engine.
-Benchmarks the APM predictive model against verified, canonical ground-truth archaeological sites
-(e.g., Harappa, Mohenjo-daro, Rakhigarhi, Dholavira, Lothal, Sinauli, Hastinapur, Gilund, Daimabad).
+Phase 0 Spatial Prior & Metric Recovery Verification.
 
-OBJECTIVE:
-To empirically verify whether the 7-evidence orthogonal gating pipeline can detect
-and accurately recover known Pre-600 BCE archaeological monuments across all 6 Macro-Basins.
-If the engine achieves a ~100% detection rate on known ground-truth monuments,
-it establishes high empirical confidence for detecting novel, unexcavated sites in unexplored lands.
+SCIENTIFIC OBJECTIVE:
+1. Verify spatial exclusion guarantees: ensure that every known monument is properly indexed and zero candidates breach the 1500m exclusion perimeter.
+2. Verify paleochannel prior consistency across canonical Pre-600 BCE ground-truth reference sites.
+
+NOTE ON SCIENTIFIC STATUS (Phase 0 vs Phase 2):
+In Phase 0, this module benchmarks whether known canonical sites achieve high presence probabilities under the heuristic spatial and fluvial prior.
+In Phase 2, this will be complemented by formal Orengo Random Forest baseline replication, spatial block cross-validation (Spatial Block CV), Kvamme's Gain, and Area of Applicability (AoA) on real multitemporal Earth Engine features.
 """
 
 from __future__ import annotations

@@ -18,13 +18,23 @@ import xml.etree.ElementTree as ET
 from src.subcontinent_discovery_engine import SubcontinentCandidate
 
 
-def candidate_to_geojson_feature(candidate: SubcontinentCandidate) -> dict:
-    """Convert SubcontinentCandidate into an RFC 7946 GeoJSON Feature."""
+def candidate_to_geojson_feature(
+    candidate: SubcontinentCandidate,
+    obfuscate_for_anti_looting: bool = True,
+) -> dict:
+    """
+    Convert SubcontinentCandidate into an RFC 7946 GeoJSON Feature.
+    By default, obfuscate_for_anti_looting=True coarsens coordinates to 2 decimal places (~1.1 km)
+    in compliance with ICAHM/UNESCO archaeological heritage ethics against illicit metal-detecting.
+    """
+    coord_lon = round(candidate.longitude, 2) if obfuscate_for_anti_looting else round(candidate.longitude, 6)
+    coord_lat = round(candidate.latitude, 2) if obfuscate_for_anti_looting else round(candidate.latitude, 6)
+
     return {
         "type": "Feature",
         "geometry": {
             "type": "Point",
-            "coordinates": [round(candidate.longitude, 6), round(candidate.latitude, 6)],
+            "coordinates": [coord_lon, coord_lat],
         },
         "properties": {
             "candidate_id": candidate.candidate_id,
@@ -49,12 +59,16 @@ def candidate_to_geojson_feature(candidate: SubcontinentCandidate) -> dict:
             "nearest_known_monument": candidate.nearest_known_monument,
             "dist_to_known_monument_m": round(candidate.dist_to_known_monument_m, 1),
             "is_novel_undiscovered": True,
+            "anti_looting_status": "COARSE_PUBLIC_1KM" if obfuscate_for_anti_looting else "RESEARCH_EXACT",
             "recommended_ground_check": candidate.recommended_ground_check,
         },
     }
 
 
-def candidates_to_geojson(candidates: List[SubcontinentCandidate]) -> dict:
+def candidates_to_geojson(
+    candidates: List[SubcontinentCandidate],
+    obfuscate_for_anti_looting: bool = True,
+) -> dict:
     """Convert list of candidates into a GeoJSON FeatureCollection."""
     return {
         "type": "FeatureCollection",
@@ -66,20 +80,28 @@ def candidates_to_geojson(candidates: List[SubcontinentCandidate]) -> dict:
             "generated_by": "Archaeological Predictive Modeling (APM) Subcontinent Engine",
             "chronological_scope": "Pre-600 BCE (Indus, Saraswati, Vedic, Chalcolithic)",
             "safety_invariant": "Strict >=1500m exclusion against all registered historical monuments",
+            "anti_looting_policy": (
+                "ICAHM/UNESCO Compliant: Public coordinates coarsened to ~1.1km to prevent illicit looting. "
+                "Sub-meter precision vectors reserved for state antiquity directorates (ASI, DOAM) and authorized academic consortia."
+                if obfuscate_for_anti_looting else "UNMASKED_INSTITUTIONAL_RESEARCH_COORDINATES"
+            ),
             "total_candidates": len(candidates),
         },
-        "features": [candidate_to_geojson_feature(c) for c in candidates],
+        "features": [candidate_to_geojson_feature(c, obfuscate_for_anti_looting=obfuscate_for_anti_looting) for c in candidates],
     }
 
 
-def candidates_to_kml(candidates: List[SubcontinentCandidate]) -> str:
+def candidates_to_kml(
+    candidates: List[SubcontinentCandidate],
+    obfuscate_for_anti_looting: bool = True,
+) -> str:
     """Generate KML format with stylized balloons for Google Earth."""
     kml_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<kml xmlns="http://www.opengis.net/kml/2.2">',
         '  <Document>',
-        '    <name>Pre-600 BCE Undiscovered Archaeological Candidates</name>',
-        '    <description>Subcontinent-wide GeoAI prospective discoveries (P &gt;= 95%, unexcavated, unrecorded)</description>',
+        '    <name>Pre-600 BCE Undiscovered Archaeological Candidates (Anti-Looting Masked)</name>' if obfuscate_for_anti_looting else '    <name>Pre-600 BCE Undiscovered Archaeological Candidates</name>',
+        '    <description>Subcontinent-wide GeoAI prospective discoveries (Anti-looting coarsened to ~1.1km)</description>' if obfuscate_for_anti_looting else '    <description>Subcontinent-wide GeoAI prospective discoveries</description>',
         '    <Style id="discoveryPin">',
         '      <IconStyle>',
         '        <color>ff00aaff</color>',
@@ -90,9 +112,13 @@ def candidates_to_kml(candidates: List[SubcontinentCandidate]) -> str:
     ]
 
     for c in candidates:
+        coord_lon = round(c.longitude, 2) if obfuscate_for_anti_looting else c.longitude
+        coord_lat = round(c.latitude, 2) if obfuscate_for_anti_looting else c.latitude
+        looting_notice = "<tr><td colspan='2' style='color:#ef4444;font-size:10px;'>🛡️ <i>Coordinates coarsened to ~1.1km for archaeological heritage preservation.</i></td></tr>" if obfuscate_for_anti_looting else ""
         desc = f"""
         <table border="1" cellpadding="4" style="border-collapse:collapse;font-family:sans-serif;font-size:12px;">
           <tr bgcolor="#f4ecd8"><th colspan="2">🌟 {c.candidate_id}: {c.predicted_culture}</th></tr>
+          {looting_notice}
           <tr><td><b>Presence Probability:</b></td><td><b>{c.calibrated_probability * 100:.1f}%</b></td></tr>
           <tr><td><b>Macro-Basin:</b></td><td>{c.basin_name} ({c.state_province}, {c.country})</td></tr>
           <tr><td><b>Nearest Paleochannel:</b></td><td>{c.nearest_paleochannel_name} ({c.dist_paleochannel_km:.2f} km)</td></tr>
@@ -108,7 +134,7 @@ def candidates_to_kml(candidates: List[SubcontinentCandidate]) -> str:
             f'      <styleUrl>#discoveryPin</styleUrl>',
             f'      <description><![CDATA[{desc}]]></description>',
             '      <Point>',
-            f'        <coordinates>{c.longitude:.6f},{c.latitude:.6f},{c.estimated_relief_m:.1f}</coordinates>',
+            f'        <coordinates>{coord_lon:.4f},{coord_lat:.4f},{c.estimated_relief_m:.1f}</coordinates>',
             '      </Point>',
             '    </Placemark>',
         ])
@@ -120,27 +146,33 @@ def candidates_to_kml(candidates: List[SubcontinentCandidate]) -> str:
     return '\n'.join(kml_lines)
 
 
-def candidates_to_gpx(candidates: List[SubcontinentCandidate]) -> str:
+def candidates_to_gpx(
+    candidates: List[SubcontinentCandidate],
+    obfuscate_for_anti_looting: bool = True,
+) -> str:
     """Generate GPS Exchange Format (GPX 1.1) for handheld GPS units."""
     gpx_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<gpx version="1.1" creator="APM Subcontinent GeoAI Engine" xmlns="http://www.topografix.com/GPX/1/1">',
         '  <metadata>',
-        '    <name>Pre-600 BCE Undiscovered Mound Discoveries</name>',
-        '    <desc>Target waypoints for ground archaeological verification surveys</desc>',
+        '    <name>Pre-600 BCE Undiscovered Mound Discoveries (Anti-Looting Masked)</name>' if obfuscate_for_anti_looting else '    <name>Pre-600 BCE Undiscovered Mound Discoveries</name>',
+        '    <desc>Target waypoints for ground archaeological verification surveys (coarsened to ~1.1km)</desc>' if obfuscate_for_anti_looting else '    <desc>Target waypoints for ground archaeological verification surveys</desc>',
         '  </metadata>',
     ]
 
     for c in candidates:
         name = f"{c.candidate_id}"
+        coord_lon = round(c.longitude, 2) if obfuscate_for_anti_looting else c.longitude
+        coord_lat = round(c.latitude, 2) if obfuscate_for_anti_looting else c.latitude
         desc = (
             f"Culture: {c.predicted_culture} | Prob: {c.calibrated_probability * 100:.1f}% | "
             f"Relief: +{c.estimated_relief_m:.1f}m | Paleochannel: {c.nearest_paleochannel_name} "
             f"({c.dist_paleochannel_km:.1f}km) | Nearest Known Monument: {c.nearest_known_monument} "
             f"({c.dist_to_known_monument_m/1000.0:.1f}km)"
+            + (" [Anti-Looting Coarsened ~1.1km]" if obfuscate_for_anti_looting else "")
         )
         gpx_lines.extend([
-            f'  <wpt lat="{c.latitude:.6f}" lon="{c.longitude:.6f}">',
+            f'  <wpt lat="{coord_lat:.4f}" lon="{coord_lon:.4f}">',
             f'    <ele>{c.estimated_relief_m:.1f}</ele>',
             f'    <name>{html.escape(name)}</name>',
             f'    <desc>{html.escape(desc)}</desc>',

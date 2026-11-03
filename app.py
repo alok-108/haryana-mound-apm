@@ -82,15 +82,15 @@ def run_streamlit_app():
     with m1:
         st.metric(
             label="Documented Monuments",
-            value="97 Verified",
-            delta="100.0% Empirical Recall",
+            value="97 Sites",
+            delta="Phase 0 Baseline Prior Audit",
             delta_color="normal",
         )
     with m2:
         st.metric(
             label="Undiscovered Tells",
             value="32 Sites",
-            delta="P ≥ 99.4% (Tier 1 Ultra-High)",
+            delta="Phase 0 Prototype Seeds (P ≥ 99.4%)",
             delta_color="normal",
         )
     with m3:
@@ -104,8 +104,27 @@ def run_streamlit_app():
         st.metric(
             label="Safety Exclusion Distance",
             value="≥ 1,500 m",
-            delta="Zero Known Site Overlaps",
+            delta="Strict Monument Perimeter",
             delta_color="normal",
+        )
+
+    # Academic Integrity & Methodology Disclosure
+    with st.expander("🔬 Academic Methodology & Heritage Protection Ethics (Phase 0 Disclosure)", expanded=False):
+        st.markdown(
+            """
+            > **Scientific Integrity & Data Provenance Notice:**  
+            > This platform currently operates in **Phase 0 (Architectural Heuristic Prototype & Spatial Prior Model)**.  
+            > Candidate discovery scores reflect spatial geomorphic levee proximity and multi-sensor priors synthesized from published archaeological surveys (*Orengo et al. 2020 PNAS, Berganzo-Besga et al. 2021 Remote Sensing, Petrie et al. 2017 Antiquity*).
+            >
+            > **Scientific Upgrade Roadmap:**
+            > - **Phase 1 (In Progress):** Live multitemporal Sentinel-1 SAR, Sentinel-2 BSI/NDVI, FABDEM MSRM, and AlphaEarth embedding extraction via Google Earth Engine.
+            > - **Phase 2:** Formal Orengo Random Forest baseline replication, Spatial Block Cross-Validation (Spatial Block CV), Kvamme's Gain, and Area of Applicability (AoA).
+            > - **Phase 3:** MSRM-patch CNN false-positive filter and positive-unlabelled (nnPU) learning.
+            > - **Phase 4:** QGIS Plugin release and field feedback active learning loop for field archaeologists.
+            >
+            > **Anti-Looting Spatial Coarsening (ICAHM/UNESCO Compliance):**  
+            > In strict compliance with archaeological heritage preservation ethics and the *Antiquities and Art Treasures Act (1972)*, public vector exports (GeoJSON, KML, GPX) are **coarsened to ~1.1 km** (2 decimal places) to prevent illicit treasure hunting or metal detecting. Sub-meter precision vectors are reserved exclusively for authorized state antiquities directorates (ASI, DOAM) and affiliated university consortia.
+            """
         )
 
     # Sidebar Controls
@@ -293,11 +312,12 @@ def run_streamlit_app():
 
     # Tab 3: Ground-Truth Benchmark
     with tab_bench:
-        st.subheader("🏆 Empirical Benchmark Verification (97 Canonical Monuments)")
+        st.subheader("🏆 Ground-Truth Benchmark Audit (97 Canonical Reference Monuments)")
         st.markdown(
-            "To prove mathematical validity, our APM model was tested against **97 registered excavated monuments** "
-            "spanning the Indus Valley, Saraswati/Ghaggar-Hakra, Upper Ganga, Gujarat, and Deccan civilizations. "
-            "The model achieves **100.0% Empirical Detection Recall** (0 false negatives) using the identical physical sensor indices."
+            "To verify spatial exclusion invariants and paleochannel prior consistency, the engine was benchmarked against "
+            "**97 registered excavated monuments** spanning the Indus Valley, Saraswati/Ghaggar-Hakra, Upper Ganga, Gujarat, and Deccan civilizations. "
+            "In Phase 0, the baseline physical indices achieve consistent recovery of canonical reference sites. "
+            "In Phase 2, formal Spatial Block Cross-Validation (CV) and Kvamme's Gain will be evaluated against external test basins."
         )
 
         _, bench_df, stats = apm.benchmark_monuments()
@@ -333,6 +353,7 @@ def run_streamlit_app():
     # Tab 4: Downloads & Field Manual
     with tab_export:
         st.subheader("📥 GIS Layer Downloads & Surveyor's Field Manual")
+        st.info("🛡️ **Heritage Preservation Notice:** Public vector exports (GeoJSON, KML, GPX) are ethically coarsened to ~1.1 km to prevent unauthorized metal-detecting or looting in accordance with ICAHM/UNESCO guidelines. Sub-meter research vectors are restricted to authorized institutions.")
         st.markdown(
             "Download full spatial packages for field devices, GIS software, and drone flight planners. "
             "Every format includes comprehensive cultural attribution, elevation relief, and paleochannel proximity."
