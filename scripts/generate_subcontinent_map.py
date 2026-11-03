@@ -312,11 +312,11 @@ def generate_subcontinent_map_html(
         <!-- Global Search Bar -->
         <input type="text" id="globalSearchInput" placeholder="🔍 Search site, basin, river..." oninput="handleGlobalSearch(this.value)" style="padding: 5px 10px; background: #1e293b; color: #f8fafc; border: 1px solid #475569; border-radius: 6px; font-size: 11px; width: 180px; outline: none;" />
 
-        <!-- Quick Export Buttons -->
-        <a href="/api/export/geojson" download="subcontinent_undiscovered_pre600bce.geojson" class="export-pill-btn" title="Download GeoJSON for QGIS / ArcGIS">⬇️ GeoJSON</a>
-        <a href="/api/export/kml" download="subcontinent_undiscovered_pre600bce.kml" class="export-pill-btn" title="Download KML for Google Earth 3D">⬇️ KML</a>
-        <a href="/api/export/gpx" download="subcontinent_undiscovered_pre600bce.gpx" class="export-pill-btn" title="Download GPX for Garmin/Trimble GPS">⬇️ GPX</a>
-        <a href="/api/export/csv" download="subcontinent_undiscovered_pre600bce.csv" class="export-pill-btn" title="Download CSV Table">⬇️ CSV</a>
+        <!-- Quick Export Buttons (Backend + Client-Side Fallback for GitHub Pages) -->
+        <button onclick="handleExportClick('geojson')" class="export-pill-btn" title="Download GeoJSON for QGIS / ArcGIS">⬇️ GeoJSON</button>
+        <button onclick="handleExportClick('kml')" class="export-pill-btn" title="Download KML for Google Earth 3D">⬇️ KML</button>
+        <button onclick="handleExportClick('gpx')" class="export-pill-btn" title="Download GPX for Garmin/Trimble GPS">⬇️ GPX</button>
+        <button onclick="handleExportClick('csv')" class="export-pill-btn" title="Download CSV Table">⬇️ CSV</button>
 
         <!-- Backend Status Pill -->
         <div id="backendStatusPill" style="padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight: 700; background: #065f46; color: #a7f3d0; border: 1px solid #10b981; white-space: nowrap;">
@@ -932,6 +932,55 @@ def generate_subcontinent_map_html(
         "</div>";
 
       document.getElementById('liveTelemetry').innerHTML = html;
+    }}
+
+    function downloadData(content, filename, type) {{
+      const blob = new Blob([content], {{ type: type }});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }}
+
+    function handleExportClick(fmt) {{
+      if (window.location.protocol.startsWith('http') && document.getElementById('backendStatusPill').innerText.includes('Live')) {{
+        window.location.href = '/api/export/' + fmt;
+        return;
+      }}
+      if (fmt === 'geojson') {{
+        const gj = {{
+          type: "FeatureCollection",
+          features: rawCandidates.map(c => ({{
+            type: "Feature",
+            geometry: {{ type: "Point", coordinates: [c.longitude, c.latitude] }},
+            properties: c
+          }}))
+        }};
+        downloadData(JSON.stringify(gj, null, 2), "subcontinent_undiscovered_pre600bce.geojson", "application/geo+json");
+      }} else if (fmt === 'csv') {{
+        if (!rawCandidates.length) return;
+        const keys = Object.keys(rawCandidates[0]);
+        const csv = [keys.join(",")].concat(rawCandidates.map(r => keys.map(k => JSON.stringify(r[k] !== undefined ? r[k] : "")).join(","))).join("\n");
+        downloadData(csv, "subcontinent_undiscovered_pre600bce.csv", "text/csv");
+      }} else if (fmt === 'kml') {{
+        let kml = '<?xml version="1.0" encoding="UTF-8"?>\\n<kml xmlns="http://www.opengis.net/kml/2.2">\\n<Document>\\n<name>Pre-600 BCE Undiscovered Mounds</name>\\n';
+        rawCandidates.forEach(c => {{
+          kml += `<Placemark><name>${{c.candidate_id}}</name><description>Culture: ${{c.predicted_culture}} | Prob: ${{(c.calibrated_probability*100).toFixed(1)}}%</description><Point><coordinates>${{c.longitude}},${{c.latitude}},${{c.estimated_relief_m}}</coordinates></Point></Placemark>\\n`;
+        }});
+        kml += '</Document>\\n</kml>';
+        downloadData(kml, "subcontinent_undiscovered_pre600bce.kml", "application/vnd.google-earth.kml+xml");
+      }} else if (fmt === 'gpx') {{
+        let gpx = '<?xml version="1.0" encoding="UTF-8"?>\\n<gpx version="1.1" creator="APM Engine" xmlns="http://www.topografix.com/GPX/1/1">\\n';
+        rawCandidates.forEach(c => {{
+          gpx += `<wpt lat="${{c.latitude}}" lon="${{c.longitude}}"><name>${{c.candidate_id}}</name><desc>${{c.predicted_culture}} (${{(c.calibrated_probability*100).toFixed(1)}}%)</desc></wpt>\\n`;
+        }});
+        gpx += '</gpx>';
+        downloadData(gpx, "subcontinent_undiscovered_pre600bce.gpx", "application/gpx+xml");
+      }}
     }}
 
     // Benchmark Audit Tool
