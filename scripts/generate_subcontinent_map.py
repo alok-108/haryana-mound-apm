@@ -1070,7 +1070,7 @@ def generate_subcontinent_map_html(
       }} else if (fmt === 'csv') {{
         if (!rawCandidates.length) return;
         const keys = Object.keys(rawCandidates[0]);
-        const csv = [keys.join(",")].concat(rawCandidates.map(r => keys.map(k => JSON.stringify(r[k] !== undefined ? r[k] : "")).join(","))).join("\n");
+        const csv = [keys.join(",")].concat(rawCandidates.map(r => keys.map(k => JSON.stringify(r[k] !== undefined ? r[k] : "")).join(","))).join(String.fromCharCode(10));
         downloadData(csv, "subcontinent_undiscovered_pre600bce.csv", "text/csv");
       }} else if (fmt === 'kml') {{
         let kml = '<?xml version="1.0" encoding="UTF-8"?>\\n<kml xmlns="http://www.opengis.net/kml/2.2">\\n<Document>\\n<name>Pre-600 BCE Undiscovered Mounds</name>\\n';
