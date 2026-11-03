@@ -1,5 +1,5 @@
 {
-  "probe_auc": 0.8,
+  "probe_auc": 0.8962962962962964,
   "passed": false,
   "n_excavated": 9,
   "n_unexcavated": 15

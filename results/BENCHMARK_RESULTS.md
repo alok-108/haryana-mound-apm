@@ -1,8 +1,8 @@
 # Empirical Benchmark Results: Haryana Mound APM
 
 **Target Districts:** Hisar, Fatehabad, Sirsa (Ghaggar-Hakra / Chautang Interfluve)  
-**Spatial Units Evaluated:** `h3_res8, patch_250m`  
-**Total Benchmark Runs:** 28 configurations (7 tracks × 2 CV schemes × spatial units)  
+**Spatial Units Evaluated:** `h3_res8`  
+**Total Benchmark Runs:** 14 configurations (7 tracks × 2 CV schemes × spatial units)  
 
 ## Summary Results Matrix
 
@@ -22,20 +22,6 @@
 | T4 | knn | emb_only | None (Unweighted) | Spatial_Block_Buffered_CV | h3_res8 | 0.375 | 1.000 | 1.000 | 0.949 |
 | T5a | nnpu | emb_dem | None (Unweighted) | Spatial_Block_Buffered_CV | h3_res8 | 0.417 | 1.000 | 1.000 | 0.949 |
 | T5b | nnpu | emb_dem | Weighted (IPW) | Spatial_Block_Buffered_CV | h3_res8 | 0.417 | 1.000 | 1.000 | 0.949 |
-| T1 | rf | s1s2_dem | None (Unweighted) | Random_5Fold_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
-| T2 | lgbm | s1s2_dem | None (Unweighted) | Random_5Fold_CV | patch_250m | 0.375 | 0.958 | 0.958 | 0.947 |
-| T3a | nnpu | s1s2_dem | None (Unweighted) | Random_5Fold_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
-| T3b | nnpu | s1s2_dem | Weighted (IPW) | Random_5Fold_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
-| T4 | knn | emb_only | None (Unweighted) | Random_5Fold_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
-| T5a | nnpu | emb_dem | None (Unweighted) | Random_5Fold_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
-| T5b | nnpu | emb_dem | Weighted (IPW) | Random_5Fold_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
-| T1 | rf | s1s2_dem | None (Unweighted) | Spatial_Block_Buffered_CV | patch_250m | 0.375 | 1.000 | 1.000 | 0.949 |
-| T2 | lgbm | s1s2_dem | None (Unweighted) | Spatial_Block_Buffered_CV | patch_250m | 0.375 | 1.000 | 1.000 | 0.949 |
-| T3a | nnpu | s1s2_dem | None (Unweighted) | Spatial_Block_Buffered_CV | patch_250m | 0.458 | 1.000 | 1.000 | 0.949 |
-| T3b | nnpu | s1s2_dem | Weighted (IPW) | Spatial_Block_Buffered_CV | patch_250m | 0.458 | 1.000 | 1.000 | 0.949 |
-| T4 | knn | emb_only | None (Unweighted) | Spatial_Block_Buffered_CV | patch_250m | 0.333 | 1.000 | 1.000 | 0.949 |
-| T5a | nnpu | emb_dem | None (Unweighted) | Spatial_Block_Buffered_CV | patch_250m | 0.375 | 1.000 | 1.000 | 0.949 |
-| T5b | nnpu | emb_dem | Weighted (IPW) | Spatial_Block_Buffered_CV | patch_250m | 0.417 | 1.000 | 1.000 | 0.949 |
 
 ## Excavation-Scar Diagnostic Leakage Probe
 
