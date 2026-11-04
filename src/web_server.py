@@ -16,6 +16,7 @@ Endpoints:
 from __future__ import annotations
 import json
 import math
+import time
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 import sys
@@ -34,6 +35,10 @@ from src.export_engine import (
     candidates_to_gpx,
     candidates_to_kml,
     generate_field_survey_dossier,
+)
+from src.field_feedback.active_learning_ingestor import (
+    ActiveLearningFeedbackIngestor,
+    SurveyVerificationSubmission,
 )
 from src.pre600bce_cultures import CULTURE_PROFILES, infer_likely_pre600bce_culture
 from src.subcontinent_basins import SUBCONTINENT_BASINS, find_macro_basin_for_coordinates
@@ -55,6 +60,9 @@ class ArchaeologicalAPMServer:
             min_exclusion_distance_m=min_exclusion_distance_m
         )
         self.benchmark_runner = KnownMonumentsBenchmarkRunner()
+        self.feedback_ingestor = ActiveLearningFeedbackIngestor(
+            min_exclusion_distance_m=min_exclusion_distance_m
+        )
 
         # Cache candidates and benchmark
         self.candidates, self.candidates_df = self.discovery_engine.scan_subcontinent()
@@ -457,6 +465,52 @@ class ArchaeologicalHTTPHandler(BaseHTTPRequestHandler):
             self.wfile.write(csv_payload)
             return
 
+        if path == "/api/export/qgis-plugin":
+            plugin_zip = REPO_ROOT / "dist" / "pre600bce_apm_qgis_plugin.zip"
+            if not plugin_zip.exists():
+                from scripts.package_qgis_plugin import build_qgis_plugin_zip
+                build_qgis_plugin_zip()
+            payload = plugin_zip.read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/zip")
+            self.send_header("Content-Disposition", 'attachment; filename="pre600bce_apm_qgis_plugin.zip"')
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
+        if path == "/api/export/coarse-geojson":
+            coarse_gj_path = REPO_ROOT / "results" / "subcontinent" / "coarse_public_sensitivity_2km.geojson"
+            if not coarse_gj_path.exists():
+                from src.coarse_raster_exporter import CoarseRasterExporter
+                exporter = CoarseRasterExporter()
+                exporter.export_coarse_sensitivity_geojson(output_path=coarse_gj_path)
+            payload = coarse_gj_path.read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/geo+json; charset=utf-8")
+            self.send_header("Content-Disposition", 'attachment; filename="coarse_public_sensitivity_2km.geojson"')
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
+        if path == "/api/export/odk-bundle":
+            odk_json_path = REPO_ROOT / "data" / "field_survey" / "apm_field_survey_form.json"
+            if not odk_json_path.exists():
+                from src.field_feedback.odk_form_generator import export_odk_survey_bundle
+                export_odk_survey_bundle(REPO_ROOT / "data" / "field_survey")
+            payload = odk_json_path.read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Disposition", 'attachment; filename="apm_field_survey_form.json"')
+            self.send_header("Content-Length", str(len(payload)))
+            self.send_header("Access-Control-Allow-Origin", "*")
+            self.end_headers()
+            self.wfile.write(payload)
+            return
+
         # 8. Field Survey Dossier API
         if path == "/api/dossier":
             cid = query.get("id", [""])[0].upper()
@@ -496,6 +550,41 @@ class ArchaeologicalHTTPHandler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "text/plain")
         self.end_headers()
         self.wfile.write(b"404 Not Found: Check /api/status, /api/scan, or /map")
+
+    def do_POST(self):
+        parsed = urlparse(self.path)
+        path = parsed.path
+
+        if path == "/api/feedback/submit":
+            try:
+                content_length = int(self.headers.get("Content-Length", 0))
+                post_body = self.rfile.read(content_length)
+                data = json.loads(post_body.decode("utf-8"))
+
+                submission = SurveyVerificationSubmission(
+                    submission_id=data.get("submission_id", f"SUB_{int(time.time())}"),
+                    surveyor_name=data.get("surveyor_name", "Anonymous Field Archaeologist"),
+                    institution=data.get("institution", "university"),
+                    latitude=float(data["latitude"]),
+                    longitude=float(data["longitude"]),
+                    ground_verdict=data.get("ground_verdict", "mound_confirmed"),
+                    candidate_id=data.get("candidate_id"),
+                    observed_relief_m=float(data.get("observed_relief_m", 0.0)),
+                    observed_diameter_m=float(data.get("observed_diameter_m", 0.0)),
+                    observed_ceramics=data.get("observed_ceramics"),
+                    field_notes=data.get("field_notes", ""),
+                    timestamp=data.get("timestamp", ""),
+                )
+                result = APM_BACKEND.feedback_ingestor.ingest_submission(submission)
+                self.send_json_response(result, status=200)
+            except Exception as e:
+                self.send_json_response({"error": str(e), "message": "Failed to parse survey submission payload"}, status=400)
+            return
+
+        self.send_response(404)
+        self.send_header("Content-Type", "text/plain")
+        self.end_headers()
+        self.wfile.write(b"404 Not Found")
 
 
 def start_server(port: int = 8000) -> ThreadingHTTPServer:

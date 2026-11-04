@@ -8,6 +8,7 @@ or Hugging Face Spaces (https://huggingface.co/spaces).
 import json
 from pathlib import Path
 import sys
+import time
 
 # Ensure repository root on path
 ROOT_DIR = Path(__file__).resolve().parent
@@ -27,6 +28,12 @@ from src.export_engine import (
     candidates_to_gpx,
     candidates_to_kml,
 )
+from src.field_feedback.active_learning_ingestor import (
+    ActiveLearningFeedbackIngestor,
+    SurveyVerificationSubmission,
+)
+from src.field_feedback.odk_form_generator import export_odk_survey_bundle
+from src.coarse_raster_exporter import CoarseRasterExporter
 
 
 def run_streamlit_app():
@@ -200,10 +207,11 @@ def run_streamlit_app():
     )
 
     # Main Dashboard Tabs
-    tab_map, tab_scanner, tab_bench, tab_export = st.tabs([
+    tab_map, tab_scanner, tab_bench, tab_plugin, tab_export = st.tabs([
         "🛰️ Interactive Satellite GIS Explorer",
         "🎯 Coordinate Deep Scanner & Dossier",
         "🏆 Ground-Truth Benchmark (97 Sites)",
+        "🗺️ QGIS Plugin & 📱 Field Feedback (Active Learning)",
         "📥 GIS Layers & Field Survey Guide",
     ])
 
@@ -350,7 +358,214 @@ def run_streamlit_app():
             "Lothal, Sinauli, Hastinapur, Kalibangan, Banawali, Gilund, Daimabad, Inamgaon, and 85 others."
         )
 
-    # Tab 4: Downloads & Field Manual
+    # Tab 4: QGIS Plugin & Mobile Field Feedback (Active Learning)
+    with tab_plugin:
+        st.subheader("🗺️ Non-Technical Archaeologist Suite: QGIS Desktop Plugin & Mobile Field Survey")
+        st.markdown(
+            "Empowering field archaeologists, non-technical historians, and university survey teams with "
+            "direct GIS tools, offline smartphone survey forms, and an active learning feedback loop."
+        )
+
+        col_qgis, col_odk = st.columns(2)
+
+        # Left Column: Desktop QGIS Plugin
+        with col_qgis:
+            st.markdown("### 🏺 QGIS Desktop Plugin")
+            st.markdown(
+                "Most field archaeologists in India and globally work within **QGIS (Quantum GIS)**. "
+                "Instead of requiring Python or command-line execution, our plugin loads directly as a docked toolbar "
+                "inside QGIS 3.x, overlaying high-probability tells and 1500m exclusion buffers."
+            )
+
+            plugin_zip_path = ROOT_DIR / "dist" / "pre600bce_apm_qgis_plugin.zip"
+            if not plugin_zip_path.exists():
+                from scripts.package_qgis_plugin import build_qgis_zip
+                build_qgis_zip()
+
+            if plugin_zip_path.exists():
+                zip_bytes = plugin_zip_path.read_bytes()
+                st.download_button(
+                    "⬇️ Download QGIS Plugin (.zip)",
+                    data=zip_bytes,
+                    file_name="pre600bce_apm_qgis_plugin.zip",
+                    mime="application/zip",
+                    use_container_width=True,
+                    type="primary",
+                )
+
+            coarse_gj_path = ROOT_DIR / "results" / "subcontinent" / "coarse_public_sensitivity_2km.geojson"
+            if not coarse_gj_path.exists():
+                exporter = CoarseRasterExporter(resolution_km=2.0)
+                exporter.export_coarse_sensitivity_geojson(output_path=coarse_gj_path)
+
+            if coarse_gj_path.exists():
+                coarse_bytes = coarse_gj_path.read_bytes()
+                st.download_button(
+                    "🗺️ Download Coarse 2km Sensitivity Grid (GeoJSON)",
+                    data=coarse_bytes,
+                    file_name="coarse_public_sensitivity_2km.geojson",
+                    mime="application/geo+json",
+                    use_container_width=True,
+                )
+
+            st.markdown(
+                """
+                **How to Install in QGIS (30 seconds):**
+                1. Open **QGIS** (v3.22 LTR or newer).
+                2. Click Menu `Plugins` → `Manage and Install Plugins...`.
+                3. Click `Install from ZIP` in the left panel.
+                4. Select `pre600bce_apm_qgis_plugin.zip` and click **Install Plugin**.
+                5. A new panel **"Pre-600 BCE APM Discovery"** appears in your right dock!
+                """
+            )
+
+        # Right Column: Mobile ODK / KoboToolbox Survey
+        with col_odk:
+            st.markdown("### 📱 Mobile Field Survey (ODK / Kobo)")
+            st.markdown(
+                "When walking across rural alluvium or desert dunes, surveyors need an offline mobile app. "
+                "Our standardized **ODK Collect / KoboToolbox** form records ground verification verdicts, "
+                "mound relief, photos, and ceramic horizons without requiring internet connectivity."
+            )
+
+            survey_dir = ROOT_DIR / "data" / "field_survey"
+            survey_bundle = export_odk_survey_bundle(survey_dir)
+
+            json_bytes = survey_bundle["json_form"].read_bytes()
+            st.download_button(
+                "📱 Download Mobile Survey Form (JSON)",
+                data=json_bytes,
+                file_name="apm_field_survey_form.json",
+                mime="application/json",
+                use_container_width=True,
+            )
+
+            survey_csv_bytes = survey_bundle["survey_csv"].read_bytes()
+            st.download_button(
+                "📋 Download XLSForm Survey (CSV)",
+                data=survey_csv_bytes,
+                file_name="xlsform_survey.csv",
+                mime="text/csv",
+                use_container_width=True,
+            )
+
+            st.markdown(
+                """
+                **How to Use in the Field:**
+                1. Upload `xlsform_survey.csv` and `xlsform_choices.csv` into [KoboToolbox](https://kobotoolbox.org) or ODK Central.
+                2. Install **ODK Collect** on surveyor Android phones or rugged field tablets.
+                3. Download the form and conduct ground verification offline with GNSS accuracy.
+                """
+            )
+
+        st.markdown("---")
+        # Active Learning Section
+        st.markdown("### 🔄 Active Learning Ground-Truth Verification Simulator")
+        st.markdown(
+            "Close the loop between physical archaeology and machine learning. "
+            "When a field surveyor confirms a tell or rejects a sand dune, their verdict updates the training database. "
+            "Confirmed tells become new ground truth positives (`y=1`), while false alarm dunes or canal banks become "
+            "hard negatives (`is_hard_negative=1`), preventing future false positives across the entire basin."
+        )
+
+        feedback_ingestor = ActiveLearningFeedbackIngestor(
+            storage_csv=ROOT_DIR / "data" / "field_survey" / "verified_field_submissions.csv"
+        )
+
+        with st.form("ground_feedback_form"):
+            f1, f2 = st.columns(2)
+            with f1:
+                f_name = st.text_input("Surveyor Full Name:", value="Dr. Field Archaeologist")
+                f_inst = st.selectbox(
+                    "Affiliated Institution:",
+                    [
+                        ("asi", "Archaeological Survey of India (ASI)"),
+                        ("state_doam", "State Directorate of Archaeology & Museums"),
+                        ("university", "University / Academic Department"),
+                        ("consortium", "International Research Consortium"),
+                        ("independent", "Independent Field Researcher"),
+                    ],
+                    format_func=lambda x: x[1],
+                )[0]
+                cand_list = [c.candidate_id for c in all_candidates] if all_candidates else ["SUBCON_DISCOV_001"]
+                f_cand = st.selectbox("Select Target APM Candidate ID:", cand_list)
+
+            with f2:
+                f_verdict = st.selectbox(
+                    "Ground Archaeological Verdict:",
+                    [
+                        "mound_confirmed",
+                        "false_positive_dune",
+                        "false_positive_canal",
+                        "false_positive_brick_kiln",
+                        "ploughed_out_scatter",
+                    ],
+                    format_func=lambda v: {
+                        "mound_confirmed": "✅ Mound Confirmed (Ancient Archaeological Tell)",
+                        "false_positive_dune": "❌ False Positive: Natural Sand Dune / Relict Ridge",
+                        "false_positive_canal": "❌ False Positive: Modern Canal Spoil Bank / Bund",
+                        "false_positive_brick_kiln": "❌ False Positive: Modern Brick Kiln / Debris",
+                        "ploughed_out_scatter": "⚠️ Levelled / Ploughed-out Pottery Scatter",
+                    }.get(v, v),
+                )
+                f_lat = st.number_input("Observed Latitude (°N):", value=float(preset_lat), format="%.5f")
+                f_lon = st.number_input("Observed Longitude (°E):", value=float(preset_lon), format="%.5f")
+
+            f_relief = st.slider("Observed Mound Relief Height (m):", 0.0, 15.0, 3.5, 0.5)
+            f_ceramics = st.multiselect(
+                "Diagnostic Ceramic Horizons Observed:",
+                [
+                    "Hakra Ware (Incised / Mud-Applique)",
+                    "Early Harappan (Sothi-Siswal / Kot Diji)",
+                    "Mature Harappan (Red Ware / Black-on-Red)",
+                    "Late Harappan / Ochre Coloured Pottery (OCP)",
+                    "Painted Grey Ware (PGW / Vedic Horizon)",
+                    "Black-and-Red Ware (BRW / Chalcolithic)",
+                    "Early Historic (NBPW / Red Polished Ware)",
+                ],
+                default=["Mature Harappan (Red Ware / Black-on-Red)"],
+            )
+            f_notes = st.text_area("Field Geomorphic Notes:", "Prominent tell summit observed with diagnostic ceramic sherds across 200m radius.")
+
+            submit_feedback = st.form_submit_button("🚀 Submit Ground Verification Verdict", type="primary", use_container_width=True)
+
+        if submit_feedback:
+            sub = SurveyVerificationSubmission(
+                submission_id=f"SUB_{int(time.time())}",
+                surveyor_name=f_name,
+                institution=f_inst,
+                latitude=f_lat,
+                longitude=f_lon,
+                ground_verdict=f_verdict,
+                candidate_id=f_cand,
+                observed_relief_m=f_relief,
+                observed_ceramics=f_ceramics,
+                field_notes=f_notes,
+                timestamp=time.strftime("%Y-%m-%d %H:%M:%S"),
+            )
+            res = feedback_ingestor.ingest_submission(sub)
+            if res["active_learning_role"] == "new_ground_truth_positive":
+                st.success(
+                    f"### 🎉 Tell Mound Verified & Promoted to Ground Truth!\n"
+                    f"**Role:** `{res['active_learning_role']}` &bull; "
+                    f"**Distance to Monument:** {res['dist_to_documented_monument_m']} m "
+                    f"({'✅ Outside Legal Buffer' if res['is_outside_known_buffer'] else '⚠️ Inside Monument Area'})\n\n"
+                    f"This verified tell is now integrated into the model's positive training corpus."
+                )
+            else:
+                st.warning(
+                    f"### 🛡️ Ground Rejection Ingested as Hard Negative!\n"
+                    f"**Role:** `{res['active_learning_role']}`\n\n"
+                    f"The feature space at this coordinate will penalize similar sand dune or canal features across this macro-basin."
+                )
+
+        # Display accumulated submissions table
+        all_subs = feedback_ingestor.load_all_submissions()
+        if not all_subs.empty:
+            st.markdown("#### 📋 Field Verification Registry (Active Learning Corpus)")
+            st.dataframe(all_subs, use_container_width=True, height=220)
+
+    # Tab 5: Downloads & Field Manual
     with tab_export:
         st.subheader("📥 GIS Layer Downloads & Surveyor's Field Manual")
         st.info("🛡️ **Heritage Preservation Notice:** Public vector exports (GeoJSON, KML, GPX) are ethically coarsened to ~1.1 km to prevent unauthorized metal-detecting or looting in accordance with ICAHM/UNESCO guidelines. Sub-meter research vectors are restricted to authorized institutions.")

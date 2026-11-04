@@ -1,0 +1,175 @@
+{
+  "settings": {
+    "form_title": "Pre-600 BCE APM Ground Tell Verification Form",
+    "form_id": "pre600bce_apm_field_verification_v1",
+    "version": "20261104",
+    "default_language": "en"
+  },
+  "survey": [
+    {
+      "type": "start",
+      "name": "start_time",
+      "label": "Start Time"
+    },
+    {
+      "type": "end",
+      "name": "end_time",
+      "label": "End Time"
+    },
+    {
+      "type": "deviceid",
+      "name": "device_id",
+      "label": "Device Identifier"
+    },
+    {
+      "type": "text",
+      "name": "surveyor_name",
+      "label": "Surveyor Full Name",
+      "required": "yes"
+    },
+    {
+      "type": "select_one institution_type",
+      "name": "institution",
+      "label": "Affiliated Institution",
+      "required": "yes"
+    },
+    {
+      "type": "text",
+      "name": "candidate_id",
+      "label": "Target APM Candidate ID (e.g. SUBCON_DISCOV_001)",
+      "required": "no"
+    },
+    {
+      "type": "geopoint",
+      "name": "ground_location",
+      "label": "GPS Coordinate (Ensure < 5m GNSS accuracy)",
+      "required": "yes"
+    },
+    {
+      "type": "select_one ground_verdict_list",
+      "name": "ground_verdict",
+      "label": "Ground Archaeological Verdict",
+      "required": "yes"
+    },
+    {
+      "type": "decimal",
+      "name": "observed_relief_m",
+      "label": "Estimated Mound Relief Height Above Plain (m)",
+      "relevant": "${ground_verdict} = 'mound_confirmed'"
+    },
+    {
+      "type": "decimal",
+      "name": "observed_diameter_m",
+      "label": "Estimated Mound Footprint Diameter (m)",
+      "relevant": "${ground_verdict} = 'mound_confirmed'"
+    },
+    {
+      "type": "select_multiple pottery_types",
+      "name": "observed_ceramics",
+      "label": "Observed Diagnostic Ceramic Horizons",
+      "relevant": "${ground_verdict} = 'mound_confirmed' or ${ground_verdict} = 'ploughed_out_scatter'"
+    },
+    {
+      "type": "image",
+      "name": "mound_photo",
+      "label": "Photograph of Mound Profile or Ceramic Sherds"
+    },
+    {
+      "type": "note",
+      "name": "anti_looting_reminder",
+      "label": "REMINDER: Do NOT remove diagnostic sherds or artifacts without statutory authorization from ASI / State Antiquities Directorate."
+    },
+    {
+      "type": "text",
+      "name": "field_notes",
+      "label": "General Field Geomorphic & Cultural Notes"
+    }
+  ],
+  "choices": [
+    {
+      "list_name": "institution_type",
+      "name": "asi",
+      "label": "Archaeological Survey of India (ASI)"
+    },
+    {
+      "list_name": "institution_type",
+      "name": "state_doam",
+      "label": "State Directorate of Archaeology & Museums"
+    },
+    {
+      "list_name": "institution_type",
+      "name": "university",
+      "label": "University / Academic Department"
+    },
+    {
+      "list_name": "institution_type",
+      "name": "consortium",
+      "label": "International / Inter-Institutional Consortium"
+    },
+    {
+      "list_name": "institution_type",
+      "name": "independent",
+      "label": "Accredited Independent Researcher"
+    },
+    {
+      "list_name": "ground_verdict_list",
+      "name": "mound_confirmed",
+      "label": "\u2705 Mound Confirmed (Ancient Archaeological Tell)"
+    },
+    {
+      "list_name": "ground_verdict_list",
+      "name": "false_positive_dune",
+      "label": "\u274c False Positive: Natural Sand Dune / Relict Ridge"
+    },
+    {
+      "list_name": "ground_verdict_list",
+      "name": "false_positive_canal",
+      "label": "\u274c False Positive: Modern Canal Spoil Bank / Bund"
+    },
+    {
+      "list_name": "ground_verdict_list",
+      "name": "false_positive_brick_kiln",
+      "label": "\u274c False Positive: Modern Brick Kiln / Debris Mound"
+    },
+    {
+      "list_name": "ground_verdict_list",
+      "name": "ploughed_out_scatter",
+      "label": "\u26a0\ufe0f Levelled / Ploughed-out Pottery Scatter (Low Relief)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "hakra_ware",
+      "label": "Hakra Ware (Incised / Mud-Applique)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "early_harappan",
+      "label": "Early Harappan (Sothi-Siswal / Kot Diji)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "mature_harappan",
+      "label": "Mature Harappan (Red Ware / Black-on-Red)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "late_harappan_ocp",
+      "label": "Late Harappan / Ochre Coloured Pottery (OCP)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "pgw",
+      "label": "Painted Grey Ware (PGW / Vedic Horizon)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "brw",
+      "label": "Black-and-Red Ware (BRW / Chalcolithic)"
+    },
+    {
+      "list_name": "pottery_types",
+      "name": "early_historic",
+      "label": "Early Historic (NBPW / Red Polished Ware)"
+    }
+  ]
+}

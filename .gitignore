@@ -11,8 +11,10 @@ data/processed/*
 !data/processed/.gitkeep
 *.parquet
 *.zip
+!dist/pre600bce_apm_qgis_plugin.zip
 .vscode/
-dist/
+dist/*
+!dist/pre600bce_apm_qgis_plugin.zip
 build/
 *.egg-info/
 
