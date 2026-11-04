@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Union
 import webbrowser
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 __author__ = "Alok"
 
 from src.benchmark_known_monuments import KnownMonumentsBenchmarkRunner

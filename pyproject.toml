@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "haryana-mound-apm"
-version = "0.3.0"
+version = "0.4.0"
 description = "Pan-Subcontinent Pre-600 BCE Archaeological Predictive Modeling, Multi-Sensor Gating & Live Satellite GIS"
 readme = "README.md"
 authors = [
@@ -45,6 +45,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+ml = [
+    "torch>=2.0.0",
+]
 dev = [
     "pytest>=7.4.0",
     "build>=1.0.0",
@@ -65,13 +68,16 @@ apm-benchmark = "scripts.run_known_monuments_benchmark:run_benchmark_cli"
 apm-scan = "scripts.cli_scan:main"
 apm-export = "scripts.cli_export:main"
 apm-dossier = "scripts.cli_dossier:main"
+apm-package-qgis = "scripts.package_qgis_plugin:build_qgis_zip"
+apm-hybrid = "scripts.run_hybrid_pipeline:main"
+apm-cross-basin = "scripts.run_cross_basin_benchmark:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["src*", "scripts*"]
+include = ["src*", "scripts*", "qgis_plugin*"]
 
 [tool.setuptools.package-data]
-"*" = ["*.csv", "*.geojson", "*.html", "*.png", "*.md", "*.yaml"]
+"*" = ["*.csv", "*.geojson", "*.html", "*.png", "*.md", "*.yaml", "*.txt", "*.json", "*.zip"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
