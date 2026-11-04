@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+  <pyqgis_plugin name="Pre-600 BCE Subcontinent APM Discovery GIS" version="1.0.0" plugin_id="pre600bce_apm">
+    <description>Archaeological Predictive Modeling (APM) &amp; Multi-Sensor Prospection for Pre-600 BCE Tells across the Indian Subcontinent.</description>
+    <about>Enables field archaeologists, heritage surveyors, and university research teams to load prospective Pre-600 BCE tell anomalies, inspect 4-stage hybrid telemetry (Orengo RF, MSRM CNN, AlphaEarth), verify 1500m exclusion buffers around 97 canonical monuments, and export ODK/KoboToolbox mobile ground survey forms.</about>
+    <version>1.0.0</version>
+    <qgis_minimum_version>3.0</qgis_minimum_version>
+    <qgis_maximum_version>3.99</qgis_maximum_version>
+    <homepage>https://github.com/alok-108/haryana-mound-apm</homepage>
+    <file_name>pre600bce_apm_qgis_plugin.zip</file_name>
+    <icon>icon.png</icon>
+    <author_name>Alok (Subcontinent APM Consortia)</author_name>
+    <download_url>https://alok-108.github.io/haryana-mound-apm/pre600bce_apm_qgis_plugin.zip</download_url>
+    <uploaded_by>alok-108</uploaded_by>
+    <create_date>2026-11-04</create_date>
+    <update_date>2026-11-04</update_date>
+    <experimental>False</experimental>
+    <deprecated>False</deprecated>
+    <tracker>https://github.com/alok-108/haryana-mound-apm/issues</tracker>
+    <repository>https://github.com/alok-108/haryana-mound-apm</repository>
+    <tags>archaeology,remote-sensing,indus-valley,harappan,vedic,pre-600-bce,gis,apm,sar,dem</tags>
+  </pyqgis_plugin>
+</plugins>

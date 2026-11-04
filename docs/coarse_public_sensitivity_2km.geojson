@@ -1,0 +1,2405 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "layer_title": "Pre-600 BCE Coarse Archaeological Sensitivity Heatmap",
+    "resolution": "2.0 km grid cells",
+    "anti_looting_policy": "ICAHM / UNESCO Compliant: Coordinates generalized to 2km blocks to protect fragile ancient tell mounds from illicit metal-detecting and clandestine disturbance.",
+    "total_blocks": 57
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              66.5717,
+              25.712
+            ],
+            [
+              66.5923,
+              25.712
+            ],
+            [
+              66.5923,
+              25.73
+            ],
+            [
+              66.5717,
+              25.73
+            ],
+            [
+              66.5717,
+              25.712
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3247_1427",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.721,
+        "center_longitude": 66.582,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "hakra_early_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              67.5357,
+              28.901
+            ],
+            [
+              67.5563,
+              28.901
+            ],
+            [
+              67.5563,
+              28.919
+            ],
+            [
+              67.5357,
+              28.919
+            ],
+            [
+              67.5357,
+              28.901
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3294_1604",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.91,
+        "center_longitude": 67.546,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.0277,
+              27.081
+            ],
+            [
+              68.0483,
+              27.081
+            ],
+            [
+              68.0483,
+              27.099
+            ],
+            [
+              68.0277,
+              27.099
+            ],
+            [
+              68.0277,
+              27.081
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3318_1503",
+        "grid_type": "grid_2km",
+        "center_latitude": 27.09,
+        "center_longitude": 68.038,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.2117,
+              29.297
+            ],
+            [
+              68.2323,
+              29.297
+            ],
+            [
+              68.2323,
+              29.315
+            ],
+            [
+              68.2117,
+              29.315
+            ],
+            [
+              68.2117,
+              29.297
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3327_1626",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.306,
+        "center_longitude": 68.222,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "hakra_early_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.3967,
+              26.847
+            ],
+            [
+              68.4173,
+              26.847
+            ],
+            [
+              68.4173,
+              26.865
+            ],
+            [
+              68.3967,
+              26.865
+            ],
+            [
+              68.3967,
+              26.847
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3336_1490",
+        "grid_type": "grid_2km",
+        "center_latitude": 26.856,
+        "center_longitude": 68.407,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "hakra_early_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.6427,
+              27.802
+            ],
+            [
+              68.6633,
+              27.802
+            ],
+            [
+              68.6633,
+              27.82
+            ],
+            [
+              68.6427,
+              27.82
+            ],
+            [
+              68.6427,
+              27.802
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3348_1543",
+        "grid_type": "grid_2km",
+        "center_latitude": 27.811,
+        "center_longitude": 68.653,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              68.8267,
+              25.117
+            ],
+            [
+              68.8473,
+              25.117
+            ],
+            [
+              68.8473,
+              25.135
+            ],
+            [
+              68.8267,
+              25.135
+            ],
+            [
+              68.8267,
+              25.117
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3357_1394",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.126,
+        "center_longitude": 68.837,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "hakra_early_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              69.2987,
+              25.55
+            ],
+            [
+              69.3193,
+              25.55
+            ],
+            [
+              69.3193,
+              25.568
+            ],
+            [
+              69.2987,
+              25.568
+            ],
+            [
+              69.2987,
+              25.55
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3380_1418",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.559,
+        "center_longitude": 69.309,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              69.8317,
+              23.171
+            ],
+            [
+              69.8523,
+              23.171
+            ],
+            [
+              69.8523,
+              23.189
+            ],
+            [
+              69.8317,
+              23.189
+            ],
+            [
+              69.8317,
+              23.171
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3406_1286",
+        "grid_type": "grid_2km",
+        "center_latitude": 23.18,
+        "center_longitude": 69.842,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              70.1187,
+              23.64
+            ],
+            [
+              70.1393,
+              23.64
+            ],
+            [
+              70.1393,
+              23.658
+            ],
+            [
+              70.1187,
+              23.658
+            ],
+            [
+              70.1187,
+              23.64
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3420_1312",
+        "grid_type": "grid_2km",
+        "center_latitude": 23.649,
+        "center_longitude": 70.129,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              70.5087,
+              23.946
+            ],
+            [
+              70.5293,
+              23.946
+            ],
+            [
+              70.5293,
+              23.964
+            ],
+            [
+              70.5087,
+              23.964
+            ],
+            [
+              70.5087,
+              23.946
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3439_1329",
+        "grid_type": "grid_2km",
+        "center_latitude": 23.955,
+        "center_longitude": 70.519,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              70.8157,
+              28.505
+            ],
+            [
+              70.8363,
+              28.505
+            ],
+            [
+              70.8363,
+              28.523
+            ],
+            [
+              70.8157,
+              28.523
+            ],
+            [
+              70.8157,
+              28.505
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3454_1582",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.514,
+        "center_longitude": 70.826,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              70.8367,
+              21.405
+            ],
+            [
+              70.8573,
+              21.405
+            ],
+            [
+              70.8573,
+              21.423
+            ],
+            [
+              70.8367,
+              21.423
+            ],
+            [
+              70.8367,
+              21.405
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3455_1188",
+        "grid_type": "grid_2km",
+        "center_latitude": 21.414,
+        "center_longitude": 70.847,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.2057,
+              22.0
+            ],
+            [
+              71.2263,
+              22.0
+            ],
+            [
+              71.2263,
+              22.018
+            ],
+            [
+              71.2057,
+              22.018
+            ],
+            [
+              71.2057,
+              22.0
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3473_1221",
+        "grid_type": "grid_2km",
+        "center_latitude": 22.009,
+        "center_longitude": 71.216,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.3077,
+              24.523
+            ],
+            [
+              71.3283,
+              24.523
+            ],
+            [
+              71.3283,
+              24.541
+            ],
+            [
+              71.3077,
+              24.541
+            ],
+            [
+              71.3077,
+              24.523
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3478_1361",
+        "grid_type": "grid_2km",
+        "center_latitude": 24.532,
+        "center_longitude": 71.318,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.3287,
+              28.739
+            ],
+            [
+              71.3493,
+              28.739
+            ],
+            [
+              71.3493,
+              28.757
+            ],
+            [
+              71.3287,
+              28.757
+            ],
+            [
+              71.3287,
+              28.739
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3479_1595",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.748,
+        "center_longitude": 71.339,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.4107,
+              22.829
+            ],
+            [
+              71.4313,
+              22.829
+            ],
+            [
+              71.4313,
+              22.847
+            ],
+            [
+              71.4107,
+              22.847
+            ],
+            [
+              71.4107,
+              22.829
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3483_1267",
+        "grid_type": "grid_2km",
+        "center_latitude": 22.838,
+        "center_longitude": 71.421,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.8207,
+              32.144
+            ],
+            [
+              71.8413,
+              32.144
+            ],
+            [
+              71.8413,
+              32.162
+            ],
+            [
+              71.8207,
+              32.162
+            ],
+            [
+              71.8207,
+              32.144
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3503_1784",
+        "grid_type": "grid_2km",
+        "center_latitude": 32.153,
+        "center_longitude": 71.831,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              71.8407,
+              30.108
+            ],
+            [
+              71.8613,
+              30.108
+            ],
+            [
+              71.8613,
+              30.126
+            ],
+            [
+              71.8407,
+              30.126
+            ],
+            [
+              71.8407,
+              30.108
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3504_1671",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.117,
+        "center_longitude": 71.851,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.0667,
+              22.685
+            ],
+            [
+              72.0873,
+              22.685
+            ],
+            [
+              72.0873,
+              22.703
+            ],
+            [
+              72.0667,
+              22.703
+            ],
+            [
+              72.0667,
+              22.685
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3515_1259",
+        "grid_type": "grid_2km",
+        "center_latitude": 22.694,
+        "center_longitude": 72.077,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.1897,
+              30.342
+            ],
+            [
+              72.2103,
+              30.342
+            ],
+            [
+              72.2103,
+              30.36
+            ],
+            [
+              72.1897,
+              30.36
+            ],
+            [
+              72.1897,
+              30.342
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3521_1684",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.351,
+        "center_longitude": 72.2,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.2307,
+              28.757
+            ],
+            [
+              72.2513,
+              28.757
+            ],
+            [
+              72.2513,
+              28.775
+            ],
+            [
+              72.2307,
+              28.775
+            ],
+            [
+              72.2307,
+              28.757
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3523_1596",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.766,
+        "center_longitude": 72.241,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.3947,
+              22.108
+            ],
+            [
+              72.4153,
+              22.108
+            ],
+            [
+              72.4153,
+              22.126
+            ],
+            [
+              72.3947,
+              22.126
+            ],
+            [
+              72.3947,
+              22.108
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3531_1227",
+        "grid_type": "grid_2km",
+        "center_latitude": 22.117,
+        "center_longitude": 72.405,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "gujarat_estuarine_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              72.5377,
+              30.468
+            ],
+            [
+              72.5583,
+              30.468
+            ],
+            [
+              72.5583,
+              30.486
+            ],
+            [
+              72.5377,
+              30.486
+            ],
+            [
+              72.5377,
+              30.468
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3538_1691",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.477,
+        "center_longitude": 72.548,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              73.1117,
+              31.243
+            ],
+            [
+              73.1323,
+              31.243
+            ],
+            [
+              73.1323,
+              31.261
+            ],
+            [
+              73.1117,
+              31.261
+            ],
+            [
+              73.1117,
+              31.243
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3566_1734",
+        "grid_type": "grid_2km",
+        "center_latitude": 31.252,
+        "center_longitude": 73.122,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "mature_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.1167,
+              24.613
+            ],
+            [
+              74.1373,
+              24.613
+            ],
+            [
+              74.1373,
+              24.631
+            ],
+            [
+              74.1167,
+              24.631
+            ],
+            [
+              74.1167,
+              24.613
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3615_1366",
+        "grid_type": "grid_2km",
+        "center_latitude": 24.622,
+        "center_longitude": 74.127,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "ahar_banas",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.3017,
+              29.802
+            ],
+            [
+              74.3223,
+              29.802
+            ],
+            [
+              74.3223,
+              29.82
+            ],
+            [
+              74.3017,
+              29.82
+            ],
+            [
+              74.3017,
+              29.802
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3624_1654",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.811,
+        "center_longitude": 74.312,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.3837,
+              18.703
+            ],
+            [
+              74.4043,
+              18.703
+            ],
+            [
+              74.4043,
+              18.721
+            ],
+            [
+              74.3837,
+              18.721
+            ],
+            [
+              74.3837,
+              18.703
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3628_1038",
+        "grid_type": "grid_2km",
+        "center_latitude": 18.712,
+        "center_longitude": 74.394,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "jorwe_chalcolithic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.4447,
+              30.703
+            ],
+            [
+              74.4653,
+              30.703
+            ],
+            [
+              74.4653,
+              30.721
+            ],
+            [
+              74.4447,
+              30.721
+            ],
+            [
+              74.4447,
+              30.703
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3631_1704",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.712,
+        "center_longitude": 74.455,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "late_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.4657,
+              25.207
+            ],
+            [
+              74.4863,
+              25.207
+            ],
+            [
+              74.4863,
+              25.225
+            ],
+            [
+              74.4657,
+              25.225
+            ],
+            [
+              74.4657,
+              25.207
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3632_1399",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.216,
+        "center_longitude": 74.476,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "ahar_banas",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.5067,
+              19.568
+            ],
+            [
+              74.5273,
+              19.568
+            ],
+            [
+              74.5273,
+              19.586
+            ],
+            [
+              74.5067,
+              19.586
+            ],
+            [
+              74.5067,
+              19.568
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3634_1086",
+        "grid_type": "grid_2km",
+        "center_latitude": 19.577,
+        "center_longitude": 74.517,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "jorwe_chalcolithic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.6087,
+              29.73
+            ],
+            [
+              74.6293,
+              29.73
+            ],
+            [
+              74.6293,
+              29.748
+            ],
+            [
+              74.6087,
+              29.748
+            ],
+            [
+              74.6087,
+              29.73
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3639_1650",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.739,
+        "center_longitude": 74.619,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.8347,
+              19.117
+            ],
+            [
+              74.8553,
+              19.117
+            ],
+            [
+              74.8553,
+              19.135
+            ],
+            [
+              74.8347,
+              19.135
+            ],
+            [
+              74.8347,
+              19.117
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3650_1061",
+        "grid_type": "grid_2km",
+        "center_latitude": 19.126,
+        "center_longitude": 74.845,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "jorwe_chalcolithic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.8347,
+              20.306
+            ],
+            [
+              74.8553,
+              20.306
+            ],
+            [
+              74.8553,
+              20.324
+            ],
+            [
+              74.8347,
+              20.324
+            ],
+            [
+              74.8347,
+              20.306
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3650_1127",
+        "grid_type": "grid_2km",
+        "center_latitude": 20.315,
+        "center_longitude": 74.845,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "jorwe_chalcolithic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.8347,
+              25.405
+            ],
+            [
+              74.8553,
+              25.405
+            ],
+            [
+              74.8553,
+              25.423
+            ],
+            [
+              74.8347,
+              25.423
+            ],
+            [
+              74.8347,
+              25.405
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3650_1410",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.414,
+        "center_longitude": 74.845,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "ahar_banas",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.8347,
+              29.496
+            ],
+            [
+              74.8553,
+              29.496
+            ],
+            [
+              74.8553,
+              29.514
+            ],
+            [
+              74.8347,
+              29.514
+            ],
+            [
+              74.8347,
+              29.496
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3650_1637",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.505,
+        "center_longitude": 74.845,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "hakra_early_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.1007,
+              30.342
+            ],
+            [
+              75.1213,
+              30.342
+            ],
+            [
+              75.1213,
+              30.36
+            ],
+            [
+              75.1007,
+              30.36
+            ],
+            [
+              75.1007,
+              30.342
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3663_1684",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.351,
+        "center_longitude": 75.111,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "late_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.1217,
+              22.595
+            ],
+            [
+              75.1423,
+              22.595
+            ],
+            [
+              75.1423,
+              22.613
+            ],
+            [
+              75.1217,
+              22.613
+            ],
+            [
+              75.1217,
+              22.595
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3664_1254",
+        "grid_type": "grid_2km",
+        "center_latitude": 22.604,
+        "center_longitude": 75.132,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "malwa_kayatha",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.1217,
+              29.874
+            ],
+            [
+              75.1423,
+              29.874
+            ],
+            [
+              75.1423,
+              29.892
+            ],
+            [
+              75.1217,
+              29.892
+            ],
+            [
+              75.1217,
+              29.874
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3664_1658",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.883,
+        "center_longitude": 75.132,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "hakra_early_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.4087,
+              22.108
+            ],
+            [
+              75.4293,
+              22.108
+            ],
+            [
+              75.4293,
+              22.126
+            ],
+            [
+              75.4087,
+              22.126
+            ],
+            [
+              75.4087,
+              22.108
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3678_1227",
+        "grid_type": "grid_2km",
+        "center_latitude": 22.117,
+        "center_longitude": 75.419,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "malwa_kayatha",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.6747,
+              29.207
+            ],
+            [
+              75.6953,
+              29.207
+            ],
+            [
+              75.6953,
+              29.225
+            ],
+            [
+              75.6747,
+              29.225
+            ],
+            [
+              75.6747,
+              29.207
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3691_1621",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.216,
+        "center_longitude": 75.685,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.8187,
+              23.279
+            ],
+            [
+              75.8393,
+              23.279
+            ],
+            [
+              75.8393,
+              23.297
+            ],
+            [
+              75.8187,
+              23.297
+            ],
+            [
+              75.8187,
+              23.279
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3698_1292",
+        "grid_type": "grid_2km",
+        "center_latitude": 23.288,
+        "center_longitude": 75.829,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "malwa_kayatha",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              75.8387,
+              29.405
+            ],
+            [
+              75.8593,
+              29.405
+            ],
+            [
+              75.8593,
+              29.423
+            ],
+            [
+              75.8387,
+              29.423
+            ],
+            [
+              75.8387,
+              29.405
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3699_1632",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.414,
+        "center_longitude": 75.849,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.0647,
+              30.811
+            ],
+            [
+              76.0853,
+              30.811
+            ],
+            [
+              76.0853,
+              30.829
+            ],
+            [
+              76.0647,
+              30.829
+            ],
+            [
+              76.0647,
+              30.811
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3710_1710",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.82,
+        "center_longitude": 76.075,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "late_harappan",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.2077,
+              29.351
+            ],
+            [
+              76.2283,
+              29.351
+            ],
+            [
+              76.2283,
+              29.369
+            ],
+            [
+              76.2077,
+              29.369
+            ],
+            [
+              76.2077,
+              29.351
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3717_1629",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.36,
+        "center_longitude": 76.218,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              76.3717,
+              30.108
+            ],
+            [
+              76.3923,
+              30.108
+            ],
+            [
+              76.3923,
+              30.126
+            ],
+            [
+              76.3717,
+              30.126
+            ],
+            [
+              76.3717,
+              30.108
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3725_1671",
+        "grid_type": "grid_2km",
+        "center_latitude": 30.117,
+        "center_longitude": 76.382,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2537,
+              28.973
+            ],
+            [
+              77.2743,
+              28.973
+            ],
+            [
+              77.2743,
+              28.991
+            ],
+            [
+              77.2537,
+              28.991
+            ],
+            [
+              77.2537,
+              28.973
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3768_1608",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.982,
+        "center_longitude": 77.264,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.2737,
+              29.568
+            ],
+            [
+              77.2943,
+              29.568
+            ],
+            [
+              77.2943,
+              29.586
+            ],
+            [
+              77.2737,
+              29.586
+            ],
+            [
+              77.2737,
+              29.568
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3769_1641",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.577,
+        "center_longitude": 77.284,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.3967,
+              29.838
+            ],
+            [
+              77.4173,
+              29.838
+            ],
+            [
+              77.4173,
+              29.856
+            ],
+            [
+              77.3967,
+              29.856
+            ],
+            [
+              77.3967,
+              29.838
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3775_1656",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.847,
+        "center_longitude": 77.407,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              77.8077,
+              29.351
+            ],
+            [
+              77.8283,
+              29.351
+            ],
+            [
+              77.8283,
+              29.369
+            ],
+            [
+              77.8077,
+              29.369
+            ],
+            [
+              77.8077,
+              29.351
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3795_1629",
+        "grid_type": "grid_2km",
+        "center_latitude": 29.36,
+        "center_longitude": 77.818,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.4017,
+              28.523
+            ],
+            [
+              78.4223,
+              28.523
+            ],
+            [
+              78.4223,
+              28.541
+            ],
+            [
+              78.4017,
+              28.541
+            ],
+            [
+              78.4017,
+              28.523
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3824_1583",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.532,
+        "center_longitude": 78.412,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.6277,
+              23.838
+            ],
+            [
+              78.6483,
+              23.838
+            ],
+            [
+              78.6483,
+              23.856
+            ],
+            [
+              78.6277,
+              23.856
+            ],
+            [
+              78.6277,
+              23.838
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3835_1323",
+        "grid_type": "grid_2km",
+        "center_latitude": 23.847,
+        "center_longitude": 78.638,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "malwa_kayatha",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              78.6277,
+              28.198
+            ],
+            [
+              78.6483,
+              28.198
+            ],
+            [
+              78.6483,
+              28.216
+            ],
+            [
+              78.6277,
+              28.216
+            ],
+            [
+              78.6277,
+              28.198
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3835_1565",
+        "grid_type": "grid_2km",
+        "center_latitude": 28.207,
+        "center_longitude": 78.638,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              79.6117,
+              27.243
+            ],
+            [
+              79.6323,
+              27.243
+            ],
+            [
+              79.6323,
+              27.261
+            ],
+            [
+              79.6117,
+              27.261
+            ],
+            [
+              79.6117,
+              27.243
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3883_1512",
+        "grid_type": "grid_2km",
+        "center_latitude": 27.252,
+        "center_longitude": 79.622,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              80.8417,
+              26.396
+            ],
+            [
+              80.8623,
+              26.396
+            ],
+            [
+              80.8623,
+              26.414
+            ],
+            [
+              80.8417,
+              26.414
+            ],
+            [
+              80.8417,
+              26.396
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3943_1465",
+        "grid_type": "grid_2km",
+        "center_latitude": 26.405,
+        "center_longitude": 80.852,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              81.1697,
+              25.514
+            ],
+            [
+              81.1903,
+              25.514
+            ],
+            [
+              81.1903,
+              25.532
+            ],
+            [
+              81.1697,
+              25.532
+            ],
+            [
+              81.1697,
+              25.514
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_3959_1416",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.523,
+        "center_longitude": 81.18,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              82.3997,
+              25.838
+            ],
+            [
+              82.4203,
+              25.838
+            ],
+            [
+              82.4203,
+              25.856
+            ],
+            [
+              82.3997,
+              25.856
+            ],
+            [
+              82.3997,
+              25.838
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "cell_id": "COARSE_4019_1434",
+        "grid_type": "grid_2km",
+        "center_latitude": 25.847,
+        "center_longitude": 82.41,
+        "mean_probability": 0.994,
+        "max_probability": 0.994,
+        "sensitivity_tier": "Very High Archaeological Sensitivity",
+        "dominant_culture": "painted_grey_ware_vedic",
+        "estimated_mound_density_per_100sqkm": 25.0,
+        "anti_looting_compliance": "ICAHM_UNESCO_ETHICAL_MASKED_2KM"
+      }
+    }
+  ]
+}

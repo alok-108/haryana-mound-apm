@@ -12,6 +12,7 @@ data/processed/*
 *.parquet
 *.zip
 !dist/pre600bce_apm_qgis_plugin.zip
+!docs/pre600bce_apm_qgis_plugin.zip
 .vscode/
 dist/*
 !dist/pre600bce_apm_qgis_plugin.zip
